@@ -15,7 +15,7 @@ public static void main(String[] args) {
     createFile();
     System.out.print(getSavePath()+"\n");
     writingPain();
-    try{Thread.sleep(3000);}catch(Exception e){}
+    try{Thread.sleep(1000);}catch(Exception e){}
     readingPain();
 }
 
