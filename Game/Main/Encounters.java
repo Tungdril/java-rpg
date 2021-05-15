@@ -3,7 +3,7 @@ public class Encounters {
 
 static String enemy;
 static int enemyHealth;
-static int playerHealth = 6;
+static int playerHealth = 8;
 static int playerDamage;
 static int sword;
 static int enemyDamage = 1;
@@ -21,11 +21,11 @@ static double difficulty;
             difficulty = 0.85;
         } else if(randomEnemy >50 & randomEnemy <=80){
             enemy = "Skeleton";
-            enemyHealth = 5;
+            enemyHealth = 6;
             difficulty = 1.0;
         } else{
             enemy = "Orc";
-            enemyHealth = 6;
+            enemyHealth = 8;
             difficulty = 1.15;
         }
          System.out.println("You were just minding your own buisness, when suddenly a " + enemy + " appeared!");
@@ -53,8 +53,10 @@ static double difficulty;
                 playerDefense++;
             }
             else if (fight2==3){ //Check Health
+                System.out.println("----------------------------------------------------------------------");
                 System.out.println("The Enemy has still " + enemyHealth + " HP left");
                 System.out.println("You still have " + playerHealth + " HP left");
+                System.out.println("----------------------------------------------------------------------");
             }
             else if (fight2==4){ //Flee
                 System.out.println("You tried to flee! But to no avail");
@@ -85,14 +87,16 @@ static double difficulty;
             }
             playerDefense=0;
             Thread.sleep(150);
-            //fight.close();
         } catch(Exception e){System.out.println("shit");}}
-        
-        
 
     public static void nothing(){
         System.out.println("Nothing");
     }
+
+    public static void loot(){
+        System.out.println("Loot");
+    }
+
 
     public static void healthCalc() {
         try {Thread.sleep(200);} catch(Exception e) {System.out.println("shit");}
@@ -106,6 +110,7 @@ static double difficulty;
             }
         }
         if (playerHealth<=0){
+            Game.day ++;
             System.out.println(
 "                                 _____  _____ \n"+
 "                                <     `/     | \n"+            
@@ -116,10 +121,10 @@ static double difficulty;
 "                                |            | \n"+
 "                 ______.______%_|            |_________________ \n"+            
 "               _/                                              | \n"+
-"              |               B I L L   G A T E S              < \n"+    //replace with username        
+"              |                                                < \n"+    //replace with username        
 "              |_____.-._________              ____/|___________| \n"+
 "                                | * Day 0    | \n"+            
-"                                | + 19/10/97 | \n"+    //date should reflect current day
+"                                | + Day "+Game.day+"    | \n"+    //date should reflect current day
 "                                |            | \n"+            
 "                                |            | \n"+
 "                                |   _        < \n"+            
@@ -132,6 +137,7 @@ static double difficulty;
 "                    _.%%%%%%@@@@@@%%_/%__%@@%%@@@@@@@%%%%%% \n"
                  
             );
+            Game.day --;
         }
         if (enemyHealth<=0){
             System.out.println("You have murdered something!\nCongrats!");
