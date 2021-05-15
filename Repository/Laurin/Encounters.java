@@ -35,8 +35,7 @@ static double difficulty;
         int playerDamage = (int) (Math.random()*2+1); // Player damage is 1-2 HP 
 
         try {
-        Scanner fight = new Scanner(System.in);
-        fight.close();
+        Scanner fight = new Scanner(System.in);       
         System.out.println("\n----------------------------------------------------------------------");
         System.out.println("\nWhat will you do?\n1. Attack\n2. Defend\n3. Check Health\n4. Flee");
 
@@ -85,7 +84,7 @@ static double difficulty;
             }
             playerDefense=0;
             Thread.sleep(150);
-
+            //fight.close();
         } catch(Exception e){System.out.println("shit");}}
         
         
