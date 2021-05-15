@@ -128,7 +128,7 @@ static int enemyDamageChance;
         }
         if (enemyHealth<=0){
             System.out.println("You have murdered something!\nCongrats!");
-            System.out.println(Game.day);
+            System.out.println(Game.money);
         }  
     }    
     
