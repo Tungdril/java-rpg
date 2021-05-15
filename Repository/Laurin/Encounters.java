@@ -135,7 +135,8 @@ static double difficulty;
         if (enemyHealth<=0){
             System.out.println("You have murdered something!\nCongrats!");
             int reward = (int) (Math.random()*10 * difficulty + 10);
-            System.out.println("You found " + Game.money + reward + " G!");
+            int loot = Game.money + reward;
+            System.out.println("You found " + loot + " G!");
         }  
     }    
     
