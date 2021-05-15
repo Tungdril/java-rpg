@@ -5,17 +5,17 @@ public class Shop {
     static int money=2000;
     static int sword=0;
     static int armor=0;
-    static boolean S = sword!=0;  
-    static boolean A = armor!=0;
     static boolean Sword = money >= 200;
     static boolean Armor = money >= 300;
-    static int swordEquip = 0;
-    static int armorEquip = 0;
-
+    static int swordEquip;
+    static int armorEquip;
+    
 public static void main(String[] args){ 
-  shop();  
+    shop();  
 }
     public static void shop(){
+        boolean S=swordEquip!=0;
+        boolean A=armorEquip!=0;
         Scanner vendor = new Scanner(System.in);
         int ka = 0;
         boolean sop = ka==0 ;
@@ -37,12 +37,12 @@ public static void main(String[] args){
                 int upgrades = vendor.nextInt();
                 switch (upgrades){
                     case 1:
-                    if (moen) {System.out.println("You don't have enough money to buy this cool Sword."); break;}  
-                    else if (S) {System.out.println("You have already bought that Weapon."); break;}
+                    if (swordEquip==1) {System.out.println("You have already bought that Weapon.");}  
+                    else if (money<200) {System.out.println("You don't have enough money to buy this cool Sword.");}
                     else {System.out.println("You bought a cool sword!\nHopefully it's as useful as it's cool looking!");
                     sword=sword+2;
                     money=money-200;
-                    swordEquip}
+                    swordEquip=1;}
                         break;
                     case 2:
                     
