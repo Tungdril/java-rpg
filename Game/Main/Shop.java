@@ -50,16 +50,30 @@ public static void main(String[] args){
                                                             "|         this cool Sword.           |\n"+ 
                                                             "|____________________________________|\n");}
                     else {System.out.println(               " ____________________________________ \n"+
-                                                            "|     You bought a cool sword!       |\n"+
+                                                            "|     You bought the cool Sword!     |\n"+
                                                             "|     Hopefully it's as useful       |\n"+
                                                             "|       as it's cool looking!        |\n"+
                                                             "|____________________________________|\n");
                     sword=sword+2;
                     money=money-200;
                     swordEquip=1;}
-                        break;
+                    break;
                     case 2:
-                    
+                    if (armorEquip==1) {System.out.println( " ____________________________________ \n"+
+                                                            "|You have already bought that Armor. |\n"+
+                                                            "|____________________________________|\n");}  
+                    else if (money<300) {System.out.println(" ____________________________________ \n"+
+                                                            "| You don't have enough money to buy |\n"+
+                                                            "|         this shiny Armor.          |\n"+ 
+                                                            "|____________________________________|\n");}
+                    else {System.out.println(               " ____________________________________ \n"+
+                                                            "|    You bought the shiny Armor!     |\n"+
+                                                            "|      Hopefully it's as useful      |\n"+
+                                                            "|           as it's shiny!           |\n"+
+                                                            "|____________________________________|\n");
+                    armor=armor+2;
+                    money=money-300;
+                    armorEquip=1;}
                     break;
                 }
                 break;
