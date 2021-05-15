@@ -85,7 +85,9 @@ public static void main(String[] args){
                                     "|And directly drank it. How wasteful.|\n"+
                                     "|           You gain " + heal + "HP.            |\n"+
                                     "|____________________________________|\n");
-            } else                      {System.out.println("You don't have enough G.");}
+            } else                      {System.out.println(" ____________________________________ \n"+
+                                                            "|       You don't have enough G.     |\n"+
+                                                            "|____________________________________|\n"););}
                 money=money-20;
                 break;
             case 3:
@@ -93,9 +95,9 @@ public static void main(String[] args){
                                 "|         You leave the shop.        |\n"+
                                 "|____________________________________|\n");
             ka ++;
+            break;
+        }   ka=0;
             Game.decide();
-                break;
-        } ka=0;
     }        
 }
 }
