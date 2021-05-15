@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.FileWriter;
 import java.util.Scanner;
-public class Login {
+public class Save {
 //save system complete, only need a load system
 public static void main(String[] args) {
     Game.userName = "John"; //set userName to the name of the player
