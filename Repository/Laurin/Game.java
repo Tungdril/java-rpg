@@ -1,7 +1,15 @@
-
 public class Game {
      
     static int day = 0; //Current day, not implemented yet
+    static String Exp;
+    static String Money;
+    static String Day;
+    static String userName;
+    // exp, money, day only defined for test reasons
+    static int exp=200;
+    static int money=2000;
+
+
 
     public static void main(String[] args) {
 
