@@ -2,13 +2,17 @@ import java.util.Scanner;
 
 //building a vendor
 public class Shop {
-    static int money=20;
-    static int sword;
-    static int armor;
-    static boolean Sword = money >= 200 & sword==0;
-    static boolean Armor = money >= 300 & armor==0;
+    static int money=2000;
+    static int sword=0;
+    static int armor=0;
+    static boolean S = sword!=0;  
+    static boolean A = armor!=0;
+    static boolean Sword = money >= 200;
+    static boolean Armor = money >= 300;
+    static int swordEquip = 0;
+    static int armorEquip = 0;
 
-public static void main(){ 
+public static void main(String[] args){ 
   shop();  
 }
     public static void shop(){
@@ -19,8 +23,9 @@ public static void main(){
         System.out.print(   "--------------------------\n"+
                             "You have entered the Shop.\n"+
                             "--------------------------\n"+
-                            "What are you buying? says the shopkeeper."+
-                            "You choose to do:\n"+
+                            "What are you buying? says the shopkeeper.\n"+
+                            "You currently have " + money + "G on you.\n"+
+                            "You choose to:\n"+
                             "1. Buy Equipment\n"+
                             "2. Buy a Healing Potion (20 G)\n"+
                             "3. Leave\n");
@@ -32,14 +37,16 @@ public static void main(){
                 int upgrades = vendor.nextInt();
                 switch (upgrades){
                     case 1:
-                    if (Sword) {
-                        System.out.println("You bought a cool sword!\nHopefully it's as useful as it's cool looking!");
-                        sword=sword+2;
-                        money=money-200;
+                    if (moen) {System.out.println("You don't have enough money to buy this cool Sword."); break;}  
+                    else if (S) {System.out.println("You have already bought that Weapon."); break;}
+                    else {System.out.println("You bought a cool sword!\nHopefully it's as useful as it's cool looking!");
+                    sword=sword+2;
+                    money=money-200;
+                    swordEquip}
                         break;
-                    }
                     case 2:
-
+                    
+                    break;
                 }
                 break;
             case 2:
