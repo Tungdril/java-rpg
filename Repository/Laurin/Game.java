@@ -6,8 +6,8 @@ public class Game {
     static String Day;
     static String userName;
     // exp, money, day only defined for test reasons
-    static int exp=200;
-    static int money=2000;
+    static int exp;
+    static int money;
 
     public static void main(String[] args) {
 

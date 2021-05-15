@@ -4,6 +4,7 @@
 # VSCode # idk why it's not ignoring this 
 .vscode/
 java-rpg.code-workspace
+Test.java
 
 # Log file
 *.log
