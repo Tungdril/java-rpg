@@ -1,7 +1,7 @@
 # Compiled class file
 *.class
 
-# VSCode #
+# VSCode # idk why it's not ignoring this
 .vscode/
 java-rpg.code-workspace
 
