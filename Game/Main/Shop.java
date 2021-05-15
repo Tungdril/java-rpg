@@ -93,9 +93,9 @@ public static void main(String[] args){
                                 "|         You leave the shop.        |\n"+
                                 "|____________________________________|\n");
             ka ++;
+            break;
+        }   ka=0;
             Game.decide();
-                break;
-        } ka=0;
     }        
 }
 }

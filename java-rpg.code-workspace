@@ -7,5 +7,9 @@
 			"path": "C:\\Users\\MIchael\\Desktop\\java playground"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"java.project.sourcePaths": [
+			"java-rpg/Game/Main"
+		]
+	}
 }
