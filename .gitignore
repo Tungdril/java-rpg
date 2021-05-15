@@ -1,7 +1,7 @@
 # Compiled class file
 *.class
 
-# VSCode # idk why it's not ignoring this 
+# VSCode # idk why it's not ignoring this                               Ich hasse lebensformen
 .vscode/
 java-rpg.code-workspace
 
