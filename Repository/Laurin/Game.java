@@ -22,7 +22,7 @@ public class Game {
             System.in.read();
         } catch(Exception e){}
 
-        int exploreEvent = (int) (Math.random()*2+1); //Generate encounter, 33.3% chance
+        int exploreEvent = (int) (Math.random()*2+1); //Generate encounter, 33.3% chance 
 
         switch (exploreEvent)
 		{
@@ -39,7 +39,7 @@ public class Game {
 				break;
         }
 
-        System.out.println(day); 
+        System.out.println("Day: "+ day); 
 
 
         //Encounters encounters = new Encounters();
