@@ -1,7 +1,7 @@
 # Compiled class file
 *.class
 
-# VSCode # idk why it's not ignoring this
+# VSCode # idk why it's not ignoring this 
 .vscode/
 java-rpg.code-workspace
 
@@ -11,7 +11,7 @@ java-rpg.code-workspace
 # BlueJ files
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
+# Mobile Tools for Java (J2ME) more test
 .mtj.tmp/
 
 # Package Files #
