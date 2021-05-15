@@ -3,7 +3,11 @@ import java.util.Scanner;
 //building a vendor
 public class Shop {
     static int money=20;
-
+    static int sword;
+    
+public static void main(){ 
+  shop();  
+}
     public static void shop(){
         Scanner vendor = new Scanner(System.in);
         int ka = 0;
@@ -22,7 +26,11 @@ public class Shop {
         switch (Talk){
             case 1:
                 System.out.println("A new Sword or a new Armor?\n1. Sword (200 G)\n2. Armor ()");
-                
+                int upgrades = vendor.nextInt();
+                switch (upgrades){
+                    case 1:
+                    case 2:
+                }
                 break;
             case 2:
             if(money>=20){
