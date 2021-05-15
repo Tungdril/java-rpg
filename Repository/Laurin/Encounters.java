@@ -141,25 +141,3 @@ static double difficulty;
     }    
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
