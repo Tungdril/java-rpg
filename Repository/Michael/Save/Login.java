@@ -53,9 +53,12 @@ public static void readingPain(){
             String Exp = reader.nextLine();
             String Money = reader.nextLine();
             String Day = reader.nextLine();
-            System.out.println("Exp: " + Exp);
-            System.out.println("Money: " + Money);
-            System.out.println("Day: " + Day);
+            int exp = Integer.parseInt(Exp);
+            int money = Integer.parseInt(Money);
+            int day = Integer.parseInt(Day);
+            System.out.println("Exp: " + exp);
+            System.out.println("Money: " + money);
+            System.out.println("Day: " + day);
         }
             reader.close();
         } catch (Exception e) {}
