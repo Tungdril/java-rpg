@@ -147,25 +147,3 @@ static double difficulty;
     }    
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
