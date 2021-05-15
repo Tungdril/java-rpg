@@ -21,21 +21,25 @@ public static void main(){
                             "1. Buy Equipment\n"+
                             "2. Buy a Healing Potion (20 G)\n"+
                             "3. Leave\n");
-        int Talk = vendor.nextInt();
+        int Talk = vendor.nextInt()+1;
 
         switch (Talk){
             case 1:
-                System.out.println("A new Sword or a new Armor?\n1. Sword (200 G)\n2. Armor ()");
-                int upgrades = vendor.nextInt();
+                System.out.println("This cool Sword or this shiny Armor?\n1. Sword (200 G)\n2. Armor (300 G)");
+                int upgrades = vendor.nextInt()+1;
                 switch (upgrades){
                     case 1:
+                    if (money>=200){
+                        System.out.println("You bought a cool sword!\nHopefully it's as useful as it's cool looking!");
+                    }
                     case 2:
+
                 }
                 break;
             case 2:
             if(money>=20){
                 int heal = (int) (Math.random()*3+1);
-                System.out.println("You bought the potion! \nAnd directly drank it. How wasteful.\nYou heal " + heal + "HP.");
+                System.out.println("You bought the potion! \nAnd directly drank it. How wasteful.\nYou gain " + heal + "HP.");
             } else                      {System.out.println("You don't have enough G.");}
                 money=money-20;
                 break;
