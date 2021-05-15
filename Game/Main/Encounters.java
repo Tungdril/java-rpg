@@ -190,6 +190,7 @@ static double difficulty;
         playerHealth = restingHealth+playerHealth;
         System.out.println("You find your way back to the surface and walk back home to have a rest.\nThe next day you walk right back into the cave.");
         System.out.println("You regenerated "+restingHealth+" health!");
+        Game.decide();
     }
 
     

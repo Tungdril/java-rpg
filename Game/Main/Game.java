@@ -38,9 +38,10 @@ public class Game {
 
     public static void decide(){
         System.out.println("----------------------------------------------------------------------");
-        System.out.println( "|------------------------------------|\n"+
-                            "|Health: "Encounters.playerHealth"+             |\n"+
-                            "|------------------------------------|\n");
+        System.out.println(" ____________________________________ \n"+ 
+                           "|        Health: "+ Encounters.playerHealth+"                  |\n"+
+                           "|        Money: "+ money+            "                    |\n"+
+                           "|____________________________________|\n");
         System.out.println("Decide what to do next.\n"+
                            "1. Continue deeper into the cave\n"+
                            "2. Go back home to heal your wounds");
