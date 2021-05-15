@@ -10,19 +10,22 @@ static int playerDefense = 0;
 static int enemyDefense = 0;
 static int enemyDefenseChance;
 static int enemyDamageChance;
+static double difficulty;
 
     public static void fight(){
         int randomEnemy = (int) (Math.random()*100+1);
         if(randomEnemy <= 50){
             enemy = "Goblin";
             enemyHealth = 4;
+            difficulty = 0.85;
         } else if(randomEnemy >50 & randomEnemy <=80){
             enemy = "Skeleton";
             enemyHealth = 5;
+            difficulty = 1.0;
         } else{
             enemy = "Orc";
             enemyHealth = 6;
-
+            difficulty = 1.15;
         }
          System.out.println("You were just minding your own buisness, when suddenly a " + enemy + " appeared!");
         }
@@ -81,6 +84,7 @@ static int enemyDamageChance;
             }
             playerDefense=0;
             try {Thread.sleep(150);} catch(Exception e) {System.out.println("shit");}
+            //fight.close();
     }
 
     public static void nothing(){
@@ -128,7 +132,8 @@ static int enemyDamageChance;
         }
         if (enemyHealth<=0){
             System.out.println("You have murdered something!\nCongrats!");
-            System.out.println(Game.money);
+            int reward = (int) (Math.random()*(10 + 10) * difficulty);
+            System.out.println(Game.money + reward);
         }  
     }    
     
