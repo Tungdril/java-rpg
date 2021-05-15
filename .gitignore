@@ -1,6 +1,10 @@
 # Compiled class file
 *.class
 
+# VSCode #
+.vscode/
+.code-workspace
+
 # Log file
 *.log
 
