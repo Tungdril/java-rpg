@@ -5,6 +5,7 @@ static String enemy;
 static int enemyHealth;
 static int playerHealth = 6;
 static int playerDamage;
+static int sword;
 static int enemyDamage = 1;
 static int playerDefense = 0;
 static int enemyDefense = 0;
@@ -32,7 +33,7 @@ static double difficulty;
 
     public static void combat(){
         try {Thread.sleep(150);} catch(Exception e) {System.out.println("shit");}
-        int playerDamage = (int) (Math.random()*2+1); // Player damage is 1-2 HP 
+        int playerDamage = (int) (Math.random()*2+1+sword); // Player damage is 1-2 HP 
 
         try {
         Scanner fight = new Scanner(System.in);       
