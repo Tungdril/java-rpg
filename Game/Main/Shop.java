@@ -93,6 +93,7 @@ public static void main(String[] args){
                                 "|         You leave the shop.        |\n"+
                                 "|____________________________________|\n");
             ka ++;
+            Game.decide();
                 break;
         } ka=0;
     }        

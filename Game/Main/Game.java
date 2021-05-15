@@ -1,12 +1,11 @@
 import java.util.Scanner;
 public class Game {
      
-    static int day = 1; //Current day, not implemented yet
+    static int day = 1; 
     static String Exp;
     static String Money;
     static String Day;
     static String userName;
-    // exp, money, day only defined for test reasons
     static int exp;
     static int money;
     static int healthPotion;
@@ -39,6 +38,9 @@ public class Game {
 
     public static void decide(){
         System.out.println("----------------------------------------------------------------------");
+        System.out.println( "|------------------------------------|\n"+
+                            "|Health: "Encounters.playerHealth"+             |\n"+
+                            "|------------------------------------|\n");
         System.out.println("Decide what to do next.\n"+
                            "1. Continue deeper into the cave\n"+
                            "2. Go back home to heal your wounds");
@@ -49,7 +51,7 @@ public class Game {
                 explore();
             break;
             case 2:
-
+                Encounters.home();
             break;
         }  
     }

@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import javax.swing.plaf.basic.BasicBorders.RadioButtonBorder;
 public class Encounters {
 
 static String enemy;
@@ -107,14 +109,7 @@ static double difficulty;
             System.out.println("Endless rock and stone surrounds you. You feel the weight of the earth above you.\nYou're starting to wonder if you'll find your way out again...");
             break;
         }
-
-
-
-
-
-            
-        }
-    }
+    } 
 
     //creates small, medium, large loot, by multiplying with lootSize
     public static void loot(){ 
@@ -188,5 +183,14 @@ static double difficulty;
             Game.decide(); //calls decide to let the player make the next move              
         }  
     }    
+
+    //home, heals player, and returns to decide()
+    public static void home(){
+        int restingHealth = (int) (Math.random()*3);
+        playerHealth = restingHealth+playerHealth;
+        System.out.println("You find your way back to the surface and walk back home to have a rest.\nThe next day you walk right back into the cave.");
+        System.out.println("You regenerated "+restingHealth+" health!");
+    }
+
     
 }
