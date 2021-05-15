@@ -19,16 +19,19 @@ public static void main(String[] args){
         Scanner vendor = new Scanner(System.in);
         int ka = 0;
         boolean sop = ka==0 ;
+        System.out.print(   " ____________________________________ \n"+  
+                            "|      You have entered the Shop.    |\n"+
+                            "|____________________________________|\n");
         while (sop) {
-        System.out.print(   "--------------------------\n"+
-                            "You have entered the Shop.\n"+
-                            "--------------------------\n"+
-                            "What are you buying? says the shopkeeper.\n"+
-                            "You currently have " + money + "G on you.\n"+
-                            "You choose to:\n"+
-                            "1. Buy Equipment\n"+
-                            "2. Buy a Healing Potion (20 G)\n"+
-                            "3. Leave\n");
+        System.out.print(   "|       \"What are you buying?\"       |\n"+ 
+                            "|    says the dwarven shopkeeper     |\n"+
+                            "|  You currently have " + money + "G.         |\n"+
+                            "|------------------------------------|\n"+
+                            "|           You choose to:           |\n"+
+                            "|1. Buy Equipment                    |\n"+
+                            "|2. Buy a Healing Potion (20 G)      |\n"+
+                            "|3. Leave                            |\n"+
+                            "|____________________________________|");
         int Talk = vendor.nextInt();
 
         switch (Talk){
@@ -37,8 +40,13 @@ public static void main(String[] args){
                 int upgrades = vendor.nextInt();
                 switch (upgrades){
                     case 1:
-                    if (swordEquip==1) {System.out.println("You have already bought that Weapon.");}  
-                    else if (money<200) {System.out.println("You don't have enough money to buy this cool Sword.");}
+                    if (swordEquip==1) {System.out.println( "|------------------------------------|\n"+
+                                                            "|You have already bought that Weapon.|\n"+
+                                                            "|------------------------------------|\n");}  
+                    else if (money<200) {System.out.println("|------------------------------------|\n"+
+                                                            "| You don't have enough money to buy |\n"+
+                                                            "|         this cool Sword.           |\n"+ 
+                                                            "|------------------------------------|\n");}
                     else {System.out.println("You bought a cool sword!\nHopefully it's as useful as it's cool looking!");
                     sword=sword+2;
                     money=money-200;
