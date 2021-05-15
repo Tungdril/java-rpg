@@ -30,7 +30,10 @@ public class Game {
         switch (exploreEvent)
 		{
 			case 1:
-				Encounters.fight(); //Starts fight encounter 
+                Encounters.fight();
+                Encounters.combat();
+                Encounters.healthCalc();
+				 //Starts fight encounter                 
                 day++;
 				break;
 			case 2:
