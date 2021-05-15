@@ -9,7 +9,11 @@ static String Exp;
 static String Money;
 static String Day;
 static String userName;
-
+// exp, money, day only defined for test reasons
+static int exp=200;
+static int money=2000;
+static int day=5;
+//
 public static void main(String[] args) {
     userName = "John"; //set userName to the name of the player
     createFile();
@@ -40,7 +44,10 @@ public static String getSavePath(){
 public static void writingPain(){
     try{
     FileWriter writingSave = new FileWriter("res/" + userName + ".txt");
-    writingSave.write("1\n2\n3");
+    String Exp = Integer.toString(exp);
+    String Money = Integer.toString(money);
+    String Day = Integer.toString(day);
+    writingSave.write(Exp +"\n"+ Money +"\n" + Day);
     writingSave.close();
     System.out.println("Cheeki");
     } catch(IOException e) {System.out.println("Breeki"); e.printStackTrace();}
