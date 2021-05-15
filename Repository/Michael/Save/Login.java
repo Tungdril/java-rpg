@@ -26,11 +26,12 @@ public static void main(String[] args) {
 public static void createFile() {
 
     File f = new File("res/" + userName + ".txt");
-    if (!f.exists())
+    if (!f.createNewFile();)
         try {
             f.createNewFile();
         } catch (IOException e) {
-            e.printStackTrace();
+            f.delete();
+            f.createNewFile();
         }
 
 }
