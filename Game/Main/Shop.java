@@ -4,7 +4,10 @@ import java.util.Scanner;
 public class Shop {
     static int money=20;
     static int sword;
-    
+    static int armor;
+    static boolean Sword = money >= 200 & sword==0;
+    static boolean Armor = money >= 300 & armor==0;
+
 public static void main(){ 
   shop();  
 }
@@ -21,16 +24,19 @@ public static void main(){
                             "1. Buy Equipment\n"+
                             "2. Buy a Healing Potion (20 G)\n"+
                             "3. Leave\n");
-        int Talk = vendor.nextInt()+1;
+        int Talk = vendor.nextInt();
 
         switch (Talk){
             case 1:
                 System.out.println("This cool Sword or this shiny Armor?\n1. Sword (200 G)\n2. Armor (300 G)");
-                int upgrades = vendor.nextInt()+1;
+                int upgrades = vendor.nextInt();
                 switch (upgrades){
                     case 1:
-                    if (money>=200){
+                    if (Sword) {
                         System.out.println("You bought a cool sword!\nHopefully it's as useful as it's cool looking!");
+                        sword=sword+2;
+                        money=money-200;
+                        break;
                     }
                     case 2:
 
