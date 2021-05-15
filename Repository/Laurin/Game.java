@@ -9,8 +9,6 @@ public class Game {
     static int exp=200;
     static int money=2000;
 
-
-
     public static void main(String[] args) {
 
         //Titlescreen
