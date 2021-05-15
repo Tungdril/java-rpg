@@ -95,18 +95,23 @@ static double difficulty;
         switch (nothing) {
             case 1:
             System.out.println("You walk aimlessly through the cave system.\nNothing interesting happens."); 
+            Game.decide();
             break;            
             case 2:
             System.out.println("You march deeper into the cave, sometimes changing directions here and there.\nBoring!");
+            Game.decide();
             break;            
             case 3:
             System.out.println("The caves seems to take no end at all.\nYou wander deeper and deeper with no events whatsoever.");
+            Game.decide();
             break;            
             case 4:
             System.out.println("Other than the constant dripping of water and the echo of your own steps,\nyou fail to notice anything significant.");
+            Game.decide();
             break;
             case 5:
             System.out.println("Endless rock and stone surrounds you. You feel the weight of the earth above you.\nYou're starting to wonder if you'll find your way out again...");
+            Game.decide();
             break;
         }
     } 
@@ -119,14 +124,20 @@ static double difficulty;
             case 1:
             System.out.println("You enter a small cave, the walls are overgrown with moss. To your right you can see a faint glimmering in the overgrowth.\n"+"Upon closer inspection it seems like a few coins were reflecting the light of your torch.\n"+
             "You find ["+ lootValue+"] G!");
+            Game.money= Game.money+lootValue;
+            Game.decide();
             break;
             case 2:
             System.out.println("Examining the new cave you just entered, you see a lifeless skeleton lying collapsed against the wall.\nYou approach the body and snatch it's wallet\n"+
             "It had ["+ lootValue+"] G in it!");
+            Game.money= Game.money+lootValue;
+            Game.decide();
             break;
             case 3:
             System.out.println("As you continue to walk deeper and deeper into the cave, you suddenly stumble over something.\n"+"You look down and discover that something is a half-buried treasure chest!\n"+
             "It is filled with ["+ lootValue+"] G!");
+            Game.money= Game.money+lootValue;
+            Game.decide();
             break;      
         }
         
@@ -176,10 +187,11 @@ static double difficulty;
         }
 
         if (enemyHealth<=0){                                        
+            System.out.println("----------------------------------------------------------------------");
             System.out.println("You have successfully beaten the "+enemy);      //winstate
             int reward = (int) (Math.random()*10 * difficulty + 10);
-            int loot = Game.money + reward;
-            System.out.println("You found [" + loot + "] G!");
+            System.out.println("You found [" + reward + "] G!");
+            Game.money= Game.money+reward;
             Game.decide(); //calls decide to let the player make the next move              
         }  
     }    

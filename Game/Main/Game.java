@@ -37,11 +37,13 @@ public class Game {
     }
 
     public static void decide(){
+        try {Thread.sleep(5000);} catch(Exception e) {System.out.println("shit");}
         System.out.println("----------------------------------------------------------------------");
-        System.out.println(" ____________________________________ \n"+ 
-                           "|        Health: "+ Encounters.playerHealth+"                  |\n"+
-                           "|        Money: "+ money+            "                    |\n"+
-                           "|____________________________________|\n");
+        System.out.println(" ____________________ \n"+ 
+                           "|                    |\n"+
+                           "      Health: "+ Encounters.playerHealth+"\n"+
+                           "      Money: "+ money+"\n"+
+                           "|____________________|\n");
         System.out.println("Decide what to do next.\n"+
                            "1. Continue deeper into the cave\n"+
                            "2. Go back home to heal your wounds");
