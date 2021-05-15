@@ -3,7 +3,7 @@
 
 # VSCode #
 .vscode/
-.code-workspace
+java-rpg.code-workspace
 
 # Log file
 *.log
