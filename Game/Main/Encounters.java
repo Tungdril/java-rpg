@@ -89,10 +89,35 @@ static double difficulty;
         } catch(Exception e){System.out.println("shit");}}
 
     public static void nothing(){
-        System.out.println("Nothing");
+        int nothing = (int) (Math.random()*5+1);
+        switch (nothing) {
+            case 1:
+            System.out.println("You walk aimlessly through the cave system.\nNothing interesting happens."); 
+            break;            
+            case 2:
+            System.out.println("You march deeper into the cave, sometimes changing directions here and there.\nBoring!");
+            break;            
+            case 3:
+            System.out.println("The caves seems to take no end at all.\nYou wander deeper and deeper with no events whatsoever.");
+            break;            
+            case 4:
+            System.out.println("Other than the constant dripping of water and the echo of your own steps,\nyou fail to notice anything significant.");
+            break;
+            case 5:
+            System.out.println("Endless rock and stone surrounds you. You feel the weight of the earth above you.\nYou're starting to wonder if you'll find your way out again...");
+            break;
+        }
+
+
+
+
+
+            
+        }
     }
 
-    public static void loot(){
+    //creates small, medium, large loot, by multiplying with lootSize
+    public static void loot(){ 
         int lootSize = (int) (Math.random()*3+1);
         int lootValue = (int) (Math.random()*10*lootSize+5);
         switch (lootSize) {
@@ -112,8 +137,8 @@ static double difficulty;
         
     }
 
-
-    public static void healthCalc() {
+    //loops combat until player or enemy is dead
+    public static void healthCalc() { 
         try {Thread.sleep(200);} catch(Exception e) {System.out.println("shit");}
         while(true) {
          combat();
@@ -124,22 +149,22 @@ static double difficulty;
             break;
             }
         }
-        if (playerHealth<=0){
-            Game.day ++;
+        if (playerHealth<=0){ //deathstate
+            Game.day ++; 
             System.out.println(
 "                                 _____  _____ \n"+
 "                                <     `/     | \n"+            
 "                                 >          ( \n"+
 "                                |   _     _  | \n"+            
 "                                |  |_) | |_) | \n"+
-"                                |  | \\ | |   | \n"+    //dont remove space here or it'll break        
+"                                |  | \\ | |   | \n"+    //don't remove space here or it'll break        
 "                                |            | \n"+
 "                 ______.______%_|            |_________________ \n"+            
 "               _/                                              | \n"+
-"              |                                                < \n"+    //replace with username        
+"              |                                                < \n"+        
 "              |_____.-._________              ____/|___________| \n"+
 "                                | * Day 0    | \n"+            
-"                                | + Day "+Game.day+"    | \n"+    //date should reflect current day
+"                                | + Day "+Game.day+"    | \n"+    
 "                                |            | \n"+            
 "                                |            | \n"+
 "                                |   _        < \n"+            
@@ -152,14 +177,15 @@ static double difficulty;
 "                    _.%%%%%%@@@@@@%%_/%__%@@%%@@@@@@@%%%%%% \n"
                  
             );
-            Game.day --;
+            Game.day --; //need this to undo the previous increment, which was used for the graphic only
         }
-        if (enemyHealth<=0){
-            System.out.println("You have successfully beaten the "+enemy);
+
+        if (enemyHealth<=0){                                        
+            System.out.println("You have successfully beaten the "+enemy);      //winstate
             int reward = (int) (Math.random()*10 * difficulty + 10);
             int loot = Game.money + reward;
             System.out.println("You found [" + loot + "] G!");
-            Game.decide();
+            Game.decide(); //calls decide to let the player make the next move              
         }  
     }    
     
