@@ -14,7 +14,7 @@ public class Test1Fight {
 
     public static void fightRound(){
     try {Thread.sleep(1500);} catch(Exception e) {System.out.println("shit");}
-    int playerDamage = (int) (Math.random()*2+1); // Player damage is 1-2 HP
+    int playerDamage = (int) (Math.random()*2+1); // Player damage is 1-2 HP 
     Scanner fight = new Scanner(System.in);
     System.out.println("\n\n\n\nWhat will you do?\n1. Attack\n2. Defend\n3. Check Health\n4. Flee");
     try {Thread.sleep(1500);} catch(Exception e) {System.out.println("shit");}
