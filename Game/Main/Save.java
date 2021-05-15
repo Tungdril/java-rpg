@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Save {
 //save system complete, only need a load system
 public static void main(String[] args) {
-    Game.userName = "John"; //set userName to the name of the player
+    //set userName to the name of the player
     createFile();
     System.out.print(getSavePath()+"\n");
     writingPain();
@@ -15,7 +15,7 @@ public static void main(String[] args) {
 
 public static void createFile() {
 
-    File f = new File("res/" + Game.userName + ".txt");
+    File f = new File("saves/" + Game.userName + ".txt");
        if(f.exists()){ 
         f.delete();
         try {f.createNewFile(); } catch(Exception e) {System.out.println("Something went wrong while Saving");} 
@@ -25,36 +25,44 @@ public static void createFile() {
 
 
 public static String getSavePath(){
-        return "res/" + Game.userName + ".txt";
+        return "saves/" + Game.userName + ".txt";
 
 
 }
 
 public static void writingPain(){
     try{
-    FileWriter writingSave = new FileWriter("res/" + Game.userName + ".txt");
+    FileWriter writingSave = new FileWriter("saves/" + Game.userName + ".txt");
     Game.Exp = Integer.toString(Game.exp);
     Game.Money = Integer.toString(Game.money);
     Game.Day = Integer.toString(Game.day);
-    writingSave.write(Game.Exp +"\n"+ Game.Money +"\n" + Game.Day);
+    Shop.ArmorEquip = Integer.toString(Shop.armorEquip);
+    Shop.SwordEquip = Integer.toString(Shop.swordEquip); 
+    writingSave.write(Game.Exp +"\n"+ Game.Money +"\n" + Game.Day+"\n"+ Shop.ArmorEquip + "\n" + Shop.SwordEquip);
     writingSave.close();
-    System.out.println("");
+    System.out.println("Saved");
     } catch(IOException e) {System.out.println("Breeki"); e.printStackTrace();}
 }
 public static void readingPain(){
     try {
-        File f = new File("res/" + Game.userName + ".txt");
+        File f = new File("saves/" + Game.userName + ".txt");
         Scanner reader = new Scanner(f);
         while (reader.hasNextLine()) {
             Game.Exp = reader.nextLine();
             Game.Money = reader.nextLine();
             Game.Day = reader.nextLine();
+            Shop.ArmorEquip = reader.nextLine();
+            Shop.SwordEquip = reader.nextLine();
             Game.exp = Integer.parseInt(Game.Exp);
             Game.money = Integer.parseInt(Game.Money);
             Game.day = Integer.parseInt(Game.Day);
+            Shop.armorEquip = Integer.parseInt(Shop.ArmorEquip);
+            Shop.swordEquip = Integer.parseInt(Shop.SwordEquip);
             System.out.println("Exp: " + Game.exp);
             System.out.println("Money: " + Game.money);
             System.out.println("Day: " + Game.day);
+            System.out.println("Armor " + Shop.armorEquip);
+            System.out.println("Sword: " + Shop.swordEquip);
         }
             reader.close();
         } catch (Exception e) {}
