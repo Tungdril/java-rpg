@@ -38,7 +38,7 @@ public static void writingPain(){
     Game.Day = Integer.toString(Game.day);
     writingSave.write(Game.Exp +"\n"+ Game.Money +"\n" + Game.Day);
     writingSave.close();
-    System.out.println("Cheeki");
+    System.out.println("");
     } catch(IOException e) {System.out.println("Breeki"); e.printStackTrace();}
 }
 public static void readingPain(){
