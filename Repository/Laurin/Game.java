@@ -28,7 +28,7 @@ public class Game {
             System.in.read();
         } catch(Exception e){}
 
-        int exploreEvent = (int) (Math.random()*2+1); //Generate encounter, 33.3% chance 
+        int exploreEvent = (int) (Math.random()*2+1); //Generate encounter, 50% chance 
 
         switch (exploreEvent)
 		{
