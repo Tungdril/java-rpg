@@ -7,7 +7,8 @@ public class Shop {
     static int armor;
     static int swordEquip;
     static int armorEquip;
-    
+    static String ArmorEquip;
+    static String SwordEquip;
 public static void main(String[] args){ 
     shop();  
 }
@@ -22,7 +23,7 @@ public static void main(String[] args){
         System.out.print(   " ____________________________________ \n"+
                             "|       \"What are you buying?\"       |\n"+ 
                             "|    says the dwarven shopkeeper     |\n"+
-                            "|  You currently have " + money + "G.         |\n"+
+                            "|  You currently have " + Game.money + "G.         |\n"+
                             "|------------------------------------|\n"+
                             "|           You choose to:           |\n"+
                             "|1. Buy Equipment                    |\n"+
@@ -86,7 +87,7 @@ public static void main(String[] args){
                                     "|____________________________________|\n");
             } else                      {System.out.println(" ____________________________________ \n"+
                                                             "|       You don't have enough G.     |\n"+
-                                                            "|____________________________________|\n"););}
+                                                            "|____________________________________|\n");}
                 Game.money=Game.money-20;
                 break;
             case 3:
