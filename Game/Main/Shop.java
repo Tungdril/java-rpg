@@ -3,9 +3,8 @@ import java.util.Scanner;
 
 //building a vendor
 public class Shop {
-    static int money=2000;
-    static int sword=0;
-    static int armor=0;
+    static int sword;
+    static int armor;
     static int swordEquip;
     static int armorEquip;
     
@@ -45,7 +44,7 @@ public static void main(String[] args){
                     if (swordEquip==1) {System.out.println( " ____________________________________ \n"+
                                                             "|You have already bought that Weapon.|\n"+
                                                             "|____________________________________|\n");}  
-                    else if (money<200) {System.out.println(" ____________________________________ \n"+
+                    else if (Game.money<200) {System.out.println(" ____________________________________ \n"+
                                                             "| You don't have enough money to buy |\n"+
                                                             "|         this cool Sword.           |\n"+ 
                                                             "|____________________________________|\n");}
@@ -55,14 +54,14 @@ public static void main(String[] args){
                                                             "|       as it's cool looking!        |\n"+
                                                             "|____________________________________|\n");
                     sword=sword+2;
-                    money=money-200;
+                    Game.money=Game.money-200;
                     swordEquip=1;}
                     break;
                     case 2:
                     if (armorEquip==1) {System.out.println( " ____________________________________ \n"+
                                                             "|You have already bought that Armor. |\n"+
                                                             "|____________________________________|\n");}  
-                    else if (money<300) {System.out.println(" ____________________________________ \n"+
+                    else if (Game.money<300) {System.out.println(" ____________________________________ \n"+
                                                             "| You don't have enough money to buy |\n"+
                                                             "|         this shiny Armor.          |\n"+ 
                                                             "|____________________________________|\n");}
@@ -72,13 +71,13 @@ public static void main(String[] args){
                                                             "|           as it's shiny!           |\n"+
                                                             "|____________________________________|\n");
                     armor=armor+2;
-                    money=money-300;
+                    Game.money=Game.money-300;
                     armorEquip=1;}
                     break;
                 }
                 break;
             case 2:
-            if(money>=20){
+            if(Game.money>=20){
                 int heal = (int) (Math.random()*3+1);
                 System.out.println( " ____________________________________ \n"+
                                     "|      You bought the potion!        |\n"+
@@ -88,7 +87,7 @@ public static void main(String[] args){
             } else                      {System.out.println(" ____________________________________ \n"+
                                                             "|       You don't have enough G.     |\n"+
                                                             "|____________________________________|\n"););}
-                money=money-20;
+                Game.money=Game.money-20;
                 break;
             case 3:
             System.out.println( " ____________________________________ \n"+
