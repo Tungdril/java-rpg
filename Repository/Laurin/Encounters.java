@@ -34,12 +34,13 @@ static double difficulty;
         try {Thread.sleep(150);} catch(Exception e) {System.out.println("shit");}
         int playerDamage = (int) (Math.random()*2+1); // Player damage is 1-2 HP 
 
+        try {
         Scanner fight = new Scanner(System.in);
-
+        fight.close();
         System.out.println("\n----------------------------------------------------------------------");
         System.out.println("\nWhat will you do?\n1. Attack\n2. Defend\n3. Check Health\n4. Flee");
 
-        try {Thread.sleep(150);} catch(Exception e) {System.out.println("shit");}
+        Thread.sleep(150);
         Integer fight2 = fight.nextInt();
             if (fight2==1){ //Attack
                 System.out.println("You attacked the Enemy!");
@@ -64,7 +65,7 @@ static double difficulty;
                 //int newplayerHealth = (playerHealth-playerHealth);
                 //playerHealth = newplayerHealth; 
             }
-            try {Thread.sleep(200);} catch(Exception e) {System.out.println("shit");}
+            Thread.sleep(200);
             enemyDamageChance = (int) (Math.random()*100+1);
             enemyDefenseChance = (int) (Math.random()*100+1 ) ;
             enemyDefense=0;
@@ -83,9 +84,11 @@ static double difficulty;
                 System.out.println("The Enemy attacked and missed.");
             }
             playerDefense=0;
-            try {Thread.sleep(150);} catch(Exception e) {System.out.println("shit");}
-            //fight.close();
-    }
+            Thread.sleep(150);
+
+        } catch(Exception e){System.out.println("shit");}}
+        
+        
 
     public static void nothing(){
         System.out.println("Nothing");
