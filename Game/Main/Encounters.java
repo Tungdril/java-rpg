@@ -27,7 +27,7 @@ static double difficulty;
             enemyHealth = 8;
             difficulty = 1.15;
         }
-         System.out.println("You were just minding your own buisness, when suddenly a " + enemy + " appeared!");
+         System.out.println("You were just minding your own buisness, when suddenly a " + enemy + " appeares!");
         }
 
     public static void combat(){
