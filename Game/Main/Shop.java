@@ -67,6 +67,7 @@ public static void main(String[] args){
             case 3:
             System.out.println("You leave the shop.");
             ka ++;
+            Game.decide();
                 break;
         } ka=0;
     }        
