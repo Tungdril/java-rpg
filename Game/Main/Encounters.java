@@ -27,7 +27,7 @@ static double difficulty;
             enemyHealth = 8;
             difficulty = 1.15;
         }
-         System.out.println("You were just minding your own buisness, when suddenly a " + enemy + " appeares!");
+         System.out.println("As you are marching deeper into the cave system, you are suprised by an angry " + enemy+"!");
         }
 
     public static void combat(){
@@ -139,10 +139,11 @@ static double difficulty;
             Game.day --;
         }
         if (enemyHealth<=0){
-            System.out.println("You have murdered something!\nCongrats!");
+            System.out.println("You have successfully beaten the "+enemy);
             int reward = (int) (Math.random()*10 * difficulty + 10);
             int loot = Game.money + reward;
-            System.out.println("You found " + loot + " G!");
+            System.out.println("You found [" + loot + "] G!");
+            Game.decide();
         }  
     }    
     

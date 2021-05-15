@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Game {
      
     static int day = 1; //Current day, not implemented yet
@@ -34,6 +35,23 @@ public class Game {
         explore();
 
         System.out.println("Day: "+ day);    
+    }
+
+    public static void decide(){
+        System.out.println("----------------------------------------------------------------------");
+        System.out.println("Decide what to do next.\n"+
+                           "1. Continue deeper into the cave\n"+
+                           "2. Go back home to heal your wounds");
+        Scanner choice = new Scanner(System.in);
+        int option = choice.nextInt();
+        switch (option) {
+            case 1:
+                explore();
+            break;
+            case 2:
+
+            break;
+        }  
     }
 
     public static void explore(){
