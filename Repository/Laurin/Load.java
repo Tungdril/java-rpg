@@ -22,4 +22,6 @@ public class Load { //just for loading a savefile
                 reader.close();
             } catch (Exception e) {}
     
-}
+
+        }
+    }
