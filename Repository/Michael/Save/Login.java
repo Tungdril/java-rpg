@@ -14,7 +14,7 @@ public class Login {
 //static int day=5;
 //
 public static void main(String[] args) {
-    Game.userName = John; //set userName to the name of the player
+    Game.userName = "John"; //set userName to the name of the player
     createFile();
     System.out.print(getSavePath()+"\n");
     writingPain();
