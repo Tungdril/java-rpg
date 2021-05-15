@@ -97,16 +97,16 @@ static double difficulty;
         int lootValue = (int) (Math.random()*10*lootSize+5);
         switch (lootSize) {
             case 1:
-            System.out.println("You enter a small cave, the walls are overgrown with moss. To your right you can see a faint glimmering in the overgrowth.\n"+"Upon closer inspection it seems like a few coins were reflecting th light of your torch.\n"+
+            System.out.println("You enter a small cave, the walls are overgrown with moss. To your right you can see a faint glimmering in the overgrowth.\n"+"Upon closer inspection it seems like a few coins were reflecting the light of your torch.\n"+
             "You find ["+ lootValue+"] G!");
             break;
             case 2:
-            System.out.println("text\n"+
-            "You find ["+ lootValue+"] G!");
+            System.out.println("Examining the new cave you just entered, you see a lifeless skeleton lying collapsed against the wall.\nYou approach the body and snatch it's wallet\n"+
+            "It had ["+ lootValue+"] G in it!");
             break;
             case 3:
-            System.out.println("As you continue to walk deeper and deeper into the cave, you suddenly stumble over something.\n"+"You look down and discover that something is a half-buried tresure chest!\n"+
-            "You discover that it is filled with ["+ lootValue+"] G!");
+            System.out.println("As you continue to walk deeper and deeper into the cave, you suddenly stumble over something.\n"+"You look down and discover that something is a half-buried treasure chest!\n"+
+            "It is filled with ["+ lootValue+"] G!");
             break;      
         }
         
