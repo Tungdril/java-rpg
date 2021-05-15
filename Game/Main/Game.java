@@ -1,6 +1,6 @@
 public class Game {
      
-    static int day = 0; //Current day, not implemented yet
+    static int day = 1; //Current day, not implemented yet
     static String Exp;
     static String Money;
     static String Day;
@@ -8,6 +8,7 @@ public class Game {
     // exp, money, day only defined for test reasons
     static int exp;
     static int money;
+    static int healthPotion;
 
     public static void main(String[] args) {
 
@@ -28,30 +29,45 @@ public class Game {
             System.in.read();
         } catch(Exception e){}
 
-        int exploreEvent = (int) (Math.random()*2+1); //Generate encounter, 50% chance 
+        explore();
 
-        switch (exploreEvent)
-		{
-			case 1:
-                Encounters.fight();
-                Encounters.combat();
-                Encounters.healthCalc();
-				 //Starts fight encounter                 
-                day++;
-				break;
-			case 2:
-                Encounters.nothing(); //not sure what exactly it should do
-                day++;
-				break;
-        }
-
-        System.out.println("Day: "+ day); 
-
-
-        //Encounters encounters = new Encounters();
-        //System.out.print(Encounters.fight());        
+        System.out.println("Day: "+ day);    
     }
 
+    public static void explore(){
+    int exploreEvent = (int) (Math.random()*100+1); //Generate encounter 
+       if(exploreEvent<=40){ //Starts fight encounter 40%
+        Encounters.fight();
+        Encounters.combat();
+        Encounters.healthCalc();              
+        day++;
+       } else if(exploreEvent >40 && exploreEvent <=70){
+           Shop.main;
+           day++;
+       } else if(exploreEvent>70 && exploreEvent <= 90){
+           Encounters.nothing();
+           day++;
+       } else{
+           Encounters.loot;
+           day++;
+       }
+    
+    
+    
+    
+    
+    switch (exploreEvent)
+    {
+        case 1:
+            
+            break;
+        case 2:
+            Encounters.nothing(); //not sure what exactly it should do
+            day++;
+            break;
+    }  
+    }
+   
 
 
 }
