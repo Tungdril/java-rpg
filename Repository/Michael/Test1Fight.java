@@ -19,25 +19,25 @@ public class Test1Fight {
     System.out.println("\n\n\n\nWhat will you do?\n1. Attack\n2. Defend\n3. Check Health\n4. Flee");
     try {Thread.sleep(1500);} catch(Exception e) {System.out.println("shit");}
     Integer fight2 = fight.nextInt();
-        if (fight2==1){
+        if (fight2==1){ //Attack
             System.out.println("You attacked the enemy!");
             int newenemyHealth = (enemyHealth - playerDamage);
             System.out.println("You did " + (enemyHealth-newenemyHealth) + " Damage."); //
             enemyHealth = newenemyHealth;
         }
-        else if (fight2==2){
+        else if (fight2==2){ //Defend
             System.out.println("You defend against the next Enemy attack.");
             playerDefense++;
         }
-        else if (fight2==3){
+        else if (fight2==3){ //Check Health
             System.out.println("The Enemy has still " + enemyHealth + " HP left");
             System.out.println("You still have " + playerHealth + " HP left");
         }
-        else if (fight2==4){
+        else if (fight2==4){ //Flee
             System.out.println("You tried to flee! But to no avail");
 
         }
-        else {
+        else { //if the Number isn't 1-4
             System.out.println("wrong");
             int newplayerHealth = (playerHealth-playerHealth);
             playerHealth = newplayerHealth; 
