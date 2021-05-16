@@ -10,7 +10,10 @@ public class Game {
     public static void main(String[] args) {
         try{
         createSaveFolder.createFold(); //creates a \JavaRPG\saves directory Folder at C:\"User"\Documents\ 
-        Exp.main();
+        Exp.main(); //initilieze Exp
+        Death.stopMusic=0; //allows bgm
+        AudioManager.playSound(); //start bgm
+
         //Titlescreen
         System.out.println("                                                                                    ");    Thread.sleep(100);  //to make it look a cooler
         System.out.println("      O))                                      O)))))))     O)))))))      O))))     ");    Thread.sleep(100);

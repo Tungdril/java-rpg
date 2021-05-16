@@ -1,8 +1,12 @@
 import java.util.Scanner;
 public class Death { //made a file for it alone to make it easier to check for a deathstate before and after battle
+    
+    public static int stopMusic;
+
     public static void death(){
         if (Enemy.playerHealth<=0){                    //deathstate 
             try{Thread.sleep(1750);}catch(Exception e){}
+            stopMusic = 1; //stops bgm   
             System.out.println("                                 You have died"); try{Thread.sleep(2000);}catch(Exception e){System.out.println("HOW?\n(exception in Death.java)");};
                 System.out.println("                                 _____  _____ ");                                     try{Thread.sleep(750);}catch(Exception e){} //to make it beautiful
                 System.out.println("                                <     `/     | ");                                    try{Thread.sleep(750);}catch(Exception e){}
@@ -32,7 +36,8 @@ public class Death { //made a file for it alone to make it easier to check for a
             Scanner d = new Scanner(System.in); //d stands for death
             int postMortem = d.nextInt();
             if(postMortem==1){
-            Game.main(null);}  //goes back to the Titlescreen
+            Game.main(null);} //goes back to the Titlescreen
+            
             else{System.exit(0);} //exits java
 
     }
