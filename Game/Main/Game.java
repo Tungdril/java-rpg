@@ -38,6 +38,7 @@ public class Game {
         switch(savefile){
             case 1: Save.creatingSave(); break; 
             case 2: Load.readingPain2(); break;
+            default: System.out.print("Please use 1 or 2 the next time"); break;
         } 
         Name.close();
 
