@@ -1,55 +1,29 @@
 import java.util.Scanner;
 public class Encounters {
 
-static String enemy;
-static int enemyHealth;
-static int playerHealth = 8 + Exp.expScaling;
-static String PlayerHealth;
-static int playerDamage;
-static int enemyDamage = (int) (Math.random()*2+1); //TODO @Tungdril enemy always does 2HP damage
-static int playerDefense = 0 + Shop.armor;
-static int enemyDefense = 0;
-static int enemyDefenseChance;
-static int enemyDamageChance;
-static double difficulty;
-static int fleeChance;
-
     public static void fight(){
-        int randomEnemy = (int) (Math.random()*100+1);
-        if(randomEnemy <= 50){
-            enemy = "Goblin";
-            enemyHealth = 4 + Exp.expScaling;
-            difficulty = 0.85;
-        } else if(randomEnemy >50 & randomEnemy <=80){
-            enemy = "Skeleton";
-            enemyHealth = 6 + Exp.expScaling;
-            difficulty = 1.0;
-        } else{
-            enemy = "Orc";
-            enemyHealth = 8 + Exp.expScaling;
-            difficulty = 1.15;
-        }
+        Enemy.main(); //Gets all the enemy info
         System.out.println("\n----------------------------------------------------------------------");
         int randomMsg = (int) (Math.random()*5+1);
         switch (randomMsg) {
             case 1:
-            System.out.println("As you are marching deeper into the cave system, you are suprised by an angry" + enemy+"!"); 
+            System.out.println("As you are marching deeper into the cave system, you are suprised by an angry" + Enemy.enemy+"!"); 
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
             break;            
             case 2:
-            System.out.println("You see some movement behind a rock formation. You carefully step closer, only to be surprised by a "+enemy+" !");
+            System.out.println("You see some movement behind a rock formation. You carefully step closer, only to be surprised by a "+Enemy.enemy+" !");
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
             break;            
             case 3:
-            System.out.println("You squeeze your body through a narrow crack, but once you get to the other side, you come face to face with a "+enemy+" !");
+            System.out.println("You squeeze your body through a narrow crack, but once you get to the other side, you come face to face with a "+Enemy.enemy+" !");
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
             break;            
             case 4:
-            System.out.println("You were just examining some shiny rocks, when you hear movement behind you. It's a "+enemy+" !");
+            System.out.println("You were just examining some shiny rocks, when you hear movement behind you. It's a "+Enemy.enemy+" !");
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
             break;
             case 5:
-            System.out.println("As you enter a new cave, you are ambushed by a"+enemy+" !");
+            System.out.println("As you enter a new cave, you are ambushed by a"+Enemy.enemy+" !");
             try {Thread.sleep(3500);} catch(Exception e) {System.out.println("shit");}
             break;
         }
@@ -69,52 +43,52 @@ static int fleeChance;
         Integer fight2 = fight.nextInt();
             if (fight2==1){ //Attack
                 System.out.println("You attacked the enemy!");
-                int newenemyHealth = (enemyHealth - playerDamage);
-                System.out.println("You did " + (enemyHealth-newenemyHealth) + " damage."); 
-                enemyHealth = newenemyHealth;
+                int newenemyHealth = (Enemy.enemyHealth - playerDamage);
+                System.out.println("You did " + (Enemy.enemyHealth-newenemyHealth) + " damage."); 
+                Enemy.enemyHealth = newenemyHealth;
             }
             else if (fight2==2){ //Defend
                 System.out.println("You defend against the incoming attack.");
-                playerDefense++;
+                Enemy.playerDefense++;
             }
             else if (fight2==3){ //Check Health
                 System.out.println("----------------------------------------------------------------------");
-                System.out.println("The enemy has still " + enemyHealth + " HP left");
-                System.out.println("You still have " + playerHealth + " HP left");
+                System.out.println("The enemy has still " + Enemy.enemyHealth + " HP left");
+                System.out.println("You still have " + Enemy.playerHealth + " HP left");
                 System.out.println("----------------------------------------------------------------------");
             }
             else if (fight2==4){ //Flee
                 System.out.println("You tried to flee.");
-                fleeChance = (int) (Math.random()*100+1);
-                if(fleeChance<= 40){    // 40% Chance to flee from combat, the player will then be put in decision
+                int fleeChance = (int) (Math.random()*100+1+Game.day); //the higher day is, the harder it is to flee
+                if(fleeChance<= 30){    // 30% Chance to flee from combat, the player will then be put in decision
                     System.out.println("And succeeded at that!");
                     Game.decide();
-                } else {System.out.println("But to no avail!");} // 60% chance to not flee, the player used his turn and gained nothing
+                } else {System.out.println("But to no avail!");} // 70% chance to not flee, the player used his turn and gained nothing
             }
             else { //if the Number isn't 1-4
-                System.out.println("That's not an option!");
-                playerHealth = (playerHealth-playerHealth); //if the player is to stupid to use 1,2,3 or 4 he will be disposed immediatly
+                System.out.println("Really... We gave pretty clear instructions. Dissapointing.");
+                Enemy.playerHealth = (Enemy.playerHealth-Enemy.playerHealth); //if the player is to stupid to use 1,2,3 or 4 he will be disposed immediatly
                 Death.death(); 
             }
             Thread.sleep(200);
-            enemyDamageChance = (int) (Math.random()*100+1);
-            enemyDefenseChance = (int) (Math.random()*100+1 ) ;
-            enemyDefense=0;
+            Enemy.enemyDamageChance = (int) (Math.random()*100+1);
+            Enemy.enemyDefenseChance = (int) (Math.random()*100+1 ) ;
+            Enemy.enemyDefense=0;
             
-            if(enemyDefenseChance<16){                              //15% Chance for enemy to defend
+            if(Enemy.enemyDefenseChance<16){                              //15% Chance for enemy to defend
                 System.out.println("The enemy defends!");
-                enemyDefense++;
+                Enemy.enemyDefense++;
             } 
-            else if(enemyDamageChance>1) {                         // If the Enemy doesn't defend he has a 1% Chance to miss his attack
+            else if(Enemy.enemyDamageChance>10) {                         // If the Enemy doesn't defend he has a 10% Chance to miss his attack
                 System.out.println("The enemy attacks!");
-                int newenemyDamage = enemyDamage-playerDefense;
-                int newplayerHealth = playerHealth-newenemyDamage;
-                playerHealth = newplayerHealth;
+                int newenemyDamage = Enemy.enemyDamage-Enemy.playerDefense;
+                int newplayerHealth = Enemy.playerHealth-newenemyDamage;
+                Enemy.playerHealth = newplayerHealth;
                 System.out.println("The enemy did " + newenemyDamage + " HP damage!");
             } else {
                 System.out.println("The enemy attacked and missed.");
             }
-            playerDefense=0;
+            Enemy.playerDefense=0;
             Thread.sleep(150);
         } catch(Exception e){System.out.println("use Numbers");}}
 
@@ -153,7 +127,7 @@ static int fleeChance;
     //creates small, medium and large loot, by multiplying value with lootSize
     public static void loot(){ 
         int lootSize = (int) (Math.random()*3+1);
-        int lootValue = (int) (Math.random()*10*lootSize+5);
+        int lootValue = (int) (Math.random()*10*lootSize+2);
         switch (lootSize) {
             case 1:
             System.out.println("You enter a small cave, the walls are overgrown with moss. To your right you can see a faint glimmering in the overgrowth.\n"+"Upon closer inspection it seems like a few coins were reflecting the light of your torch.\n"+
@@ -185,24 +159,25 @@ static int fleeChance;
         try {Thread.sleep(200);} catch(Exception e) {System.out.println("shit");}
         while(true) {
          combat();
-            if (playerHealth<=0){
+            if (Enemy.playerHealth<=0){
             break;
             }
-            if (enemyHealth<=0){
+            if (Enemy.enemyHealth<=0){
             break;
             }
         }
-        Death.death(); //death state
+        //deathstate
+        Death.death(); 
         
-
-        if (enemyHealth<=0){                                        
+        //winstate
+        if (Enemy.enemyHealth<=0){                                        
             System.out.println("----------------------------------------------------------------------");
-            System.out.println("You have successfully beaten the "+enemy);      //winstate
+            System.out.println("You have successfully beaten the "+Enemy.enemy);      
             int bonus = Exp.expScaling*2;
-            int reward = (int) (Math.random()*10 * difficulty + 10 + bonus);           
+            int reward = (int) (Math.random()*10 * Enemy.difficulty + 10 + bonus);           
             System.out.println("You found [" + reward + "] G!");
             Game.money= Game.money+reward;
-            double expGain = Exp.exp + 5 * difficulty;  //adds exp based on encounter difficulty
+            double expGain = Exp.exp + 5 * Enemy.difficulty;  //adds exp based on encounter difficulty
             Exp.exp = + expGain;
             System.out.println("You gain [" + (int)expGain + "] EXP!");
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
@@ -213,7 +188,7 @@ static int fleeChance;
     //heals player, and returns to decide()
     public static void home(){
         int restingHealth = (int) (Math.random()*3+1);
-        playerHealth = restingHealth+playerHealth;
+        Enemy.playerHealth = restingHealth+Enemy.playerHealth;
         System.out.println("You find your way back to the surface and walk back home to have a rest.\nThe next day you walk right back into the cave.");
         System.out.println("You regenerated "+restingHealth+" health!");
         try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}

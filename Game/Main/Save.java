@@ -44,8 +44,8 @@ public static void writingPain(){
     Game.Day = Integer.toString(Game.day);
     Shop.ArmorEquip = Integer.toString(Shop.armorEquip);
     Shop.SwordEquip = Integer.toString(Shop.swordEquip); 
-    Encounters.PlayerHealth = Integer.toString(Encounters.playerHealth); 
-    writingSave.write(Exp.Exp +"\n"+ Game.Money +"\n" + Game.Day+"\n"+ Shop.ArmorEquip + "\n" + Shop.SwordEquip +"\n"+ Encounters.PlayerHealth);
+    Enemy.PlayerHealth = Integer.toString(Enemy.playerHealth); 
+    writingSave.write(Exp.Exp +"\n"+ Game.Money +"\n" + Game.Day+"\n"+ Shop.ArmorEquip + "\n" + Shop.SwordEquip +"\n"+ Enemy.PlayerHealth);
     writingSave.close();
     System.out.println("//////Saving\\\\\\\\\\\\");
     } catch(IOException e) {System.out.println("Breeki"); e.printStackTrace();}
@@ -60,13 +60,13 @@ public static void readingPain(){
             Game.Day = reader.nextLine();
             Shop.ArmorEquip = reader.nextLine();
             Shop.SwordEquip = reader.nextLine();
-            Encounters.PlayerHealth = reader.nextLine();
+            Enemy.PlayerHealth = reader.nextLine();
             Exp.exp = Double.parseDouble(Exp.Exp);
             Game.money = Integer.parseInt(Game.Money);
             Game.day = Integer.parseInt(Game.Day);
             Shop.armorEquip = Integer.parseInt(Shop.ArmorEquip);
             Shop.swordEquip = Integer.parseInt(Shop.SwordEquip);
-            Encounters.playerHealth = Integer.parseInt(Encounters.PlayerHealth);
+            Enemy.playerHealth = Integer.parseInt(Enemy.PlayerHealth);
            // System.out.println("Exp: " + Exp.exp);
            // System.out.println("Money: " + Game.money);
            // System.out.println("Day: " + Game.day);

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Death { //made a file for it alone to make it easier to check for a deathstate before and after battle
     public static void death(){
-        if (Encounters.playerHealth<=0){                    //deathstate 
+        if (Enemy.playerHealth<=0){                    //deathstate 
             try{Thread.sleep(1750);}catch(Exception e){}
             System.out.println("                                 You have died"); try{Thread.sleep(2000);}catch(Exception e){System.out.println("HOW?\n(exception in Death.java)");};
                 System.out.println("                                 _____  _____ ");                                     try{Thread.sleep(750);}catch(Exception e){} //to make it beautiful
