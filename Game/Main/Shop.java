@@ -71,18 +71,20 @@ public static void main(String[] args){
                 int upgrades = vendor.nextInt();
                 switch (upgrades){
                     case 1:
-                    if (swordEquip==1) {System.out.println( " ____________________________________ \n"+
-                                                            "|    \"You already have the Sword.\"   |\n"+
-                                                            "|____________________________________|\n");}  
-                    else if (Game.money<200) {System.out.println(" ____________________________________ \n"+
-                                                            "| You don't have enough money to buy |\n"+
-                                                            "|         this cool Sword.           |\n"+ 
-                                                            "|____________________________________|\n");}
-                    else {System.out.println(               " ____________________________________ \n"+
-                                                            "|     You bought the cool Sword!     |\n"+
-                                                            "|     Hopefully it's as useful       |\n"+
-                                                            "|       as it's cool looking!        |\n"+
-                                                            "|____________________________________|\n");
+                    if (swordEquip==1)  {System.out.println(  " ____________________________________ ");                 try{Thread.sleep(100);}catch(Exception e){}
+                                         System.out.println(  "|    \"You already have the Sword.\"   |");               try{Thread.sleep(100);}catch(Exception e){}
+                                         System.out.println(  "|____________________________________|");                 try{Thread.sleep(100);}catch(Exception e){}
+                                        }
+                    else if (Game.money<200){System.out.println(   " ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
+                                             System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
+                                             System.out.println(   "|         this cool Sword.           |");          try{Thread.sleep(100);}catch(Exception e){}
+                                             System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
+                                            }
+                    else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|     You bought the cool Sword!     |");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|     Hopefully it's as useful       |");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|       as it's cool looking!        |");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|____________________________________|");                  try{Thread.sleep(100);}catch(Exception e){}
                     sword=2;
                     Game.money=Game.money-200;
                     swordEquip=1;}
