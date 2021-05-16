@@ -73,13 +73,151 @@ public static void main(String[] args){
 
         public static void equipShop(){
             Scanner vendor = new Scanner(System.in);
-            if(){
+            boolean Armor = armor==2;
+            boolean Sword = sword==2;            
+            boolean ArmorSword = Armor & Sword;
 
+            if(ArmorSword){                         //if the Sword and the Shield has been bought the player will be put backk in shop
+            System.out.println(    " ______________________________________");                      try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|--------------------------------------| ");                    try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| \"There's no Equipment to be bought.\" |");                   try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| 1. Leave                             |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
+            vendor.next();
+            shop();
             }
-            else if(){
-
+            else if(Armor){                 //if only the Shield has been bought the sword can only be bought  
+                try{
+                System.out.println(    " ______________________________________");                      try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            .-.       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                           {{#}}      |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            888       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                       _    )8(    _  |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                      (O)__/ W \\__(O) |");                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                       `~\"-=):(=-\"~`  |");                   try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |C|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |O|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |'|       |");                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |.|       |");                   try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |O|       |");                   try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |O|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |'|       |");                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |.|       |");                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |L|       |");                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |'|       |");                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            \\ /       |");                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|--------------------------------------| ");                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|  \"Are you here to buy this Sword?\" |");                   try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "| 1. Sword (200 G)                     |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "| 2. No                                |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
+                int swordBuy = vendor.nextInt();
+                switch (swordBuy){
+                    case 1:
+                    if (Game.money<200)     {System.out.println(   " ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
+                                             System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
+                                             System.out.println(   "|         this cool Sword.           |");          try{Thread.sleep(100);}catch(Exception e){}
+                                             System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
+                                            shop();}
+                    else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|     You bought the cool Sword!     |");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|     Hopefully it's as useful       |");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|       as it's cool looking!        |");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|____________________________________|");                  try{Thread.sleep(100);}catch(Exception e){}
+                    sword=2;
+                    Game.money=Game.money-200;
+                    swordEquip=1;
+                    shop();}
+                    default:                
+                    shop();
+                }
+            } catch (Exception e){shop();} // just to be sure that there's no Exception that crashes the game
+        }
+            else if (Sword) {                  ////if only the Shield has been bought the sword can only be bought
+            try{
+            System.out.println(    " ______________________________________");                      try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|  ____________________                |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| |<><><>  |  |  <><><>|               |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| |<>      |  |      <>|               |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| |<>      |  |      <>|               |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| |<>   .--------.   <>|               |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| |     |   ()   |     |               |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| |_____| (O\\/O) |_____|               |");                    try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| |     \\   /\\   /     |               |");                   try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| |------\\  \\/  /------|               |");                   try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| |       '.__.'       |               |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| |        |  |        |               |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| :        |  |        :               |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|  \\       |  |       /                |");                    try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|   \\<>    |  |    <>/                 |");                    try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|    \\<>   |  |   <>/                  |");                    try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|     `\\<> |  | <>/'                   |");                    try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|       `-.|__|.-`                     |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|--------------------------------------| ");                    try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| \"Are you here to buy this Shield?\" |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| 1. Yes (200 G)                       |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| 2. No                                |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
+            int armorBuy = vendor.nextInt();
+            switch(armorBuy){
+            case 1:
+                    if (Game.money<300)     {System.out.println(   " ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
+                                              System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
+                                              System.out.println(   "|         this shiny Shield.         |");          try{Thread.sleep(100);}catch(Exception e){}
+                                              System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
+                                            shop();}
+                    else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|    You bought the shiny Shield!    |");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|      Hopefully it's as useful      |");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|           as it's shiny!           |");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|____________________________________|");                  try{Thread.sleep(100);}catch(Exception e){}
+                    armor=2;
+                    Game.money=Game.money-300;
+                    armorEquip=1;}
+                    break;
+            default:
+            shop();
             }
-            else if () {}
+        } catch(Exception e){shop();}
+    }
             else {
             System.out.println(    " ______________________________________");                      try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                            .-.       |");                     try{Thread.sleep(100);}catch(Exception e){}
@@ -112,18 +250,14 @@ public static void main(String[] args){
             System.out.println(    "| 2. Shield (300 G)                    |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "| 3. none of the above                 |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
-                int upgrades = Shop.vendor.nextInt();
+                int upgrades = vendor.nextInt();
                 switch (upgrades){
                     case 1:
-                    if (swordEquip==1)  {System.out.println(  " ____________________________________ ");                 try{Thread.sleep(100);}catch(Exception e){}
-                                         System.out.println(  "|    \"You already have the Sword.\"   |");               try{Thread.sleep(100);}catch(Exception e){}
-                                         System.out.println(  "|____________________________________|");                 try{Thread.sleep(100);}catch(Exception e){}
-                                        }
-                    else if (Game.money<200){System.out.println(   " ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
+                    if (Game.money<200)     {System.out.println(   " ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
                                              System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
                                              System.out.println(   "|         this cool Sword.           |");          try{Thread.sleep(100);}catch(Exception e){}
                                              System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
-                                            }
+                                            shop();}
                     else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|     You bought the cool Sword!     |");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|     Hopefully it's as useful       |");                  try{Thread.sleep(100);}catch(Exception e){}
@@ -132,13 +266,9 @@ public static void main(String[] args){
                     sword=2;
                     Game.money=Game.money-200;
                     swordEquip=1;}
-                    break;
+                    shop();
                     case 2:
-                    if (armorEquip==1) {System.out.println( " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
-                                        System.out.println( "|   \"You already have that Shield.\"  |");                try{Thread.sleep(100);}catch(Exception e){}
-                                        System.out.println( "|____________________________________|");                  try{Thread.sleep(100);}catch(Exception e){}
-                                    }  
-                    else if (Game.money<300) {System.out.println(   " ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
+                    if (Game.money<300)     {System.out.println(   " ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
                                               System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
                                               System.out.println(   "|         this shiny Shield.         |");          try{Thread.sleep(100);}catch(Exception e){}
                                               System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
@@ -157,7 +287,7 @@ public static void main(String[] args){
                     System.out.println( "|         \"Something else\"?          |");                            try{Thread.sleep(100);}catch(Exception e){}
                     System.out.println( "|____________________________________|");                              try{Thread.sleep(100);}catch(Exception e){}
                    }
-                break;
+                
             }
             
         }
