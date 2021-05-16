@@ -13,7 +13,7 @@ public static void main(String[] args){
     shop();  
 }
     public static void shop()
-    {   System.out.println("Heavy Work is currently done in here. You shouldn't disturb");    //
+    {   System.out.println("Heavy Work is currently in progress. You shouldn't disturb");    //
         Game.decide();
         Scanner vendor = new Scanner(System.in);
         int ka = 0; //no longer needed will replace the while loop with a loopin recursion
