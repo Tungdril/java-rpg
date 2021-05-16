@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Encounters {
 
     public static void fight(){
-        Enemy.main(); //Gets all the enemy info
+        Enemy.main(null); //Gets all the enemy info
         System.out.println("\n----------------------------------------------------------------------");
         int randomMsg = (int) (Math.random()*5+1);
         switch (randomMsg) {

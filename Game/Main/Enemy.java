@@ -11,7 +11,7 @@ public class Enemy{
     static int enemyDamageChance;
     static double difficulty;
         
-    public static void main() {
+    public static void main(String[] args) {
         int randomEnemy = (int) (Math.random()*100+1);
         if(randomEnemy <= 50){
             enemy = "Goblin";
