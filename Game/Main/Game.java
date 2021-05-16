@@ -32,7 +32,8 @@ public class Game {
         try{
             System.in.read();
         } catch(Exception e){}
-        Scanner Name = new Scanner(System.in);
+
+        /*Scanner Name = new Scanner(System.in);
         System.out.println("Please enter your Username");
         userName = Name.next();
         System.out.println("Do you wish to \n1. create \nor \n2. load \na save file");
@@ -60,6 +61,7 @@ public class Game {
                            "      Money: "+ money+"\n"+
                            "      Exp: "+(int)Exp.exp +"\n"+
                            "|____________________|\n");
+        System.out.println("Day: "+ day);                     
         System.out.println("Decide what to do next.\n"+
                            "1. Continue deeper into the cave\n"+
                            "2. Go back home to heal your wounds");
@@ -67,10 +69,12 @@ public class Game {
         int option = choice.nextInt();
         switch (option) {
             case 1:
+            day++;
                 explore();
             break;
             case 2:
-                Encounters.home();
+            day++;
+                Encounters.home(); 
             break;
             default: 
             System.out.println("That's not an option!");
@@ -80,20 +84,16 @@ public class Game {
 
     public static void explore(){
     int exploreEvent = (int) (Math.random()*100+1); //Generate encounter 
-       if(exploreEvent<=40){ //Starts fight encounter 40%
+       if(exploreEvent<=40){ 
         Encounters.fight();
         Encounters.combat();
         Encounters.healthCalc();              
-        day++;
        } else if(exploreEvent >40 && exploreEvent <=70 && day>1){
            Shop.shop();
-           day++;
        } else if(exploreEvent>70 && exploreEvent <= 90){
            Encounters.nothing();
-           day++;
        } else{
            Encounters.loot();
-           day++;
        }
     }
 }
