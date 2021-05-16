@@ -11,19 +11,19 @@ public class Encounters {
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
             break;            
             case 2:
-            System.out.println("You see some movement behind a rock formation. You carefully step closer, only to be surprised by a "+Enemy.enemy+" !");
+            System.out.println("You see some movement behind a rock formation. You carefully step closer, only to be surprised by a "+Enemy.enemy+"!");
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
             break;            
             case 3:
-            System.out.println("You squeeze your body through a narrow crack, but once you get to the other side, you come face to face with a "+Enemy.enemy+" !");
+            System.out.println("You squeeze your body through a narrow crack, but once you get to the other side, you come face to face with a "+Enemy.enemy+"!");
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
             break;            
             case 4:
-            System.out.println("You were just examining some shiny rocks, when you hear movement behind you. It's a "+Enemy.enemy+" !");
+            System.out.println("You were just examining some shiny rocks, when you hear movement behind you. It's a "+Enemy.enemy+"!");
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
             break;
             case 5:
-            System.out.println("As you enter a new cave, you are ambushed by a "+Enemy.enemy+" !");
+            System.out.println("As you enter a new cave, you are ambushed by a "+Enemy.enemy+"!");
             try {Thread.sleep(3500);} catch(Exception e) {System.out.println("shit");}
             break;
         }
@@ -35,7 +35,8 @@ public class Encounters {
         int playerDamage = (int) (Math.random()*2+1+Shop.sword); // Player damage is 1-2 HP 
 
         try {
-        Scanner fight = new Scanner(System.in);       
+        Scanner fight = new Scanner(System.in); 
+        System.out.println(Enemy.Sprite+"\n");      
         System.out.println("\n----------------------------------------------------------------------");
         System.out.println("\nWhat will you do?\n1. Attack\n2. Defend\n3. Check Health\n4. Flee");
 
