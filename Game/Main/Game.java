@@ -44,24 +44,14 @@ public class Game {
             case 2: Load.readingPain2(); break;
             default: System.out.print("Please use 1 or 2 the next time"); break;
         } 
-<<<<<<< HEAD
         
 */
-=======
-        Name.close();
-    */
-
-
-    if(day==24){
-        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-    }else{
->>>>>>> 2d0ab6795d51c298eb9ef051578523c49727d038
         explore();
         }
         
 
           
-    }
+    
 
     public static void decide(){
         try {Thread.sleep(5000);} catch(Exception e) {System.out.println("shit");}
