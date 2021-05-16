@@ -47,7 +47,7 @@ public static void main(String[] args){
         }
     }  
        
-        }        
+                
         public static void equipCheck() //checks if the player has bought equipment and if the player did, it adds the armor and sword buff
         {
             if(armorEquip==1){armor=2;};
@@ -102,7 +102,7 @@ public static void main(String[] args){
                 System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                            888       |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println(    "|                       _    )8(    _  |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                       _    )8(     _ |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                      (O)__/ W \\__(O) |");                    try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                       `~\"-=):(=-\"~`  |");                   try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
@@ -216,7 +216,7 @@ public static void main(String[] args){
             System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                            888       |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println(    "|                       _    )8(    _  |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                       _    )8(     _ |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                      (O)__/ W \\__(O) |");                    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|  ____________________ `~\"-=):(=-\"~`  |");                   try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "| |<><><>  |  |  <><><>|     |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
@@ -330,7 +330,7 @@ public static void main(String[] args){
             System.out.print(   "|    You have entered a small cave.  |\n");                              try{Thread.sleep(100);}catch(Exception e){}
             System.out.print(   "|An old dwarf has set up a shop here.|\n");                              try{Thread.sleep(100);}catch(Exception e){}
             System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
-            shop();
+            
             }
             else
             {
