@@ -6,12 +6,13 @@ import javax.sound.sampled.Clip;
 
 public class AudioManager{
  public static void playSound(){
+   String soundFile = "./Game/Main/Audio/bgm.wav";
     while (true){
       if(Death.stopMusic==1){ //prevents playing in certain cases
         return;
     }else{
         try {   
-        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("./Game/Main//Audio/bgm.wav"));
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundFile));
         Clip clip = AudioSystem.getClip();
         clip.open(audioInputStream);
         clip.start();
