@@ -13,7 +13,7 @@ public class AudioManager{
         return;
     }else{
         try {                                    //change soundFileTesting to soundFile before launch               @Tungdril does for me the same error                     
-        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundFile));
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundFileTesting));
         System.out.println();
         Clip clip = AudioSystem.getClip();
         clip.open(audioInputStream);
