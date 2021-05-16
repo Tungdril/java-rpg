@@ -100,6 +100,7 @@ public class Encounters {
                 Enemy.playerHealth = newplayerHealth;
                 try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("The enemy did " + newenemyDamage + " HP damage!");
+                try{Thread.sleep(500);}catch(Exception e){}
             } else {
                 try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("The enemy attacked and missed.");

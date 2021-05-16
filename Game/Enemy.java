@@ -98,19 +98,19 @@ public class Enemy{
             Sprite = goblinSprite;
             enemyHealth = 4 + Exp.expScaling;
             difficulty = 0.85;
-            enemyDamage = (int) (Math.random()*2+1);
+            enemyDamage = (int) (Math.random()*2);
         } else if(randomEnemy >50 & randomEnemy <=80){
             enemy = "Skeleton";
             Sprite = skeletonSprite;
             enemyHealth = 6 + Exp.expScaling;
             difficulty = 1.0;
-            enemyDamage = (int) (Math.random()*3+1);
+            enemyDamage = (int) (Math.random()*3);
         } else{
             enemy = "Orc";
             Sprite = orcSprite;
             enemyHealth = 8 + Exp.expScaling;
             difficulty = 1.15;
-            enemyDamage = (int) (Math.random()*4+1);
+            enemyDamage = (int) (Math.random()*3+1);
         }
         //System.out.println("Type: "+enemy);
         //System.out.println("Health: "+enemyHealth);
