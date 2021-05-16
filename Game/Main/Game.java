@@ -36,8 +36,9 @@ public class Game {
             createSaveFolder.SaveLoad();
          
         
-
-        explore();
+        decide(); //this is easier to check if Loading didn't fuck up
+        
+        //explore();
     }
         
 
@@ -56,6 +57,7 @@ public class Game {
                            "      Exp: "+(int)Exp.exp +"\n"+
                            "|____________________|\n");
         System.out.println("Day: "+ day);    
+        Save.creatingSave();
         System.out.println("Decide what to do next.\n"+
                            "1. Continue deeper into the cave\n"+
                            "2. Go back home to heal your wounds");
@@ -64,12 +66,10 @@ public class Game {
         switch (option) {
             case 1:
             day++;
-                Save.creatingSave();
                 explore();
             break;
             case 2:
             day++;
-                Save.creatingSave();
                 Encounters.home(); 
             break;
             default: 

@@ -18,8 +18,8 @@ public class createSaveFolder{
         System.out.println("Do you wish to \n1. create \nor \n2. load \na save file");
         int savefile = Name.nextInt();
         switch(savefile){
-            case 1: Save.creatingSave(); break; 
-            case 2: Load.readingPain2(); break;
-            default: System.out.print("Please use 1 or 2 the next time"); SaveLoad();
+            case 1: Save.creatingSave();System.out.println(""); break; 
+            case 2: Save.readingPain();System.out.println("//////Loading\\\\\\\\\\\\"); break;
+            default: System.out.print("Please use 1 or 2"); SaveLoad();
         }}
 }

@@ -4,6 +4,7 @@ public class Encounters {
 static String enemy;
 static int enemyHealth;
 static int playerHealth = 8 + Exp.expScaling;
+static String PlayerHealth;
 static int playerDamage;
 static int enemyDamage = (int) (Math.random()*2+1); //TODO @Tungdril enemy always does 2HP damage
 static int playerDefense = 0 + Shop.armor;
