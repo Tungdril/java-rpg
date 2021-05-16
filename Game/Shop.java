@@ -16,7 +16,7 @@ public static void main(String[] args){
 }
     public static void shop()
     {   Scanner vendor = new Scanner(System.in);
-        if(shopKeep){
+        if(!shopKeep){
         System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
         System.out.print(   "|    You have entered a small cave.  |\n");                              try{Thread.sleep(100);}catch(Exception e){}
         System.out.print(   "|An old dwarf has set up a shop here.|\n");                              try{Thread.sleep(100);}catch(Exception e){}
