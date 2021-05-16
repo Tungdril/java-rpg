@@ -1,11 +1,10 @@
 import java.util.Scanner;
 
-import javax.swing.plaf.basic.BasicBorders.RadioButtonBorder;
 public class Encounters {
 
 static String enemy;
 static int enemyHealth;
-static int playerHealth = 8;
+static int playerHealth = 8 + Exp.expScaling;
 static int playerDamage;
 static int enemyDamage = 1;
 static int playerDefense = 0 + Shop.armor;
@@ -18,15 +17,15 @@ static double difficulty;
         int randomEnemy = (int) (Math.random()*100+1);
         if(randomEnemy <= 50){
             enemy = "Goblin";
-            enemyHealth = 4;
+            enemyHealth = 4 + Exp.expScaling;
             difficulty = 0.85;
         } else if(randomEnemy >50 & randomEnemy <=80){
             enemy = "Skeleton";
-            enemyHealth = 6;
+            enemyHealth = 6 + Exp.expScaling;
             difficulty = 1.0;
         } else{
             enemy = "Orc";
-            enemyHealth = 8;
+            enemyHealth = 8 + Exp.expScaling;
             difficulty = 1.15;
         }
          System.out.println("As you are marching deeper into the cave system, you are suprised by an angry " + enemy+"!");
@@ -163,7 +162,7 @@ static double difficulty;
 "                                 >          ( \n"+
 "                                |   _     _  | \n"+            
 "                                |  |_) | |_) | \n"+
-"                                |  | \\ | |   | \n"+    //don't remove space here or it'll break        
+"                                |  | \\ | |   | \n"+    
 "                                |            | \n"+
 "                 ______.______%_|            |_________________ \n"+            
 "               _/                                              | \n"+
@@ -189,7 +188,8 @@ static double difficulty;
         if (enemyHealth<=0){                                        
             System.out.println("----------------------------------------------------------------------");
             System.out.println("You have successfully beaten the "+enemy);      //winstate
-            int reward = (int) (Math.random()*10 * difficulty + 10);
+            int bonus = Exp.expScaling*2;
+            int reward = (int) (Math.random()*10 * difficulty + 10 + bonus);           
             System.out.println("You found [" + reward + "] G!");
             Game.money= Game.money+reward;
             Game.decide(); //calls decide to let the player make the next move              
