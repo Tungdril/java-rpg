@@ -27,7 +27,8 @@ public class Game {
         System.out.println("Tired of your boring life as a carriage driver for crippeled Lords and Ladies, you feel the urge to explore the wide world.\nAfter wandering a whole 140 feet from your home, you begin to feel very exhausted and decide to have a rest near\nthe entrance to a cave.You have a short nap. After waking up again the sun is already beginning to set, but you still feel the urge to enter the cave.\nSo you light your torch and head inside.");
         System.out.println("------------------------------------------------------------------------------------");
         System.out.println("Press [ENTER] to depart on your adventure!");
-        System.out.println(Encounters.playerHealth);
+        //System.out.println("Day: "+ day);  
+        //System.out.println(Encounters.playerHealth);
         //Wait for user Input
         try{
             System.in.read();
@@ -43,12 +44,23 @@ public class Game {
             case 2: Load.readingPain2(); break;
             default: System.out.print("Please use 1 or 2 the next time"); break;
         } 
+<<<<<<< HEAD
         
 */
+=======
+        Name.close();
+    */
+
+
+    if(day==24){
+        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+    }else{
+>>>>>>> 2d0ab6795d51c298eb9ef051578523c49727d038
         explore();
+        }
         
 
-        System.out.println("Day: "+ day);    
+          
     }
 
     public static void decide(){
@@ -61,7 +73,7 @@ public class Game {
                            "      Money: "+ money+"\n"+
                            "      Exp: "+(int)Exp.exp +"\n"+
                            "|____________________|\n");
-        System.out.println("Day: "+ day);                     
+        System.out.println("Day: "+ day);    
         System.out.println("Decide what to do next.\n"+
                            "1. Continue deeper into the cave\n"+
                            "2. Go back home to heal your wounds");
@@ -79,7 +91,7 @@ public class Game {
             default: 
             System.out.println("That's not an option!");
             decide();
-        }  
+        }                      
     }
 
     public static void explore(){

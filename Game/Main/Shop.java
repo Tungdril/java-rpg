@@ -88,7 +88,7 @@ public static void main(String[] args){
             } else                      {System.out.println(" ____________________________________ \n"+
                                                             "|       You don't have enough G.     |\n"+
                                                             "|____________________________________|\n");}
-                Game.money=Game.money-20;
+                Game.money=Game.money-20; //TODO @SmyloG substracts money even when under 20, money turns negative
                 break;
             case 3:
             System.out.println( " ____________________________________ \n"+

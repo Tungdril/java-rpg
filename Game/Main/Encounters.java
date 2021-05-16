@@ -5,7 +5,7 @@ static String enemy;
 static int enemyHealth;
 static int playerHealth = 8 + Exp.expScaling;
 static int playerDamage;
-static int enemyDamage = 1;
+static int enemyDamage = (int) (Math.random()*2+1); //TODO @Tungdril enemy always does 2HP damage
 static int playerDefense = 0 + Shop.armor;
 static int enemyDefense = 0;
 static int enemyDefenseChance;
@@ -44,7 +44,7 @@ static double difficulty;
             if (fight2==1){ //Attack
                 System.out.println("You attacked the enemy!");
                 int newenemyHealth = (enemyHealth - playerDamage);
-                System.out.println("You did " + (enemyHealth-newenemyHealth) + " damage."); //
+                System.out.println("You did " + (enemyHealth-newenemyHealth) + " damage."); 
                 enemyHealth = newenemyHealth;
             }
             else if (fight2==2){ //Defend
@@ -127,7 +127,7 @@ static double difficulty;
             Game.decide();
             break;
             case 2:
-            System.out.println("Examining the new cave you just entered, you see a lifeless skeleton lying collapsed against the wall.\nYou approach the body and snatch it's wallet\n"+
+            System.out.println("Examining the new cave you just entered, you see a lifeless skeleton lying collapsed against the wall.\nYou approach the body and snatch its wallet\n"+
             "It had ["+ lootValue+"] G in it!");
             Game.money= Game.money+lootValue;
             Game.decide();
@@ -199,7 +199,7 @@ static double difficulty;
 
     //heals player, and returns to decide()
     public static void home(){
-        int restingHealth = (int) (Math.random()*3);
+        int restingHealth = (int) (Math.random()*3+1);
         playerHealth = restingHealth+playerHealth;
         System.out.println("You find your way back to the surface and walk back home to have a rest.\nThe next day you walk right back into the cave.");
         System.out.println("You regenerated "+restingHealth+" health!");
