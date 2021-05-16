@@ -10,20 +10,15 @@ public class Shop {
     static String ArmorEquip;
     static String SwordEquip;
     static int metBefore;
-    static boolean shopKeep= metBefore==1;
 public static void main(String[] args){ 
     shop();  
 }
-    public static void shop()
-    {   Scanner vendor = new Scanner(System.in);
-        if(!shopKeep){
-        System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
-        System.out.print(   "|    You have entered a small cave.  |\n");                              try{Thread.sleep(100);}catch(Exception e){}
-        System.out.print(   "|An old dwarf has set up a shop here.|\n");                              try{Thread.sleep(100);}catch(Exception e){}
-        System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
-                            try{Thread.sleep(650);}catch(Exception e){}
+    public static void shop(){
+        Scanner vendor = new Scanner(System.in);                            
+        greetingKeeper();
+        try{Thread.sleep(650);}catch(Exception e){}
         try{Thread.sleep(1000);}catch(Exception e){}
-        } else {
+        
         System.out.println(    " ____________________________________ ");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|       \"What are you buying?\"       |");                         try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|     said the dwarven shopkeeper    |");                           try{Thread.sleep(100);}catch(Exception e){}
@@ -326,5 +321,20 @@ public static void main(String[] args){
                  
             metBefore=1;
             shop();
+        }
+        public static void greetingKeeper(){
+            int greetedKeeper=metBefore;
+            if(greetedKeeper==0)
+            {
+            System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
+            System.out.print(   "|    You have entered a small cave.  |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+            System.out.print(   "|An old dwarf has set up a shop here.|\n");                              try{Thread.sleep(100);}catch(Exception e){}
+            System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
+            shop();
+            }
+            else
+            {
+            shop();
+            }
         }
     }
