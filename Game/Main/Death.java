@@ -27,6 +27,10 @@ public class Death {
 "                    _.%%%%%%@@@@@@%%_/%__%@@%%@@@@@@@%%%%%% \n"
                  
             );
+            System.out.print("Press [ENTER] to get to the Main \"menu\"");
+            try{
+                System.in.read();
+            } catch(Exception e){}
             Game.main(null);
 
     }
