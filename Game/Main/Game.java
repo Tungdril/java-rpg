@@ -59,7 +59,7 @@ public class Game {
     }
 
     public static void decide(){
-        try {Thread.sleep(5000);} catch(Exception e) {System.out.println("shit");}
+        //try {Thread.sleep(5000);} catch(Exception e) {System.out.println("shit");}
         Exp.main();
         System.out.println("----------------------------------------------------------------------");
         System.out.println(" ____________________ \n"+ 
