@@ -18,13 +18,14 @@ public static void main(String[] args){
         int ka = 0;
         boolean sop = ka==0 ;
         System.out.print(   " ____________________________________ \n"+  
-                            "|      You have entered the Shop.    |\n"+
+                            "|    You have entered a small cave.  |\n"+
+                            "|An old dwarf has set up a shop here.|\n"+
                             "|____________________________________|\n");
                             try{Thread.sleep(550);}catch(Exception e){}
         while (sop) {
         System.out.print(   " ____________________________________ \n"+
-                            "|       \"What are you buying?\"       |\n"+ 
-                            "|    said  the dwarven shopkeeper    |\n"+
+                            "|       \"What can I get ya?\"         |\n"+ 
+                            "|    says the dwarven shopkeeper     |\n"+
                             "|------------------------------------|\n"+
                             "|           You choose to:           |\n"+
                             "|1. Buy Equipment                    |\n"+
