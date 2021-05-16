@@ -191,6 +191,9 @@ static double difficulty;
             int reward = (int) (Math.random()*10 * difficulty + 10 + bonus);           
             System.out.println("You found [" + reward + "] G!");
             Game.money= Game.money+reward;
+            double expGain = Exp.exp + 5 * difficulty;
+            Exp.exp = + expGain;
+            System.out.println("You gain [" + (int)expGain + "] EXP!");
             Game.decide(); //calls decide to let the player make the next move              
         }  
     }    

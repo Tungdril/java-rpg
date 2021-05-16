@@ -26,7 +26,7 @@ public class Game {
         System.out.println("Press [ENTER] to depart on your adventure!");
         //System.out.println(Encounters.playerHealth);
         //Wait for user Input
-        try{
+        /*try{
             System.in.read();
         } catch(Exception e){}
         Scanner Name = new Scanner(System.in);
@@ -40,7 +40,7 @@ public class Game {
             default: System.out.print("Please use 1 or 2 the next time"); break;
         } 
         Name.close();
-
+*/
         explore();
         
 
@@ -55,7 +55,7 @@ public class Game {
                            "|                    |\n"+
                            "      Health: "+ Encounters.playerHealth+"\n"+
                            "      Money: "+ money+"\n"+
-                           "      Exp: "+Exp.exp +"\n"+
+                           "      Exp: "+(int)Exp.exp +"\n"+
                            "|____________________|\n");
         System.out.println("Decide what to do next.\n"+
                            "1. Continue deeper into the cave\n"+
