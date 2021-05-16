@@ -12,18 +12,19 @@ public class Shop {
 public static void main(String[] args){ 
     shop();  
 }
-    public static void shop(){
+    public static void shop()
+    {
         Scanner vendor = new Scanner(System.in);
         int ka = 0;
         boolean sop = ka==0 ;
         System.out.print(   " ____________________________________ \n"+  
                             "|      You have entered the Shop.    |\n"+
                             "|____________________________________|\n");
+                            try{Thread.sleep(550);}catch(Exception e){}
         while (sop) {
         System.out.print(   " ____________________________________ \n"+
                             "|       \"What are you buying?\"       |\n"+ 
-                            "|    sayed the dwarven shopkeeper    |\n"+
-                            "|  You currently have " + Game.money + "G.         |\n"+
+                            "|    said  the dwarven shopkeeper    |\n"+
                             "|------------------------------------|\n"+
                             "|           You choose to:           |\n"+
                             "|1. Buy Equipment                    |\n"+
@@ -35,15 +36,16 @@ public static void main(String[] args){
         switch (Talk){
             case 1:
                 System.out.println( " ____________________________________ \n"+
-                                    "|This cool Sword or this shiny Armor?|\n"+
+                                    "|\"The cool Sword or the shiny Armor?\"|\n"+
                                     "|1. Sword (200 G)                    |\n"+
                                     "|2. Armor (300 G)                    |\n"+ 
+                                    "|3. none of the above                |\n"+
                                     "|____________________________________|\n");
                 int upgrades = vendor.nextInt();
                 switch (upgrades){
                     case 1:
                     if (swordEquip==1) {System.out.println( " ____________________________________ \n"+
-                                                            "|You have already bought that Weapon.|\n"+
+                                                            "|    \"You already have the Sword.\"   |\n"+
                                                             "|____________________________________|\n");}  
                     else if (Game.money<200) {System.out.println(" ____________________________________ \n"+
                                                             "| You don't have enough money to buy |\n"+
@@ -54,13 +56,13 @@ public static void main(String[] args){
                                                             "|     Hopefully it's as useful       |\n"+
                                                             "|       as it's cool looking!        |\n"+
                                                             "|____________________________________|\n");
-                    sword=sword+2;
+                    sword=2;
                     Game.money=Game.money-200;
                     swordEquip=1;}
                     break;
                     case 2:
                     if (armorEquip==1) {System.out.println( " ____________________________________ \n"+
-                                                            "|You have already bought that Armor. |\n"+
+                                                            "|   \"You already have that Armor.\"   |\n"+
                                                             "|____________________________________|\n");}  
                     else if (Game.money<300) {System.out.println(" ____________________________________ \n"+
                                                             "| You don't have enough money to buy |\n"+
@@ -71,11 +73,16 @@ public static void main(String[] args){
                                                             "|      Hopefully it's as useful      |\n"+
                                                             "|           as it's shiny!           |\n"+
                                                             "|____________________________________|\n");
-                    armor=armor+2;
+                    armor=2;
                     Game.money=Game.money-300;
                     armorEquip=1;}
                     break;
-                }
+                    default:
+                    System.out.println( " ____________________________________ \n" +
+                                        "|         \"Something else\"?          |\n" +
+                                        "|____________________________________| \n");
+                    break;
+                   }
                 break;
             case 2:
             if(Game.money>=20){
@@ -83,12 +90,13 @@ public static void main(String[] args){
                 System.out.println( " ____________________________________ \n"+
                                     "|      You bought the potion!        |\n"+
                                     "|And directly drank it. How wasteful.|\n"+
-                                    "|           You gain " + heal + "HP.            |\n"+
+                                    "|          You regain " + heal + "HP.           |\n"+
                                     "|____________________________________|\n");
+                Game.money=Game.money-20; // was in the wrond line
             } else                      {System.out.println(" ____________________________________ \n"+
                                                             "|       You don't have enough G.     |\n"+
                                                             "|____________________________________|\n");}
-                Game.money=Game.money-20; //TODO @SmyloG substracts money even when under 20, money turns negative
+                 
                 break;
             case 3:
             System.out.println( " ____________________________________ \n"+
@@ -96,8 +104,14 @@ public static void main(String[] args){
                                 "|____________________________________|\n");
             ka ++;
             break;
-        }   ka=0;
-            Game.decide();
-    }        
-}
+        }   
+        ka=0;
+        Game.decide();
+        }        
+    }
+        public static void equipCheck() //checks if the player has bought equipment and if the player did, it adds the armor and sword buff
+        {
+            if(armorEquip==1){armor=2;};
+            if(swordEquip==1){sword=2;};
+        }
 }

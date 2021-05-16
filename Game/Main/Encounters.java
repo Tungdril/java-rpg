@@ -4,6 +4,7 @@ public class Encounters {
 static String enemy;
 static int enemyHealth;
 static int playerHealth = 8 + Exp.expScaling;
+static String PlayerHealth;
 static int playerDamage;
 static int enemyDamage = (int) (Math.random()*2+1); //TODO @Tungdril enemy always does 2HP damage
 static int playerDefense = 0 + Shop.armor;
@@ -11,6 +12,7 @@ static int enemyDefense = 0;
 static int enemyDefenseChance;
 static int enemyDamageChance;
 static double difficulty;
+static int fleeChance;
 
     public static void fight(){
         int randomEnemy = (int) (Math.random()*100+1);
@@ -54,6 +56,7 @@ static double difficulty;
     }
 
     public static void combat(){
+        Death.death();
         try {Thread.sleep(150);} catch(Exception e) {System.out.println("shit");}
         int playerDamage = (int) (Math.random()*2+1+Shop.sword); // Player damage is 1-2 HP 
 
@@ -81,13 +84,17 @@ static double difficulty;
                 System.out.println("----------------------------------------------------------------------");
             }
             else if (fight2==4){ //Flee
-                System.out.println("You tried to flee! But to no avail");
-    
+                System.out.println("You tried to flee.");
+                fleeChance = (int) (Math.random()*100+1);
+                if(fleeChance<= 40){    // 40% Chance to flee from combat, the player will then be put in decision
+                    System.out.println("And succeeded at that!");
+                    Game.decide();
+                } else {System.out.println("But to no avail!");} // 60% chance to not flee, the player used his turn and gained nothing
             }
             else { //if the Number isn't 1-4
                 System.out.println("That's not an option!");
-                //int newplayerHealth = (playerHealth-playerHealth);
-                //playerHealth = newplayerHealth; 
+                playerHealth = (playerHealth-playerHealth); //if the player is to stupid to use 1,2,3 or 4 he will be disposed immediatly
+                Death.death(); 
             }
             Thread.sleep(200);
             enemyDamageChance = (int) (Math.random()*100+1);
@@ -109,7 +116,7 @@ static double difficulty;
             }
             playerDefense=0;
             Thread.sleep(150);
-        } catch(Exception e){System.out.println("shit");}}
+        } catch(Exception e){System.out.println("use Numbers");}}
 
         //just skips a day
     public static void nothing(){
@@ -150,7 +157,7 @@ static double difficulty;
         switch (lootSize) {
             case 1:
             System.out.println("You enter a small cave, the walls are overgrown with moss. To your right you can see a faint glimmering in the overgrowth.\n"+"Upon closer inspection it seems like a few coins were reflecting the light of your torch.\n"+
-            "You find ["+ lootValue+"] G!");
+            "You find ["+lootValue+"] G!");
             Game.money= Game.money+lootValue;
             try {Thread.sleep(4000);} catch(Exception e) {System.out.println("shit");}
             Game.decide();
@@ -185,35 +192,8 @@ static double difficulty;
             break;
             }
         }
-        if (playerHealth<=0){ //deathstate 
-            System.out.println(
-"                                 _____  _____ \n"+
-"                                <     `/     | \n"+            
-"                                 >          ( \n"+
-"                                |   _     _  | \n"+            
-"                                |  |_) | |_) | \n"+
-"                                |  | \\ | |   | \n"+    
-"                                |            | \n"+
-"                 ______.______%_|            |_________________ \n"+            
-"               _/                                              | \n"+
-"              |                                                < \n"+        
-"              |_____.-._________              ____/|___________| \n"+
-"                                | * Day 0    | \n"+            
-"                                | + Day "+Game.day+"    | \n"+    
-"                                |            | \n"+            
-"                                |            | \n"+
-"                                |   _        < \n"+            
-"                                |__/         | \n"+
-"                                 / `--.      | \n"+            
-"                               %|            |% \n"+
-"                           |/.%%|          -< @%%% \n"+            
-"                           ` %`@|     v      |@@%@%%     \n"+
-"                         .%%%@@@|%    |    % @@@%%@%%%% \n"+            
-"                    _.%%%%%%@@@@@@%%_/%__%@@%%@@@@@@@%%%%%% \n"
-                 
-            ); 
-            try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}        
-        }
+        Death.death(); //death state
+        
 
         if (enemyHealth<=0){                                        
             System.out.println("----------------------------------------------------------------------");
