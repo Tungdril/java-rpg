@@ -17,10 +17,10 @@ public static void main(String[] args){
         Scanner vendor = new Scanner(System.in);
         int ka = 0;
         boolean sop = ka==0 ;
-        System.out.print(   " ____________________________________ ");                              try{Thread.sleep(100);}catch(Exception e){}
-        System.out.print(   "|    You have entered a small cave.  |");                              try{Thread.sleep(100);}catch(Exception e){}
-        System.out.print(   "|An old dwarf has set up a shop here.|");                              try{Thread.sleep(100);}catch(Exception e){}
-        System.out.print(   "|____________________________________|");                              try{Thread.sleep(100);}catch(Exception e){}
+        System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
+        System.out.print(   "|    You have entered a small cave.  |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+        System.out.print(   "|An old dwarf has set up a shop here.|\n");                              try{Thread.sleep(100);}catch(Exception e){}
+        System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
                             try{Thread.sleep(650);}catch(Exception e){}
         while (sop) {        
 
@@ -44,7 +44,7 @@ public static void main(String[] args){
             System.out.println(    "|                            888       |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                       _    )8(    _  |");                     try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println(    "|                      (@)__/8@8\\__(@) |");                    try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                      (O)__/ W \\__(O) |");                    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|  ____________________ `~\"-=):(=-\"~`  |");                   try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "| |<><><>  |  |  <><><>|     |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "| |<>      |  |      <>|     |C|       |");                     try{Thread.sleep(100);}catch(Exception e){}
