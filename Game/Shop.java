@@ -10,20 +10,15 @@ public class Shop {
     static String ArmorEquip;
     static String SwordEquip;
     static int metBefore;
-    static boolean shopKeep= metBefore==1;
 public static void main(String[] args){ 
     shop();  
 }
-    public static void shop()
-    {   Scanner vendor = new Scanner(System.in);
-        if(shopKeep){
-        System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
-        System.out.print(   "|    You have entered a small cave.  |\n");                              try{Thread.sleep(100);}catch(Exception e){}
-        System.out.print(   "|An old dwarf has set up a shop here.|\n");                              try{Thread.sleep(100);}catch(Exception e){}
-        System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
-                            try{Thread.sleep(650);}catch(Exception e){}
+    public static void shop(){
+        Scanner vendor = new Scanner(System.in);                            
+        greetingKeeper();
+        try{Thread.sleep(650);}catch(Exception e){}
         try{Thread.sleep(1000);}catch(Exception e){}
-        } else {
+        
         System.out.println(    " ____________________________________ ");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|       \"What are you buying?\"       |");                         try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|     said the dwarven shopkeeper    |");                           try{Thread.sleep(100);}catch(Exception e){}
@@ -39,8 +34,10 @@ public static void main(String[] args){
         switch (Talk){          //loop was replaced with recursion
             case 1:
                 equipShop();
+                metBefore=1;
             case 2:
                 medicineShop();
+                metBefore=1;
             case 3:
             System.out.println( " ____________________________________ ");    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println( "|         You leave the shop.        |");    try{Thread.sleep(100);}catch(Exception e){}
@@ -52,7 +49,7 @@ public static void main(String[] args){
         }
     }  
        
-        }        
+                
         public static void equipCheck() //checks if the player has bought equipment and if the player did, it adds the armor and sword buff
         {
             if(armorEquip==1){armor=2;};
@@ -96,7 +93,6 @@ public static void main(String[] args){
             System.out.println(    "| 1. Leave                             |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
             vendor.next();
-            metBefore=1;
             shop();
             }
             else if(Armor){                 //if only the Shield has been bought the sword can only be bought  
@@ -107,7 +103,7 @@ public static void main(String[] args){
                 System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                            888       |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println(    "|                       _    )8(    _  |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                       _    )8(     _ |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                      (O)__/ W \\__(O) |");                    try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                       `~\"-=):(=-\"~`  |");                   try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
@@ -138,7 +134,6 @@ public static void main(String[] args){
                                              System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
                                              System.out.println(   "|         this cool Sword.           |");          try{Thread.sleep(100);}catch(Exception e){}
                                              System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
-                                             metBefore=1;
                                              shop();}
                     else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|     You bought the cool Sword!     |");                  try{Thread.sleep(100);}catch(Exception e){}
@@ -148,13 +143,11 @@ public static void main(String[] args){
                     sword=2;
                     Game.money=Game.money-200;
                     swordEquip=1;
-                    metBefore=1;
                     shop();}
                     default:                
-                    metBefore=1;
                     shop();
                 }
-            } catch (Exception e){metBefore=1;shop();} // just to be sure that there's no Exception that crashes the game
+            } catch (Exception e){shop();} // just to be sure that there's no Exception that crashes the game
         }
             else if (Sword) {                  ////if only the Shield has been bought the sword can only be bought
             try{
@@ -195,7 +188,6 @@ public static void main(String[] args){
                                               System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
                                               System.out.println(   "|         this shiny Shield.         |");          try{Thread.sleep(100);}catch(Exception e){}
                                               System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
-                                              metBefore=1;
                                               shop();}
                     else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|    You bought the shiny Shield!    |");                  try{Thread.sleep(100);}catch(Exception e){}
@@ -205,13 +197,11 @@ public static void main(String[] args){
                     armor=2;
                     Game.money=Game.money-300;
                     armorEquip=1;}
-                    metBefore=1;
                     shop();;
             default:
-            metBefore=1;
             shop();
             }
-        } catch(Exception e){metBefore=1;shop();}
+        } catch(Exception e){shop();}
     }
             else {
             try{
@@ -221,7 +211,7 @@ public static void main(String[] args){
             System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                            888       |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println(    "|                       _    )8(    _  |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|                       _    )8(     _ |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                      (O)__/ W \\__(O) |");                    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|  ____________________ `~\"-=):(=-\"~`  |");                   try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "| |<><><>  |  |  <><><>|     |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
@@ -253,7 +243,6 @@ public static void main(String[] args){
                                              System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
                                              System.out.println(   "|         this cool Sword.           |");          try{Thread.sleep(100);}catch(Exception e){}
                                              System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
-                                             metBefore=1;
                                              shop();}
                     else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|     You bought the cool Sword!     |");                  try{Thread.sleep(100);}catch(Exception e){}
@@ -263,14 +252,12 @@ public static void main(String[] args){
                     sword=2;
                     Game.money=Game.money-200;
                     swordEquip=1;}
-                    metBefore=1;
                     shop();
                     case 2:
                     if (Game.money<300)    {System.out.println(   " ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
                                             System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
                                             System.out.println(   "|         this shiny Shield.         |");          try{Thread.sleep(100);}catch(Exception e){}
                                             System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
-                                            metBefore=1;
                                             shop();}
                     else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|    You bought the shiny Shield!    |");                  try{Thread.sleep(100);}catch(Exception e){}
@@ -280,15 +267,13 @@ public static void main(String[] args){
                     armor=2;
                     Game.money=Game.money-300;
                     armorEquip=1;}
-                    metBefore=1;
-                    shop();;
+                    shop();
                     default:
                     System.out.println( " ____________________________________ ");                              try{Thread.sleep(100);}catch(Exception e){}
                     System.out.println( "|         \"Something else\"?          |");                            try{Thread.sleep(100);}catch(Exception e){}
                     System.out.println( "|____________________________________|");                              try{Thread.sleep(100);}catch(Exception e){}
-                    metBefore=1;
                     shop();}
-                } catch (Exception e){metBefore=1;shop();}
+                } catch (Exception e){shop();}
             }   
         }
         public static void medicineShop(){  //just making the health potion shop another module because i can
@@ -317,14 +302,26 @@ public static void main(String[] args){
 
                 Enemy.playerHealth = Enemy.playerHealth + heal;
                 Game.money=Game.money-20;
-                metBefore=1;
                 shop();
             } else                      {System.out.println(" ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
                                          System.out.println("|       You don't have enough G.     |");          try{Thread.sleep(100);}catch(Exception e){}
                                          System.out.println("|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
                                         }
-                 
-            metBefore=1;
             shop();
+        }
+        public static void greetingKeeper(){
+            int greetedKeeper=metBefore;
+            if(greetedKeeper==0)
+            {
+            System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
+            System.out.print(   "|    You have entered a small cave.  |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+            System.out.print(   "|An old dwarf has set up a shop here.|\n");                              try{Thread.sleep(100);}catch(Exception e){}
+            System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
+            
+            }
+            else
+            {
+            shop();
+            }
         }
     }

@@ -57,20 +57,20 @@ public class Game {
         //try {Thread.sleep(5000);} catch(Exception e) {System.out.println("shit");}
         Exp.main();
         System.out.println("----------------------------------------------------------------------");
-        System.out.println(" ____________________ \n"+ 
-                           "|                    |\n"+
-                           "      Health: "+ Enemy.playerHealth+"\n"+
-                           "      Money: "+ money+"\n"+
-                           "      Exp: "+(int)Exp.exp +"\n"+
-                           "      Day: "+day +"\n"+
-                           "|____________________|\n");
+        System.out.println(" ____________________ "             );          try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("|                    |"             );          try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("      Health: "+ Enemy.playerHealth );          try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("      Money: "+ money               );          try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("      Exp: "+(int)Exp.exp           );          try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("      Day: "+day                    );          try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("|____________________|"             );          try{Thread.sleep(100);}catch(Exception e){}
         try{Thread.sleep(600);}catch(Exception e){}
         System.out.println("Day: "+ day); 
         Save.creatingSave();
-        System.out.println("Decide what to do next.\n"+
-                           "1. Continue deeper into the cave\n"+
-                           "2. Go back home to heal your wounds\n"+
-                           "3. Leave the Game");
+        System.out.println("Decide what to do next."                );          try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("1. Continue deeper into the cave"       );          try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("2. Go back home to heal your wounds"    );          try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("3. Leave the Game"                      );          try{Thread.sleep(100);}catch(Exception e){}
         Scanner choice = new Scanner(System.in);
         int option = choice.nextInt();
         switch (option) {
