@@ -22,7 +22,7 @@ public static void main(String[] args){
         System.out.print(   "|An old dwarf has set up a shop here.|\n");                              try{Thread.sleep(100);}catch(Exception e){}
         System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
                             try{Thread.sleep(650);}catch(Exception e){}
-        while (sop) {        
+        while (sop) {                                                                               try{Thread.sleep(1000);}catch(Exception e){} // The loop doesn't work as intended
 
         System.out.println(    " ____________________________________ ");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|       \"What are you buying?\"       |");                         try{Thread.sleep(100);}catch(Exception e){}
@@ -91,14 +91,14 @@ public static void main(String[] args){
                     break;
                     case 2:
                     if (armorEquip==1) {System.out.println( " ____________________________________ \n"+
-                                                            "|   \"You already have that Armor.\"   |\n"+
+                                                            "|   \"You already have that Shield.\"  |\n"+
                                                             "|____________________________________|\n");}  
                     else if (Game.money<300) {System.out.println(" ____________________________________ \n"+
                                                             "| You don't have enough money to buy |\n"+
-                                                            "|         this shiny Armor.          |\n"+ 
+                                                            "|         this shiny Shield.         |\n"+ 
                                                             "|____________________________________|\n");}
                     else {System.out.println(               " ____________________________________ \n"+
-                                                            "|    You bought the shiny Armor!     |\n"+
+                                                            "|    You bought the shiny Shield!     |\n"+
                                                             "|      Hopefully it's as useful      |\n"+
                                                             "|           as it's shiny!           |\n"+
                                                             "|____________________________________|\n");
@@ -110,27 +110,28 @@ public static void main(String[] args){
                     System.out.println( " ____________________________________ \n" +
                                         "|         \"Something else\"?          |\n" +
                                         "|____________________________________| \n");
-                    break;
                    }
                 break;
             case 2:
             if(Game.money>=20){
                 int heal = (int) (Math.random()*3+1);
-                System.out.println( " ____________________________________ \n"+
-                                    "|      You bought the potion!        |\n"+
-                                    "|And directly drank it. How wasteful.|\n"+
-                                    "|          You regain " + heal + "HP.           |\n"+
-                                    "|____________________________________|\n");
+                System.out.println( " ____________________________________ ");
+                System.out.println( "|      You bought the potion!        |");
+                System.out.println( "|And directly drank it. How wasteful.|");
+                System.out.println( "|          You regain " + heal + "HP.           |");
+                System.out.println( "|____________________________________|");
                 Game.money=Game.money-20; // was in the wrond line
-            } else                      {System.out.println(" ____________________________________ \n"+
-                                                            "|       You don't have enough G.     |\n"+
-                                                            "|____________________________________|\n");}
+            } else                      {System.out.println(" ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
+                                         System.out.println("|       You don't have enough G.     |");          try{Thread.sleep(100);}catch(Exception e){}
+                                         System.out.println("|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
+                                        }
                  
                 break;
             case 3:
-            System.out.println( " ____________________________________ \n"+
-                                "|         You leave the shop.        |\n"+
-                                "|____________________________________|\n");
+            System.out.println( " ____________________________________ ");    try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println( "|         You leave the shop.        |");    try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println( "|____________________________________|");    try{Thread.sleep(100);}catch(Exception e){}
+            try{Thread.sleep(1000);}catch(Exception e){}
             ka ++;
             break;
         }   
