@@ -27,9 +27,9 @@ public class Game {
         System.out.println("Tired of your boring life as a carriage driver for crippeled Lords and Ladies, you feel the urge to explore the wide world.\nAfter wandering a whole 140 feet from your home, you begin to feel very exhausted and decide to have a rest near\nthe entrance to a cave.You have a short nap. After waking up again the sun is already beginning to set, but you still feel the urge to enter the cave.\nSo you light your torch and head inside.");
         System.out.println("------------------------------------------------------------------------------------");
         System.out.println("Press [ENTER] to depart on your adventure!");
-        //System.out.println(Encounters.playerHealth);
+        System.out.println(Encounters.playerHealth);
         //Wait for user Input
-        /*try{
+        try{
             System.in.read();
         } catch(Exception e){}
         Scanner Name = new Scanner(System.in);
@@ -42,8 +42,8 @@ public class Game {
             case 2: Load.readingPain2(); break;
             default: System.out.print("Please use 1 or 2 the next time"); break;
         } 
-        Name.close();
-*/
+        
+
         explore();
         
 

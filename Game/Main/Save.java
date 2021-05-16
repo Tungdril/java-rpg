@@ -41,7 +41,7 @@ public static String getSavePath(){
 public static void writingPain(){
     try{
     FileWriter writingSave = new FileWriter("\\saves\\" + Game.userName + ".txt");
-    Exp.Exp = Integer.toString(Exp.exp);
+    Exp.Exp = Double.toString(Exp.exp);
     Game.Money = Integer.toString(Game.money);
     Game.Day = Integer.toString(Game.day);
     Shop.ArmorEquip = Integer.toString(Shop.armorEquip);
@@ -61,7 +61,7 @@ public static void readingPain(){
             Game.Day = reader.nextLine();
             Shop.ArmorEquip = reader.nextLine();
             Shop.SwordEquip = reader.nextLine();
-            Exp.exp = Integer.parseInt(Exp.Exp);
+            Exp.exp = Double.parseDouble(Exp.Exp);
             Game.money = Integer.parseInt(Game.Money);
             Game.day = Integer.parseInt(Game.Day);
             Shop.armorEquip = Integer.parseInt(Shop.ArmorEquip);
