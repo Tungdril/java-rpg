@@ -1,4 +1,4 @@
-public class Death {
+public class Death { //made a file for it alone to make it easier to check for a deathstate before and after battle
     public static void death(){
         if (Encounters.playerHealth<=0){ //deathstate 
             System.out.println(
@@ -27,11 +27,11 @@ public class Death {
 "                    _.%%%%%%@@@@@@%%_/%__%@@%%@@@@@@@%%%%%% \n"
                  
             );
-            System.out.print("Press [ENTER] to get to the Main \"menu\"");
+            System.out.print("Press [ENTER] to get to the Titlescreen"); //Player has to press [Enter] to go to the Titlescreen
             try{
                 System.in.read();
             } catch(Exception e){}
-            Game.main(null);
+            Game.main(null); 
 
     }
 }

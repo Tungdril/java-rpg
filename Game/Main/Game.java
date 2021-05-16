@@ -10,11 +10,12 @@ public class Game {
     static int healthPotion;
 
     public static void main(String[] args) {
-        try{createSaveFolder.createFold();
+        try{
+        createSaveFolder.createFold(); //creates a \JavaRPG\saves directory Folder at C:\"User"\Documents\ 
         Exp.main();
         //Titlescreen
         System.out.println(
-                "                                                                                    \n" +
+                "                                                                                    \n" + //just to make it look a little better
                 "      O))                                      O)))))))     O)))))))      O))))     \n" +           
                 "      O))                                      O))    O))   O))    O))  O)    O))  \n" +
                 "      O))    O))    O))     O))   O))           O))    O))   O))    O)) O))     \n" +
@@ -22,19 +23,19 @@ public class Game {
                 "      O)) O))   O))   O)) O))  O))   O))        O))  O))     O))        O))   O))))\n" +
                 " O)   O))  O))   O))   O)O))   O))   O))        O))    O))   O))         O))    O)  \n" +
                 "  O))))     O)) O)))    O))      O)) O)))       O))      O)) O))          O)))))\n"+
-                "------------------------------------------------------------------------------------");
+                "-------------------------------------------------------------------------------------------------------------------------------------------------------");
    
         System.out.println("Tired of your boring life as a carriage driver for crippeled Lords and Ladies, you feel the urge to explore the wide world.\nAfter wandering a whole 140 feet from your home, you begin to feel very exhausted and decide to have a rest near\nthe entrance to a cave.You have a short nap. After waking up again the sun is already beginning to set, but you still feel the urge to enter the cave.\nSo you light your torch and head inside.");
-        System.out.println("------------------------------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("Press [ENTER] to depart on your adventure!");}
-        catch(Exception e){main(null);}
+        catch(Exception e){main(null);} //if there's an exception this will loop
         //System.out.println("Day: "+ day);  
         //System.out.println(Encounters.playerHealth);
         //Wait for user Input
         try{
             System.in.read();
         } catch(Exception e){}
-            createSaveFolder.SaveLoad();
+            createSaveFolder.SaveLoad(); //Loads and Saves the Games if there's an Exception the Titlescreen will be called
          
         
         decide(); //this is easier to check if Loading didn't fuck up
