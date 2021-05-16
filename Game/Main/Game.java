@@ -44,7 +44,7 @@ public class Game {
             default: System.out.print("Please use 1 or 2 the next time"); break;
         } 
         
-
+*/
         explore();
         
 

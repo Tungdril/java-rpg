@@ -23,7 +23,7 @@ public static void creatingSave(){
 
 public static void createFile() {
 
-    File f = new File("\\saves\\" + Game.userName + ".txt");
+    File f = new File(createSaveFolder.savepath + Game.userName + ".txt");
        if(f.exists()){ 
         f.delete();
         try {f.createNewFile(); } catch(Exception e) {System.out.println("Something went wrong while Saving");} 
@@ -33,14 +33,14 @@ public static void createFile() {
 
 
 public static String getSavePath(){
-        return "\\saves\\" + Game.userName + ".txt";
+        return createSaveFolder.savepath + Game.userName + ".txt";
 
 
 }
 
 public static void writingPain(){
     try{
-    FileWriter writingSave = new FileWriter("\\saves\\" + Game.userName + ".txt");
+    FileWriter writingSave = new FileWriter(createSaveFolder.savepath + Game.userName + ".txt");
     Exp.Exp = Double.toString(Exp.exp);
     Game.Money = Integer.toString(Game.money);
     Game.Day = Integer.toString(Game.day);
@@ -53,7 +53,7 @@ public static void writingPain(){
 }
 public static void readingPain(){
     try {
-        File f = new File("\\saves\\" + Game.userName + ".txt");
+        File f = new File(createSaveFolder.savepath + Game.userName + ".txt");
         Scanner reader = new Scanner(f);
         while (reader.hasNextLine()) {
             Exp.Exp = reader.nextLine();
