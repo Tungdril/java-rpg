@@ -1,6 +1,4 @@
 import java.util.Scanner;
-
-import javax.swing.plaf.basic.BasicBorders.RadioButtonBorder;
 public class Encounters {
 
 static String enemy;
