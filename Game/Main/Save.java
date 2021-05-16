@@ -3,9 +3,8 @@ import java.io.IOException;
 import java.io.FileWriter;
 import java.util.Scanner;
 public class Save {
-//save system complete, only need a load system
+//save and load complete
 public static void main(String[] args) {
-    //set userName to the name of the player
     createFile();
     System.out.print(getSavePath()+"\n");
     writingPain();
@@ -48,7 +47,7 @@ public static void writingPain(){
     Encounters.PlayerHealth = Integer.toString(Encounters.playerHealth); 
     writingSave.write(Exp.Exp +"\n"+ Game.Money +"\n" + Game.Day+"\n"+ Shop.ArmorEquip + "\n" + Shop.SwordEquip +"\n"+ Encounters.PlayerHealth);
     writingSave.close();
-    System.out.println("Saved");
+    System.out.println("//////Saving\\\\\\\\\\\\");
     } catch(IOException e) {System.out.println("Breeki"); e.printStackTrace();}
 }
 public static void readingPain(){

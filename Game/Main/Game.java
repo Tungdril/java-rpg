@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.io.File;
 public class Game {
      
     static int day = 1; 
@@ -14,17 +13,16 @@ public class Game {
         createSaveFolder.createFold(); //creates a \JavaRPG\saves directory Folder at C:\"User"\Documents\ 
         Exp.main();
         //Titlescreen
-        System.out.println(
-                "                                                                                    \n" + //just to make it look a little better
-                "      O))                                      O)))))))     O)))))))      O))))     \n" +           
-                "      O))                                      O))    O))   O))    O))  O)    O))  \n" +
-                "      O))    O))    O))     O))   O))           O))    O))   O))    O)) O))     \n" +
-                "      O))  O))  O))  O))   O))  O))  O))        O) O))       O)))))))   O))   \n" +
-                "      O)) O))   O))   O)) O))  O))   O))        O))  O))     O))        O))   O))))\n" +
-                " O)   O))  O))   O))   O)O))   O))   O))        O))    O))   O))         O))    O)  \n" +
-                "  O))))     O)) O)))    O))      O)) O)))       O))      O)) O))          O)))))\n"+
-                "-------------------------------------------------------------------------------------------------------------------------------------------------------");
-   
+            System.out.println("                                                                                    "); Thread.sleep(50);         //just to make it look a little better
+            System.out.println("      O))                                      O)))))))     O)))))))      O))))     ");   Thread.sleep(50);
+            System.out.println("      O))                                      O))    O))   O))    O))  O)    O))  ");    Thread.sleep(50);
+            System.out.println("      O))    O))    O))     O))   O))           O))    O))   O))    O)) O))     ");   Thread.sleep(50);
+            System.out.println("      O))  O))  O))  O))   O))  O))  O))        O) O))       O)))))))   O))   "); Thread.sleep(50);
+            System.out.println("      O)) O))   O))   O)) O))  O))   O))        O))  O))     O))        O))   O))))");    Thread.sleep(50);
+            System.out.println(" O)   O))  O))   O))   O)O))   O))   O))        O))    O))   O))         O))    O)  ");   Thread.sleep(50);
+            System.out.println("  O))))     O)) O)))    O))      O)) O)))       O))      O)) O))          O)))))");   Thread.sleep(50);
+            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------"); Thread.sleep(50);
+            Thread.sleep(300);
         System.out.println("Tired of your boring life as a carriage driver for crippeled Lords and Ladies, you feel the urge to explore the wide world.\nAfter wandering a whole 140 feet from your home, you begin to feel very exhausted and decide to have a rest near\nthe entrance to a cave.You have a short nap. After waking up again the sun is already beginning to set, but you still feel the urge to enter the cave.\nSo you light your torch and head inside.");
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("Press [ENTER] to depart on your adventure!");}
@@ -37,7 +35,7 @@ public class Game {
         } catch(Exception e){}
             createSaveFolder.SaveLoad(); //Loads and Saves the Games if there's an Exception the Titlescreen will be called
          
-        
+        Shop.equipCheck();
         decide(); //this is easier to check if Loading didn't fuck up
         
         //explore();
@@ -49,6 +47,7 @@ public class Game {
 
     public static void decide(){
         try {Thread.sleep(5000);} catch(Exception e) {System.out.println("shit");}
+        
         Exp.main();
         System.out.println("----------------------------------------------------------------------");
         System.out.println(" ____________________ \n"+ 

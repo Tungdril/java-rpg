@@ -12,7 +12,8 @@ public class Shop {
 public static void main(String[] args){ 
     shop();  
 }
-    public static void shop(){
+    public static void shop()
+    {
         Scanner vendor = new Scanner(System.in);
         int ka = 0;
         boolean sop = ka==0 ;
@@ -54,7 +55,7 @@ public static void main(String[] args){
                                                             "|     Hopefully it's as useful       |\n"+
                                                             "|       as it's cool looking!        |\n"+
                                                             "|____________________________________|\n");
-                    sword=sword+2;
+                    sword=2;
                     Game.money=Game.money-200;
                     swordEquip=1;}
                     break;
@@ -71,7 +72,7 @@ public static void main(String[] args){
                                                             "|      Hopefully it's as useful      |\n"+
                                                             "|           as it's shiny!           |\n"+
                                                             "|____________________________________|\n");
-                    armor=armor+2;
+                    armor=2;
                     Game.money=Game.money-300;
                     armorEquip=1;}
                     break;
@@ -88,7 +89,7 @@ public static void main(String[] args){
                 System.out.println( " ____________________________________ \n"+
                                     "|      You bought the potion!        |\n"+
                                     "|And directly drank it. How wasteful.|\n"+
-                                    "|           You gain " + heal + "HP.            |\n"+
+                                    "|          You regain " + heal + "HP.           |\n"+
                                     "|____________________________________|\n");
                 Game.money=Game.money-20; // was in the wrond line
             } else                      {System.out.println(" ____________________________________ \n"+
@@ -102,8 +103,14 @@ public static void main(String[] args){
                                 "|____________________________________|\n");
             ka ++;
             break;
-        }   ka=0;
-            Game.decide();
-    }        
-}
+        }   
+        ka=0;
+        Game.decide();
+        }        
+    }
+        public static void equipCheck() //checks if the player has bought equipment and if the player did, it adds the armor and sword buff
+        {
+            if(armorEquip==1){armor=2;};
+            if(swordEquip==1){sword=2;};
+        }
 }
