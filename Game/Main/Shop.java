@@ -13,17 +13,13 @@ public static void main(String[] args){
     shop();  
 }
     public static void shop()
-    {   System.out.println("Heavy Work is currently in progress. You shouldn't disturb");    //
-        Game.decide();
-        Scanner vendor = new Scanner(System.in);
-        int ka = 0; //no longer needed will replace the while loop with a loopin recursion
-        boolean sop = ka==0 ;
+    {   Scanner vendor = new Scanner(System.in);
         System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
         System.out.print(   "|    You have entered a small cave.  |\n");                              try{Thread.sleep(100);}catch(Exception e){}
         System.out.print(   "|An old dwarf has set up a shop here.|\n");                              try{Thread.sleep(100);}catch(Exception e){}
         System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
                             try{Thread.sleep(650);}catch(Exception e){}
-        while (sop) {                                                                               try{Thread.sleep(1000);}catch(Exception e){} // The loop doesn't work as intended
+        try{Thread.sleep(1000);}catch(Exception e){}
 
         System.out.println(    " ____________________________________ ");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|       \"What are you buying?\"       |");                         try{Thread.sleep(100);}catch(Exception e){}
@@ -34,9 +30,10 @@ public static void main(String[] args){
         System.out.println(    "|2. Buy a Healing Potion (20 G)      |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|3. Leave                            |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|____________________________________|");                           try{Thread.sleep(100);}catch(Exception e){}
+        
         int Talk = vendor.nextInt();
 
-        switch (Talk){
+        switch (Talk){          //loop was replaced with recursion
             case 1:
                 equipShop();
             case 2:
