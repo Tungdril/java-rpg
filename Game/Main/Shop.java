@@ -36,24 +36,11 @@ public static void main(String[] args){
         System.out.println(    "|____________________________________|");                           try{Thread.sleep(100);}catch(Exception e){}
         int Talk = vendor.nextInt();
 
-        switch (Talk){  //TODO @SmyloG  Will make it a different module
+        switch (Talk){
             case 1:
                 equipShop();
             case 2:
-            if(Game.money>=20){
-                int heal = (int) (Math.random()*3+1);
-                System.out.println( " ____________________________________ ");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println( "|      You bought the potion!        |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println( "|And directly drank it. How wasteful.|");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println( "|          You regain " + heal + "HP.           |");                       try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println( "|____________________________________|");                                  try{Thread.sleep(100);}catch(Exception e){}
-                Game.money=Game.money-20; // was in the wrond line
-            } else                      {System.out.println(" ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
-                                         System.out.println("|       You don't have enough G.     |");          try{Thread.sleep(100);}catch(Exception e){}
-                                         System.out.println("|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
-                                        }
-                 
-                break;
+                medicineShop();
             case 3:
             System.out.println( " ____________________________________ ");    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println( "|         You leave the shop.        |");    try{Thread.sleep(100);}catch(Exception e){}
@@ -126,19 +113,19 @@ public static void main(String[] args){
                 System.out.println(    "|                            |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                            |O|       |");                     try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println(    "|                            |'|       |");                    try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println(    "|                            |.|       |");                   try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println(    "|                            |O|       |");                   try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                            |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                            |O|       |");                     try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println(    "|                            |'|       |");                    try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println(    "|                            |.|       |");                    try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println(    "|                            |L|       |");                    try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println(    "|                            |'|       |");                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |O|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |L|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|                            |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|                            \\ /       |");                    try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|--------------------------------------| ");                    try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println(    "|  \"Are you here to buy this Sword?\" |");                   try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "|  \"Are you here to buy this Sword?\" |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "| 1. Sword (200 G)                     |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "| 2. No                                |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
@@ -290,5 +277,23 @@ public static void main(String[] args){
                     shop();}
                 } catch (Exception e){shop();}
             }   
+        }
+        public static void medicineShop(){  //just making the health potion shop another module because i can
+            if(Game.money>=20){
+                int heal = (int) (Math.random()*3+1);
+                System.out.println( " ____________________________________ ");                                  try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println( "|      You bought the potion!        |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println( "|And directly drank it. How wasteful.|");                                  try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println( "|          You regain " + heal + "HP.           |");                       try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println( "|____________________________________|");                                  try{Thread.sleep(100);}catch(Exception e){}
+                Enemy.playerHealth = Enemy.playerHealth + heal;
+                Game.money=Game.money-20;
+                shop();
+            } else                      {System.out.println(" ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
+                                         System.out.println("|       You don't have enough G.     |");          try{Thread.sleep(100);}catch(Exception e){}
+                                         System.out.println("|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
+                                        }
+                 
+                shop();
         }
     }
