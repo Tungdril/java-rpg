@@ -22,7 +22,7 @@ public static void main(String[] args){
         while (sop) {
         System.out.print(   " ____________________________________ \n"+
                             "|       \"What are you buying?\"       |\n"+ 
-                            "|    says the dwarven shopkeeper     |\n"+
+                            "|    sayed the dwarven shopkeeper    |\n"+
                             "|  You currently have " + Game.money + "G.         |\n"+
                             "|------------------------------------|\n"+
                             "|           You choose to:           |\n"+
