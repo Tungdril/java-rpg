@@ -7,7 +7,7 @@ import javax.sound.sampled.Clip;
 public class AudioManager{
  public static void playSound(){
    String soundFile = "./Audio/bgm.wav";
-   String soundFileTesting = "./Game/Audio/bgm.wav"; //only for testing
+   String soundFileTesting = "/Game/Audio/bgm.wav"; //only for testing
     while (true){
       if(Death.stopMusic==1){ //prevents playing in certain cases
         return;
