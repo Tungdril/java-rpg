@@ -1,37 +1,39 @@
+import java.util.Scanner;
 public class Death { //made a file for it alone to make it easier to check for a deathstate before and after battle
     public static void death(){
-        if (Encounters.playerHealth<=0){ //deathstate 
-            System.out.println(
-"                                 _____  _____ \n"+
-"                                <     `/     | \n"+            
-"                                 >          ( \n"+
-"                                |   _     _  | \n"+            
-"                                |  |_) | |_) | \n"+
-"                                |  | \\ | |   | \n"+    
-"                                |            | \n"+
-"                 ______.______%_|            |_________________ \n"+            
-"               _/                                              | \n"+
-"              |                                                < \n"+        
-"              |_____.-._________              ____/|___________| \n"+
-"                                | * Day 0    | \n"+            
-"                                | + Day "+Game.day+"    | \n"+    
-"                                |            | \n"+            
-"                                |            | \n"+
-"                                |   _        < \n"+            
-"                                |__/         | \n"+
-"                                 / `--.      | \n"+            
-"                               %|            |% \n"+
-"                           |/.%%|          -< @%%% \n"+            
-"                           ` %`@|     v      |@@%@%%     \n"+
-"                         .%%%@@@|%    |    % @@@%%@%%%% \n"+            
-"                    _.%%%%%%@@@@@@%%_/%__%@@%%@@@@@@@%%%%%% \n"
-                 
-            );
-            System.out.print("Press [ENTER] to get to the Titlescreen"); //Player has to press [Enter] to go to the Titlescreen
-            try{
-                System.in.read();
-            } catch(Exception e){}
-            Game.main(null); 
+        if (Encounters.playerHealth<=0){                    //deathstate 
+            try{Thread.sleep(2750);}catch(Exception e){}
+            System.out.println("                                 You have died"); try{Thread.sleep(2000);}catch(Exception e){System.out.println("HOW?\n(exception in Death.java)");};
+                System.out.println("                                 _____  _____ ");                                     try{Thread.sleep(100);}catch(Exception e){} //to make it beautiful
+                System.out.println("                                <     `/     | ");                                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                                 >          ( ");                                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                                |   _     _  | ");                                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                                |  |_) | |_) | ");                                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                                |  | \\ | |   | ");                                   try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                                |            | ");                                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                 ______.______%_|            |_________________ ");                   try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("               _/                                              | ");                  try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("              |                                                < ");                  try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("              |_____.-._________              ____/|___________| ");                  try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                                | * Day 0    | ");                                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                                | + Day "+Game.day+"    | ");                         try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                                |            | ");                                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                                |            | ");                                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                                |   _        < ");                                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                                |__/         | ");                                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                                 / `--.      | ");                                    try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                               %|            |% ");                                   try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                           |/.%%|          -< @%%% ");                                try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                           ` %`@|     v      |@@%@%%     ");                          try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                         .%%%@@@|%    |    % @@@%%@%%%% ");                           try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("                    _.%%%%%%@@@@@@%%_/%__%@@%%@@@@@@@%%%%%% ");                       try{Thread.sleep(100);}catch(Exception e){}
+                try{Thread.sleep(100);}catch(Exception e){}
+            System.out.print("Do you wish to continue?\n1. yes\n2. no\n"); //Player can return to Titlescreen or end the programm
+            Scanner d = new Scanner(System.in);
+            int postMortem = d.nextInt();
+            if(postMortem==1){
+            Game.main(null);}  //goes back to the Titlescreen
+            else{System.exit(0);} //exits java
 
     }
 }

@@ -21,7 +21,7 @@ public class Game {
             System.out.println("      O)) O))   O))   O)) O))  O))   O))        O))  O))     O))        O))   O))))");    Thread.sleep(100);
             System.out.println(" O)   O))  O))   O))   O)O))   O))   O))        O))    O))   O))         O))    O)  ");   Thread.sleep(100);
             System.out.println("  O))))     O)) O)))    O))      O)) O)))       O))      O)) O))          O)))))");   Thread.sleep(100);
-            Thread.sleep(1500);
+            Thread.sleep(4500);
             System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("Tired of your boring life as a carriage driver for crippeled Lords and Ladies, you feel the urge to explore the wide world.\nAfter wandering a whole 140 feet from your home, you begin to feel very exhausted and decide to have a rest near\nthe entrance to a cave.You have a short nap. After waking up again the sun is already beginning to set, but you still feel the urge to enter the cave.\nSo you light your torch and head inside.");
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
