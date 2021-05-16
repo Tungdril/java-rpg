@@ -38,7 +38,8 @@ public class Game {
         switch(savefile){
             case 1: Save.creatingSave(); break; 
             case 2: Load.readingPain2(); break;
-        }
+        } 
+        Name.close();
 
         explore();
 
