@@ -21,26 +21,52 @@ public static void main(String[] args){
                             "|      You have entered the Shop.    |\n"+
                             "|____________________________________|\n");
                             try{Thread.sleep(550);}catch(Exception e){}
-        while (sop) {
-        System.out.print(   " ____________________________________ \n"+
-                            "|       \"What are you buying?\"       |\n"+ 
-                            "|    said  the dwarven shopkeeper    |\n"+
-                            "|------------------------------------|\n"+
-                            "|           You choose to:           |\n"+
-                            "|1. Buy Equipment                    |\n"+
-                            "|2. Buy a Healing Potion (20 G)      |\n"+
-                            "|3. Leave                            |\n"+
-                            "|____________________________________|\n");
+        while (sop) {        
+
+        System.out.println(    " ____________________________________ ");
+        System.out.println(    "|       \"What are you buying?\"       |");
+        System.out.println(    "|    said  the dwarven shopkeeper    |");
+        System.out.println(    "|------------------------------------|");
+        System.out.println(    "|           You choose to:           |");
+        System.out.println(    "|1. Buy Equipment                    |");
+        System.out.println(    "|2. Buy a Healing Potion (20 G)      |");
+        System.out.println(    "|3. Leave                            |");
+        System.out.println(    "|____________________________________|");
         int Talk = vendor.nextInt();
 
         switch (Talk){
             case 1:
-                System.out.println( " ____________________________________ \n"+
-                                    "|\"The cool Sword or the shiny Armor?\"|\n"+
-                                    "|1. Sword (200 G)                    |\n"+
-                                    "|2. Armor (300 G)                    |\n"+ 
-                                    "|3. none of the above                |\n"+
-                                    "|____________________________________|\n");
+            System.out.println(    " ______________________________________");                      try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|                            .-.       |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|                           {{#}}      |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|                            8@8       |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|                            888       |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|                            8@8       |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|                       _    )8(    _  |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|                      (@)__/8@8\\__(@) |");                    try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|  ____________________ `~\"-=):(=-\"~`  |");                   try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| |<><><>  |  |  <><><>|     |.|       |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| |<>      |  |      <>|     |C|       |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| |<>      |  |      <>|     |'|       |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| |<>   .--------.   <>|     |.|       |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| |     |   ()   |     |     |O|       |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| |_____| (O\\/O) |_____|     |'|       |");                    try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| |     \\   /\\   /     |     |.|       |");                   try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| |------\\  \\/  /------|     |O|       |");                   try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| |       '.__.'       |     |'|       |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| |        |  |        |     |.|       |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| :        |  |        :     |O|       |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|  \\       |  |       /      |'|       |");                    try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|   \\<>    |  |    <>/       |.|       |");                    try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|    \\<>   |  |   <>/        |L|       |");                    try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|     `\\<> |  | <>/'         |'|       |");                    try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|       `-.|__|.-`           \\ /       |");                    try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|--------------------------------------| ");                    try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| \"The cool Sword or a shiny Shield?\" |");                    try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| 1. Sword (200 G)                     |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| 2. Shield (300 G)                    |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "| 3. none of the above                 |");                     try{Thread.sleep(666);}catch(Exception e){}
+            System.out.println(    "|______________________________________|");                     try{Thread.sleep(666);}catch(Exception e){}
                 int upgrades = vendor.nextInt();
                 switch (upgrades){
                     case 1:
