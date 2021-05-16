@@ -12,8 +12,8 @@ public class AudioManager{
       if(Death.stopMusic==1){ //prevents playing in certain cases
         return;
     }else{
-        try {                                    //change soundFileTesting to soundFile before launch                                    
-        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundFileTesting));
+        try {                                    //change soundFileTesting to soundFile before launch               @Tungdril does for me the same error                     
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundFile));
         System.out.println();
         Clip clip = AudioSystem.getClip();
         clip.open(audioInputStream);
