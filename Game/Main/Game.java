@@ -6,7 +6,6 @@ public class Game {
     static String Day;
     static String userName;
     static int money;
-    static int healthPotion;
 
     public static void main(String[] args) {
         try{
@@ -15,12 +14,12 @@ public class Game {
         //Titlescreen
         System.out.println("                                                                                    ");    Thread.sleep(100);  //to make it look a cooler
         System.out.println("      O))                                      O)))))))     O)))))))      O))))     ");    Thread.sleep(100);
-        System.out.println("      O))                                      O))    O))   O))    O))  O)    O))  ");     Thread.sleep(100);
-        System.out.println("      O))    O))    O))     O))   O))           O))    O))   O))    O)) O))     ");        Thread.sleep(100);
-        System.out.println("      O))  O))  O))  O))   O))  O))  O))        O) O))       O)))))))   O))   ");          Thread.sleep(100);
-        System.out.println("      O)) O))   O))   O)) O))  O))   O))        O))  O))     O))        O))   O))))");     Thread.sleep(100);
+        System.out.println("      O))                                      O))    O))   O))    O))  O)    O))   ");    Thread.sleep(100);
+        System.out.println("      O))    O))    O))     O))   O))           O))    O))   O))    O)) O))         ");    Thread.sleep(100);
+        System.out.println("      O))  O))  O))  O))   O))  O))  O))        O) O))       O)))))))   O))         ");    Thread.sleep(100);
+        System.out.println("      O)) O))   O))   O)) O))  O))   O))        O))  O))     O))        O))   O)))) ");    Thread.sleep(100);
         System.out.println(" O)   O))  O))   O))   O)O))   O))   O))        O))    O))   O))         O))    O)  ");    Thread.sleep(100);
-        System.out.println("  O))))     O)) O)))    O))      O)) O)))       O))      O)) O))          O)))))");        Thread.sleep(100);
+        System.out.println("  O))))     O)) O)))    O))      O)) O)))       O))      O)) O))          O)))))    ");    Thread.sleep(100);
         Thread.sleep(3500);
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------"    ); Thread.sleep(550);
         System.out.println( "Tired of your boring life as a carriage driver for crippeled Lords and Ladies, you feel the urge to explore the wide world."                               ); Thread.sleep(550);
