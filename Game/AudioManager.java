@@ -7,13 +7,13 @@ import javax.sound.sampled.Clip;
 public class AudioManager{
  public static void playSound(){
    String soundFile = "./Audio/bgm.wav";
-   String soundFileTesting = "/Game/Audio/bgm.wav"; //only for testing
+   String soundFileTesting = "./Game/Audio/bgm.wav"; //only for testing
     while (true){
       if(Death.stopMusic==1){ //prevents playing in certain cases
         return;
     }else{
-        try {                                    //change soundFileTesting to soundFile before launch               @Tungdril does for me the same error                     
-        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundFile));
+        try {                                    //change soundFileTesting to soundFile before launch               @Tungdril does for me the same error  @SmyloG yes I know, but it works for me                   
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundFileTesting));
         System.out.println();
         Clip clip = AudioSystem.getClip();
         clip.open(audioInputStream);

@@ -3,7 +3,7 @@ public class Encounters {
 
     public static void fight(){
         Enemy.main(null); //Gets all the enemy info
-        System.out.println("\n----------------------------------------------------------------------");
+        System.out.println("\n----------------------------------------------------------------------\n");
         int randomMsg = (int) (Math.random()*5+1);
         switch (randomMsg) {
             case 1:
@@ -37,7 +37,8 @@ public class Encounters {
 
         try {
         Scanner fight = new Scanner(System.in);
-        try{Thread.sleep(100);}catch(Exception e){}       
+        try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println(Enemy.Sprite);       
         System.out.println("\n----------------------------------------------------------------------"); 
         try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("\nWhat will you do?\n1. Attack\n2. Defend\n3. Check Health\n4. Flee");
@@ -204,7 +205,7 @@ public class Encounters {
             System.out.println("You found [" + reward + "] G!");
             Game.money= Game.money+reward;
             double expGain = Exp.exp + 5 * Enemy.difficulty;  //adds exp based on encounter difficulty
-            Exp.exp = + expGain;
+            Exp.exp = Exp.exp + expGain;
             try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("You gain [" + (int)expGain + "] EXP!");
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
