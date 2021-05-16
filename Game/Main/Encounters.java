@@ -42,9 +42,9 @@ static double difficulty;
         Thread.sleep(150);
         Integer fight2 = fight.nextInt();
             if (fight2==1){ //Attack
-                System.out.println("You attacked the Enemy!");
+                System.out.println("You attacked the enemy!");
                 int newenemyHealth = (enemyHealth - playerDamage);
-                System.out.println("You did " + (enemyHealth-newenemyHealth) + " Damage."); //
+                System.out.println("You did " + (enemyHealth-newenemyHealth) + " damage."); //
                 enemyHealth = newenemyHealth;
             }
             else if (fight2==2){ //Defend
@@ -53,7 +53,7 @@ static double difficulty;
             }
             else if (fight2==3){ //Check Health
                 System.out.println("----------------------------------------------------------------------");
-                System.out.println("The Enemy has still " + enemyHealth + " HP left");
+                System.out.println("The enemy has still " + enemyHealth + " HP left");
                 System.out.println("You still have " + playerHealth + " HP left");
                 System.out.println("----------------------------------------------------------------------");
             }
@@ -72,22 +72,23 @@ static double difficulty;
             enemyDefense=0;
             
             if(enemyDefenseChance<16){                              //15% Chance for enemy to defend
-                System.out.println("The Enemy defends!");
+                System.out.println("The enemy defends!");
                 enemyDefense++;
             } 
             else if(enemyDamageChance>1) {                         // If the Enemy doesn't defend he has a 1% Chance to miss his attack
-                System.out.println("The Enemy attacks!");
+                System.out.println("The enemy attacks!");
                 int newenemyDamage = enemyDamage-playerDefense;
                 int newplayerHealth = playerHealth-newenemyDamage;
                 playerHealth = newplayerHealth;
-                System.out.println("The Enemy did " + newenemyDamage + " HP damage!");
+                System.out.println("The enemy did " + newenemyDamage + " HP damage!");
             } else {
-                System.out.println("The Enemy attacked and missed.");
+                System.out.println("The enemy attacked and missed.");
             }
             playerDefense=0;
             Thread.sleep(150);
         } catch(Exception e){System.out.println("shit");}}
 
+        //just skips a day
     public static void nothing(){
         int nothing = (int) (Math.random()*5+1);
         switch (nothing) {
@@ -114,7 +115,7 @@ static double difficulty;
         }
     } 
 
-    //creates small, medium, large loot, by multiplying with lootSize
+    //creates small, medium and large loot, by multiplying value with lootSize
     public static void loot(){ 
         int lootSize = (int) (Math.random()*3+1);
         int lootValue = (int) (Math.random()*10*lootSize+5);
@@ -153,8 +154,7 @@ static double difficulty;
             break;
             }
         }
-        if (playerHealth<=0){ //deathstate
-            Game.day ++; 
+        if (playerHealth<=0){ //deathstate 
             System.out.println(
 "                                 _____  _____ \n"+
 "                                <     `/     | \n"+            
@@ -180,8 +180,7 @@ static double difficulty;
 "                         .%%%@@@|%    |    % @@@%%@%%%% \n"+            
 "                    _.%%%%%%@@@@@@%%_/%__%@@%%@@@@@@@%%%%%% \n"
                  
-            );
-            Game.day --; //need this to undo the previous increment, which was used for the graphic only
+            );         
         }
 
         if (enemyHealth<=0){                                        
@@ -191,14 +190,14 @@ static double difficulty;
             int reward = (int) (Math.random()*10 * difficulty + 10 + bonus);           
             System.out.println("You found [" + reward + "] G!");
             Game.money= Game.money+reward;
-            double expGain = Exp.exp + 5 * difficulty;
+            double expGain = Exp.exp + 5 * difficulty;  //adds exp based on encounter difficulty
             Exp.exp = + expGain;
             System.out.println("You gain [" + (int)expGain + "] EXP!");
             Game.decide(); //calls decide to let the player make the next move              
         }  
     }    
 
-    //home, heals player, and returns to decide()
+    //heals player, and returns to decide()
     public static void home(){
         int restingHealth = (int) (Math.random()*3);
         playerHealth = restingHealth+playerHealth;

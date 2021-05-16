@@ -1,9 +1,9 @@
-
 public class Exp {
     static String Exp;
     static double exp;
     static int expScaling;
 
+    //determines expScaling
     public static void main(){
         if(exp<10){
             expScaling = 0;
