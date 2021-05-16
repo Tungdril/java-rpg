@@ -35,7 +35,7 @@ public static void main(String[] args){
         System.out.println(    "|____________________________________|");                           try{Thread.sleep(100);}catch(Exception e){}
         int Talk = vendor.nextInt();
 
-        switch (Talk){
+        switch (Talk){  //TODO @SmyloG  Will make it a different module
             case 1:
             System.out.println(    " ______________________________________");                      try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                            .-.       |");                     try{Thread.sleep(100);}catch(Exception e){}
@@ -90,19 +90,20 @@ public static void main(String[] args){
                     swordEquip=1;}
                     break;
                     case 2:
-                    if (armorEquip==1) {System.out.println( " ____________________________________ ");
-                                        System.out.println( "|   \"You already have that Shield.\"  |");
-                                        System.out.println( "|____________________________________|");}  
-                    else if (Game.money<300) {System.out.println(   " ____________________________________ ");
-                                              System.out.println(   "| You don't have enough money to buy |");
-                                              System.out.println(   "|         this shiny Shield.         |");
-                                              System.out.println(   "|____________________________________|");
+                    if (armorEquip==1) {System.out.println( " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
+                                        System.out.println( "|   \"You already have that Shield.\"  |");                try{Thread.sleep(100);}catch(Exception e){}
+                                        System.out.println( "|____________________________________|");                  try{Thread.sleep(100);}catch(Exception e){}
+                                    }  
+                    else if (Game.money<300) {System.out.println(   " ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
+                                              System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
+                                              System.out.println(   "|         this shiny Shield.         |");          try{Thread.sleep(100);}catch(Exception e){}
+                                              System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
                                             }
-                    else {System.out.println(               " ____________________________________ \n"+
-                                                            "|    You bought the shiny Shield!     |\n"+
-                                                            "|      Hopefully it's as useful      |\n"+
-                                                            "|           as it's shiny!           |\n"+
-                                                            "|____________________________________|\n");
+                    else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|    You bought the shiny Shield!    |");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|      Hopefully it's as useful      |");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|           as it's shiny!           |");                  try{Thread.sleep(100);}catch(Exception e){}
+                          System.out.println(               "|____________________________________|");                  try{Thread.sleep(100);}catch(Exception e){}
                     armor=2;
                     Game.money=Game.money-300;
                     armorEquip=1;}
