@@ -6,6 +6,7 @@ import javax.sound.sampled.Clip;
 
 public class AudioManager{
  public static void playSound(){
+   String soundFile = "./Game/Main/Audio/bgm.wav";
     while (true){
       if(Death.stopMusic==1){ //prevents playing in certain cases
         return;
@@ -22,8 +23,8 @@ public class AudioManager{
     } catch(Exception ex) {
         System.out.println("Error with playing sound.");
         ex.printStackTrace();
-        return;
-    }
+        System.exit(0);
+      }
     }  
    }
  }          		
