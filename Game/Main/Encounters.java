@@ -70,7 +70,7 @@ static int fleeChance;
             }
             else { //if the Number isn't 1-4
                 System.out.println("That's not an option!");
-                playerHealth = (playerHealth-playerHealth);
+                playerHealth = (playerHealth-playerHealth); //if the player is to stupid to use 1,2,3 or 4 he will be disposed immediatly
                 Death.death(); 
             }
             Thread.sleep(200);
@@ -93,7 +93,7 @@ static int fleeChance;
             }
             playerDefense=0;
             Thread.sleep(150);
-        } catch(Exception e){System.out.println("shit");}}
+        } catch(Exception e){System.out.println("use Numbers");}}
 
         //just skips a day
     public static void nothing(){
