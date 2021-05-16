@@ -6,7 +6,6 @@ public class Game {
     static String Day;
     static String userName;
     static int money;
-    static int healthPotion;
 
     public static void main(String[] args) {
         try{
