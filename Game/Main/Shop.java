@@ -48,7 +48,6 @@ public static void main(String[] args){
         }   
        
         }        
-    }
         public static void equipCheck() //checks if the player has bought equipment and if the player did, it adds the armor and sword buff
         {
             if(armorEquip==1){armor=2;};
