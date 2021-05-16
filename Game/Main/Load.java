@@ -8,7 +8,7 @@ public class Load { //just for loading a savefile
     
     public static void readingPain2(){
         try {
-            File f = new File("/saves" + Game.userName + ".txt");
+            File f = new File("\\saves\\" + Game.userName + ".txt");
             Scanner reader = new Scanner(f);
             while (reader.hasNextLine()) {
                 Exp.Exp = reader.nextLine();
