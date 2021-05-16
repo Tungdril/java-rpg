@@ -85,10 +85,11 @@ public static void main(String[] args){
                                     "|And directly drank it. How wasteful.|\n"+
                                     "|           You gain " + heal + "HP.            |\n"+
                                     "|____________________________________|\n");
+                Game.money=Game.money-20; // was in the wrond line
             } else                      {System.out.println(" ____________________________________ \n"+
                                                             "|       You don't have enough G.     |\n"+
                                                             "|____________________________________|\n");}
-                Game.money=Game.money-20; //TODO @SmyloG substracts money even when under 20, money turns negative
+                 
                 break;
             case 3:
             System.out.println( " ____________________________________ \n"+
