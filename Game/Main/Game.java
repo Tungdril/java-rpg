@@ -31,7 +31,7 @@ public class Game {
         } catch(Exception e){}
         Scanner Name = new Scanner(System.in);
         System.out.println("Please enter your Username");
-        userName = Name.nextLine();
+        userName = Name.next();
         System.out.println("Do you wish to \n1. create \nor \n2. load \na save file");
         int savefile = Name.nextInt();
         switch(savefile){
