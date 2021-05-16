@@ -13,7 +13,8 @@ public static void main(String[] args){
     shop();  
 }
     public static void shop()
-    {
+    {   System.out.println("Heavy Work is done in here. You shouldn't disturb");    //
+        Game.decide();
         Scanner vendor = new Scanner(System.in);
         int ka = 0; //no longer needed will replace the while loop with a loopin recursion
         boolean sop = ka==0 ;
@@ -37,6 +38,49 @@ public static void main(String[] args){
 
         switch (Talk){  //TODO @SmyloG  Will make it a different module
             case 1:
+                equipShop();
+            case 2:
+            if(Game.money>=20){
+                int heal = (int) (Math.random()*3+1);
+                System.out.println( " ____________________________________ ");                                  try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println( "|      You bought the potion!        |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println( "|And directly drank it. How wasteful.|");                                  try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println( "|          You regain " + heal + "HP.           |");                       try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println( "|____________________________________|");                                  try{Thread.sleep(100);}catch(Exception e){}
+                Game.money=Game.money-20; // was in the wrond line
+            } else                      {System.out.println(" ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
+                                         System.out.println("|       You don't have enough G.     |");          try{Thread.sleep(100);}catch(Exception e){}
+                                         System.out.println("|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
+                                        }
+                 
+                break;
+            case 3:
+            System.out.println( " ____________________________________ ");    try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println( "|         You leave the shop.        |");    try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println( "|____________________________________|");    try{Thread.sleep(100);}catch(Exception e){}
+            try{Thread.sleep(1000);}catch(Exception e){}
+            Game.decide();;
+            
+        }   
+       
+        }        
+    }
+        public static void equipCheck() //checks if the player has bought equipment and if the player did, it adds the armor and sword buff
+        {
+            if(armorEquip==1){armor=2;};
+            if(swordEquip==1){sword=2;};
+        }
+
+        public static void equipShop(){
+            Scanner vendor = new Scanner(System.in);
+            if(){
+
+            }
+            else if(){
+
+            }
+            else if () {}
+            else {
             System.out.println(    " ______________________________________");                      try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                            .-.       |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                           {{#}}      |");                     try{Thread.sleep(100);}catch(Exception e){}
@@ -68,7 +112,7 @@ public static void main(String[] args){
             System.out.println(    "| 2. Shield (300 G)                    |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "| 3. none of the above                 |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
-                int upgrades = vendor.nextInt();
+                int upgrades = Shop.vendor.nextInt();
                 switch (upgrades){
                     case 1:
                     if (swordEquip==1)  {System.out.println(  " ____________________________________ ");                 try{Thread.sleep(100);}catch(Exception e){}
@@ -114,35 +158,12 @@ public static void main(String[] args){
                     System.out.println( "|____________________________________|");                              try{Thread.sleep(100);}catch(Exception e){}
                    }
                 break;
-            case 2:
-            if(Game.money>=20){
-                int heal = (int) (Math.random()*3+1);
-                System.out.println( " ____________________________________ ");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println( "|      You bought the potion!        |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println( "|And directly drank it. How wasteful.|");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println( "|          You regain " + heal + "HP.           |");                       try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println( "|____________________________________|");                                  try{Thread.sleep(100);}catch(Exception e){}
-                Game.money=Game.money-20; // was in the wrond line
-            } else                      {System.out.println(" ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
-                                         System.out.println("|       You don't have enough G.     |");          try{Thread.sleep(100);}catch(Exception e){}
-                                         System.out.println("|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
-                                        }
-                 
-                break;
-            case 3:
-            System.out.println( " ____________________________________ ");    try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println( "|         You leave the shop.        |");    try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println( "|____________________________________|");    try{Thread.sleep(100);}catch(Exception e){}
-            try{Thread.sleep(1000);}catch(Exception e){}
-            Game.decide();;
+            }
             
-        }   
-       
-        }        
-    }
-        public static void equipCheck() //checks if the player has bought equipment and if the player did, it adds the armor and sword buff
-        {
-            if(armorEquip==1){armor=2;};
-            if(swordEquip==1){sword=2;};
         }
-}
+
+
+
+
+
+    }
