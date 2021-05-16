@@ -9,10 +9,12 @@ public class Game {
     static int money;
 
     public static void main(String[] args) {
+        //Death.stopMusic=0; //allows bgm
+        
         try{
         createSaveFolder.createFold(); //creates a \JavaRPG\saves directory Folder at C:\"User"\Documents\ 
         Exp.main(); //initilize Exp
-        Death.stopMusic=0; //allows bgm
+        
         AudioManager.playSound(); //start bgm
 
         //Titlescreen
@@ -60,9 +62,10 @@ public class Game {
                            "      Health: "+ Enemy.playerHealth+"\n"+
                            "      Money: "+ money+"\n"+
                            "      Exp: "+(int)Exp.exp +"\n"+
+                           "      Day: "+day +"\n"+
                            "|____________________|\n");
         try{Thread.sleep(600);}catch(Exception e){}
-        System.out.println("Day: "+ day);    
+        System.out.println("Day: "+ day); 
         Save.creatingSave();
         System.out.println("Decide what to do next.\n"+
                            "1. Continue deeper into the cave\n"+
