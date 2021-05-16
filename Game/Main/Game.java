@@ -11,7 +11,7 @@ public class Game {
     public static void main(String[] args) {
         try{
         createSaveFolder.createFold(); //creates a \JavaRPG\saves directory Folder at C:\"User"\Documents\ 
-        Exp.main(); //initilieze Exp
+        Exp.main(); //initilize Exp
         Death.stopMusic=0; //allows bgm
         AudioManager.playSound(); //start bgm
 
@@ -26,7 +26,7 @@ public class Game {
         System.out.println("  O))))     O)) O)))    O))      O)) O)))       O))      O)) O))          O)))))    ");    Thread.sleep(100);
         Thread.sleep(3500);
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------"    ); Thread.sleep(550);
-        System.out.println( "Tired of your boring life as a carriage driver for crippeled Lords and Ladies, you feel the urge to explore the wide world."                               ); Thread.sleep(550);
+        System.out.println( "Tired of your boring life as a carriage driver for the fat aristocracy, you feel the urge to explore the wide world."                               ); Thread.sleep(550);
         System.out.println( "After wandering a whole 140 feet from your home, you begin to feel very exhausted and decide to have a rest near the entrance to a cave."                  ); Thread.sleep(550);
         System.out.println( "You have a short nap. After waking up again the sun is already beginning to set, but you still feel the urge to enter the cave."                           ); Thread.sleep(550);
         System.out.println( "So you light your torch and head inside."                                                                                                                  ); Thread.sleep(550);
