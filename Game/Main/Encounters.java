@@ -12,6 +12,7 @@ static int enemyDefense = 0;
 static int enemyDefenseChance;
 static int enemyDamageChance;
 static double difficulty;
+static int fleeChance;
 
     public static void fight(){
         int randomEnemy = (int) (Math.random()*100+1);
@@ -28,7 +29,7 @@ static double difficulty;
             enemyHealth = 8 + Exp.expScaling;
             difficulty = 1.15;
         }
-         System.out.println("As you are marching deeper into the cave system, you are suprised by an angry " + enemy+"!");
+         System.out.println("As you are marching deeper into the cave system, you are suprised by an angry " + enemy + "!");
         }
 
     public static void combat(){
@@ -59,8 +60,12 @@ static double difficulty;
                 System.out.println("----------------------------------------------------------------------");
             }
             else if (fight2==4){ //Flee
-                System.out.println("You tried to flee! But to no avail");
-    
+                System.out.println("You tried to flee.");
+                fleeChance = (int) (Math.random()*100+1);
+                if(fleeChance<= 40){
+                    System.out.println("And succeeded at that!");
+                    Game.decide();
+                } else {System.out.println("But to no avail!");}
             }
             else { //if the Number isn't 1-4
                 System.out.println("That's not an option!");
