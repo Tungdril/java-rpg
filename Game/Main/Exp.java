@@ -1,7 +1,7 @@
 
 public class Exp {
     static String Exp;
-    static int exp;
+    static double exp;
     static int expScaling;
 
     public static void main(){
