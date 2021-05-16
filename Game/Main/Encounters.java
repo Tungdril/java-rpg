@@ -7,7 +7,7 @@ public class Encounters {
         int randomMsg = (int) (Math.random()*5+1);
         switch (randomMsg) {
             case 1:
-            System.out.println("As you are marching deeper into the cave system, you are suprised by an angry" + Enemy.enemy+"!"); 
+            System.out.println("As you are marching deeper into the cave system, you are suprised by an angry " + Enemy.enemy+"!"); 
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
             break;            
             case 2:
@@ -23,7 +23,7 @@ public class Encounters {
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
             break;
             case 5:
-            System.out.println("As you enter a new cave, you are ambushed by a"+Enemy.enemy+" !");
+            System.out.println("As you enter a new cave, you are ambushed by a "+Enemy.enemy+" !");
             try {Thread.sleep(3500);} catch(Exception e) {System.out.println("shit");}
             break;
         }
