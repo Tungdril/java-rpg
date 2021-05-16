@@ -2,10 +2,10 @@ import java.io.File;
 import java.util.Scanner;
 public class Load { //just for loading a savefile
     public static void main(String[] args) {
-        readingPain();
+        readingPain2();
     };
     
-    public static void readingPain(){
+    public static void readingPain2(){
         try {
             File f = new File("saves/" + Game.userName + ".txt");
             Scanner reader = new Scanner(f);
@@ -15,19 +15,19 @@ public class Load { //just for loading a savefile
                 Game.Day = reader.nextLine();
                 Shop.ArmorEquip = reader.nextLine();
                 Shop.SwordEquip = reader.nextLine();
-                Game.exp = Integer.parseInt(Game.Exp);
+                Game.exp = Integer.parseInt(Game.Exp);//
                 Game.money = Integer.parseInt(Game.Money);
                 Game.day = Integer.parseInt(Game.Day);
                 Shop.armorEquip = Integer.parseInt(Shop.ArmorEquip);
                 Shop.swordEquip = Integer.parseInt(Shop.SwordEquip);
-                System.out.println("Exp: " + Game.exp);
-                System.out.println("Money: " + Game.money);
-                System.out.println("Day: " + Game.day);
-                System.out.println("Armor " + Shop.armorEquip);
-                System.out.println("Sword: " + Shop.swordEquip);
+            // System.out.println("Exp: " + Game.exp);
+            // System.out.println("Money: " + Game.money);
+            //  System.out.println("Day: " + Game.day);
+            //  System.out.println("Armor " + Shop.armorEquip);
+            //  System.out.println("Sword: " + Shop.swordEquip);
                 reader.close();
 
         }
-    } catch(Exception e){}
+    } catch(Exception e){System.out.println("Something went wron while loading.");}
 }
 }

@@ -29,6 +29,18 @@ public class Game {
         try{
             System.in.read();
         } catch(Exception e){}
+        Scanner Name = new Scanner(System.in);
+        System.out.println("Please enter your Username");
+        userName = Name.nextLine();
+        System.out.println("Do you wish to \n1. create \nor \n2. load \na save file");
+        int savefile = Name.nextInt();
+        switch(savefile){
+            case 1: Save.creatingSave(); break; 
+            case 2: Load.readingPain2(); break;
+            default: System.out.print("Please use 1 or 2 the next time"); break;
+        } 
+        Name.close();
+
         explore();
         
 

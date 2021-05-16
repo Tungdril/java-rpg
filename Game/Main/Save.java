@@ -13,6 +13,14 @@ public static void main(String[] args) {
     readingPain();
 }
 
+public static void creatingSave(){
+    createFile();
+    System.out.print(getSavePath()+"\n");
+    writingPain();
+    try{Thread.sleep(1000);}catch(Exception e){}
+    readingPain(); 
+}
+
 public static void createFile() {
 
     File f = new File("saves/" + Game.userName + ".txt");
@@ -33,12 +41,12 @@ public static String getSavePath(){
 public static void writingPain(){
     try{
     FileWriter writingSave = new FileWriter("saves/" + Game.userName + ".txt");
-    Game.Exp = Integer.toString(Game.exp);
+    Exp.Exp = Integer.toString(Exp.exp);
     Game.Money = Integer.toString(Game.money);
     Game.Day = Integer.toString(Game.day);
     Shop.ArmorEquip = Integer.toString(Shop.armorEquip);
     Shop.SwordEquip = Integer.toString(Shop.swordEquip); 
-    writingSave.write(Game.Exp +"\n"+ Game.Money +"\n" + Game.Day+"\n"+ Shop.ArmorEquip + "\n" + Shop.SwordEquip);
+    writingSave.write(Exp.Exp +"\n"+ Game.Money +"\n" + Game.Day+"\n"+ Shop.ArmorEquip + "\n" + Shop.SwordEquip);
     writingSave.close();
     System.out.println("Saved");
     } catch(IOException e) {System.out.println("Breeki"); e.printStackTrace();}
@@ -48,21 +56,21 @@ public static void readingPain(){
         File f = new File("saves/" + Game.userName + ".txt");
         Scanner reader = new Scanner(f);
         while (reader.hasNextLine()) {
-            Game.Exp = reader.nextLine();
+            Exp.Exp = reader.nextLine();
             Game.Money = reader.nextLine();
             Game.Day = reader.nextLine();
             Shop.ArmorEquip = reader.nextLine();
             Shop.SwordEquip = reader.nextLine();
-            Game.exp = Integer.parseInt(Game.Exp);
+            Exp.exp = Integer.parseInt(Exp.Exp);
             Game.money = Integer.parseInt(Game.Money);
             Game.day = Integer.parseInt(Game.Day);
             Shop.armorEquip = Integer.parseInt(Shop.ArmorEquip);
             Shop.swordEquip = Integer.parseInt(Shop.SwordEquip);
-            System.out.println("Exp: " + Game.exp);
-            System.out.println("Money: " + Game.money);
-            System.out.println("Day: " + Game.day);
-            System.out.println("Armor " + Shop.armorEquip);
-            System.out.println("Sword: " + Shop.swordEquip);
+           // System.out.println("Exp: " + Exp.exp);
+           // System.out.println("Money: " + Game.money);
+           // System.out.println("Day: " + Game.day);
+           // System.out.println("Armor " + Shop.armorEquip);
+           // System.out.println("Sword: " + Shop.swordEquip);
         }
             reader.close();
         } catch (Exception e) {}
