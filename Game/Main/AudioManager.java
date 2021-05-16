@@ -11,7 +11,7 @@ public class AudioManager{
         return;
     }else{
         try {   
-        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("./Game/Main/Audio/bgm.wav"));
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("./Game/Main//Audio/bgm.wav"));
         Clip clip = AudioSystem.getClip();
         clip.open(audioInputStream);
         clip.start();
@@ -21,7 +21,8 @@ public class AudioManager{
     } catch(Exception ex) {
         System.out.println("Error with playing sound.");
         ex.printStackTrace();
-    }
+        System.exit(0);
+      }
     }  
    }
  }          		
