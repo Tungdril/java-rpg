@@ -21,13 +21,13 @@ public class Game {
             System.out.println("      O)) O))   O))   O)) O))  O))   O))        O))  O))     O))        O))   O))))");     Thread.sleep(100);
             System.out.println(" O)   O))  O))   O))   O)O))   O))   O))        O))    O))   O))         O))    O)  ");    Thread.sleep(100);
             System.out.println("  O))))     O)) O)))    O))      O)) O)))       O))      O)) O))          O)))))");        Thread.sleep(100);
-            Thread.sleep(4500);
-        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------"    ); Thread.sleep(100);
-        System.out.println( "Tired of your boring life as a carriage driver for crippeled Lords and Ladies, you feel the urge to explore the wide world.\n"                             ); Thread.sleep(100);
-        System.out.println( "After wandering a whole 140 feet from your home, you begin to feel very exhausted and decide to have a rest near\n"                                        ); Thread.sleep(100);
-        System.out.println( "the entrance to a cave.You have a short nap. After waking up again the sun is already beginning to set, but you still feel the urge to enter the cave.\n"  ); Thread.sleep(100);
-        System.out.println( "So you light your torch and head inside."                                                                                                                  ); Thread.sleep(100);
-        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------"    ); Thread.sleep(100);
+            Thread.sleep(3500);
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------"    ); Thread.sleep(550);
+        System.out.println( "Tired of your boring life as a carriage driver for crippeled Lords and Ladies, you feel the urge to explore the wide world."                               ); Thread.sleep(550);
+        System.out.println( "After wandering a whole 140 feet from your home, you begin to feel very exhausted and decide to have a rest near"                                          ); Thread.sleep(550);
+        System.out.println( "the entrance to a cave.You have a short nap. After waking up again the sun is already beginning to set, but you still feel the urge to enter the cave."    ); Thread.sleep(550);
+        System.out.println( "So you light your torch and head inside."                                                                                                                  ); Thread.sleep(550);
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------"    ); Thread.sleep(550);
         System.out.println("Press [ENTER] to depart on your adventure!");}
         catch(Exception e){main(null);} //if there's an exception in the Titlescreen it will loop
         //System.out.println("Day: "+ day);  
@@ -59,6 +59,7 @@ public class Game {
                            "      Money: "+ money+"\n"+
                            "      Exp: "+(int)Exp.exp +"\n"+
                            "|____________________|\n");
+        try{Thread.sleep(600);}catch(Exception e){}
         System.out.println("Day: "+ day);    
         Save.creatingSave();
         System.out.println("Decide what to do next.\n"+
@@ -76,7 +77,7 @@ public class Game {
             day++;
                 Encounters.home(); 
             break;
-            case 3:
+            case 3: //ends the code
             System.exit(0);
             default: 
             System.out.println("That's not an option!");

@@ -20,6 +20,7 @@ public static void main(String[] args){
         System.out.print(   " ____________________________________ \n"+  
                             "|      You have entered the Shop.    |\n"+
                             "|____________________________________|\n");
+                            try{Thread.sleep(550);}catch(Exception e){}
         while (sop) {
         System.out.print(   " ____________________________________ \n"+
                             "|       \"What are you buying?\"       |\n"+ 

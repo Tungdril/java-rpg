@@ -108,7 +108,7 @@ static int fleeChance;
             Game.decide();
             break;            
             case 3:
-            System.out.println("The caves seems to take no end at all.\nYou wander deeper and deeper with no events whatsoever.");
+            System.out.println("The caves seems to have no end at all.\nYou wander deeper and deeper with no events whatsoever.");
             Game.decide();
             break;            
             case 4:
@@ -129,7 +129,7 @@ static int fleeChance;
         switch (lootSize) {
             case 1:
             System.out.println("You enter a small cave, the walls are overgrown with moss. To your right you can see a faint glimmering in the overgrowth.\n"+"Upon closer inspection it seems like a few coins were reflecting the light of your torch.\n"+
-            "You find ["+ lootValue+"] G!");
+            "You find ["+lootValue+"] G!");
             Game.money= Game.money+lootValue;
             Game.decide();
             break;
