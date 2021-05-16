@@ -32,7 +32,7 @@ public class Game {
         System.out.println( "So you light your torch and head inside."                                                                                                                  ); Thread.sleep(550);
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------"    ); Thread.sleep(550);
         System.out.println("Press [ENTER] to depart on your adventure!");}
-        catch(Exception e){main(null);} //if there's an exception in the Titlescreen it will loop
+        catch(Exception e){} //if there's an exception in the Titlescreen it will loop
         //System.out.println("Day: "+ day);  
         //System.out.println(Encounters.playerHealth);
         //Wait for user Input
