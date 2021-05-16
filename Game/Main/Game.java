@@ -15,6 +15,7 @@ public class Game {
         Exp.main();
         //Titlescreen
         System.out.println(
+                "                                                                                    \n" +
                 "      O))                                      O)))))))     O)))))))      O))))     \n" +           
                 "      O))                                      O))    O))   O))    O))  O)    O))  \n" +
                 "      O))    O))    O))     O))   O))           O))    O))   O))    O)) O))     \n" +
@@ -47,7 +48,6 @@ public class Game {
 
     public static void decide(){
         try {Thread.sleep(5000);} catch(Exception e) {System.out.println("shit");}
-        Death.death();
         Exp.main();
         System.out.println("----------------------------------------------------------------------");
         System.out.println(" ____________________ \n"+ 

@@ -22,8 +22,7 @@ public static void main(String[] args){
         while (sop) {
         System.out.print(   " ____________________________________ \n"+
                             "|       \"What are you buying?\"       |\n"+ 
-                            "|    sayed the dwarven shopkeeper    |\n"+
-                            "|  You currently have " + Game.money + "G.         |\n"+
+                            "|    said  the dwarven shopkeeper    |\n"+
                             "|------------------------------------|\n"+
                             "|           You choose to:           |\n"+
                             "|1. Buy Equipment                    |\n"+
@@ -35,15 +34,16 @@ public static void main(String[] args){
         switch (Talk){
             case 1:
                 System.out.println( " ____________________________________ \n"+
-                                    "|This cool Sword or this shiny Armor?|\n"+
+                                    "|\"The cool Sword or the shiny Armor?\"|\n"+
                                     "|1. Sword (200 G)                    |\n"+
                                     "|2. Armor (300 G)                    |\n"+ 
+                                    "|3. none of the above                |\n"+
                                     "|____________________________________|\n");
                 int upgrades = vendor.nextInt();
                 switch (upgrades){
                     case 1:
                     if (swordEquip==1) {System.out.println( " ____________________________________ \n"+
-                                                            "|You have already bought that Weapon.|\n"+
+                                                            "|    \"You already have the Sword.\"   |\n"+
                                                             "|____________________________________|\n");}  
                     else if (Game.money<200) {System.out.println(" ____________________________________ \n"+
                                                             "| You don't have enough money to buy |\n"+
@@ -60,7 +60,7 @@ public static void main(String[] args){
                     break;
                     case 2:
                     if (armorEquip==1) {System.out.println( " ____________________________________ \n"+
-                                                            "|You have already bought that Armor. |\n"+
+                                                            "|   \"You already have that Armor.\"   |\n"+
                                                             "|____________________________________|\n");}  
                     else if (Game.money<300) {System.out.println(" ____________________________________ \n"+
                                                             "| You don't have enough money to buy |\n"+
@@ -75,7 +75,12 @@ public static void main(String[] args){
                     Game.money=Game.money-300;
                     armorEquip=1;}
                     break;
-                }
+                    default:
+                    System.out.println( " ____________________________________ \n" +
+                                        "|         \"Something else\"?          |\n" +
+                                        "|____________________________________| \n");
+                    break;
+                   }
                 break;
             case 2:
             if(Game.money>=20){
