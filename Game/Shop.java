@@ -284,13 +284,13 @@ public static void main(String[] args){
                 System.out.println("|                (___)               |");                                  try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("|                <   >               |");                                  try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("|                 ) (                |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|                /`-.\\              |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|               /     \\             |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|              / _    _\\            |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("|                /`-.\\               |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("|               /     \\              |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("|              / _    _\\             |");                                  try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("|             :,' `-.' `:            |");                                  try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("|             |         |            |");                                  try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("|             :         ;            |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|             \\        /            |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("|              \\       /             |");                                  try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("|               `.___.'              |");                                  try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("|------------------------------------|");                                  try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("|      You bought the potion!        |");                                  try{Thread.sleep(100);}catch(Exception e){}
