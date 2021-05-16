@@ -76,11 +76,11 @@ public class Encounters {
             Enemy.enemyDefense=0;
             
             if(Enemy.enemyDefenseChance<16){                              //15% Chance for enemy to defend
-                System.out.println("The enemy defends!");
+                System.out.println("\nThe enemy defends!");
                 Enemy.enemyDefense++;
             } 
             else if(Enemy.enemyDamageChance>10) {                         // If the Enemy doesn't defend he has a 10% Chance to miss his attack
-                System.out.println("The enemy attacks!");
+                System.out.println("\nThe enemy attacks!");
                 int newenemyDamage = Enemy.enemyDamage-Enemy.playerDefense;
                 int newplayerHealth = Enemy.playerHealth-newenemyDamage;
                 Enemy.playerHealth = newplayerHealth;
