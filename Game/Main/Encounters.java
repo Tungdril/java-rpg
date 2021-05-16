@@ -70,8 +70,8 @@ static int fleeChance;
             }
             else { //if the Number isn't 1-4
                 System.out.println("That's not an option!");
-                //int newplayerHealth = (playerHealth-playerHealth);
-                //playerHealth = newplayerHealth; 
+                playerHealth = (playerHealth-playerHealth);
+                Death.death(); 
             }
             Thread.sleep(200);
             enemyDamageChance = (int) (Math.random()*100+1);
