@@ -33,6 +33,7 @@ static int fleeChance;
         }
 
     public static void combat(){
+        Death.death();
         try {Thread.sleep(150);} catch(Exception e) {System.out.println("shit");}
         int playerDamage = (int) (Math.random()*2+1+Shop.sword); // Player damage is 1-2 HP 
 
@@ -62,10 +63,10 @@ static int fleeChance;
             else if (fight2==4){ //Flee
                 System.out.println("You tried to flee.");
                 fleeChance = (int) (Math.random()*100+1);
-                if(fleeChance<= 40){
+                if(fleeChance<= 40){    // 40% Chance to flee from combat, the player will then be put in decision
                     System.out.println("And succeeded at that!");
                     Game.decide();
-                } else {System.out.println("But to no avail!");}
+                } else {System.out.println("But to no avail!");} // 60% chance to not flee, the player used his turn and gained nothing
             }
             else { //if the Number isn't 1-4
                 System.out.println("That's not an option!");
