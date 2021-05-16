@@ -10,12 +10,12 @@ public class Load { //just for loading a savefile
             File f = new File("saves/" + Game.userName + ".txt");
             Scanner reader = new Scanner(f);
             while (reader.hasNextLine()) {
-                Game.Exp = reader.nextLine();
+                Exp.Exp = reader.nextLine();
                 Game.Money = reader.nextLine();
                 Game.Day = reader.nextLine();
                 Shop.ArmorEquip = reader.nextLine();
                 Shop.SwordEquip = reader.nextLine();
-                Game.exp = Integer.parseInt(Game.Exp);//
+                Exp.exp = Integer.parseInt(Exp.Exp);//
                 Game.money = Integer.parseInt(Game.Money);
                 Game.day = Integer.parseInt(Game.Day);
                 Shop.armorEquip = Integer.parseInt(Shop.ArmorEquip);
