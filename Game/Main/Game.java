@@ -13,15 +13,15 @@ public class Game {
         createSaveFolder.createFold(); //creates a \JavaRPG\saves directory Folder at C:\"User"\Documents\ 
         Exp.main();
         //Titlescreen
-            System.out.println("                                                                                    ");    Thread.sleep(100);  //to make it look a cooler
-            System.out.println("      O))                                      O)))))))     O)))))))      O))))     ");    Thread.sleep(100);
-            System.out.println("      O))                                      O))    O))   O))    O))  O)    O))  ");     Thread.sleep(100);
-            System.out.println("      O))    O))    O))     O))   O))           O))    O))   O))    O)) O))     ");        Thread.sleep(100);
-            System.out.println("      O))  O))  O))  O))   O))  O))  O))        O) O))       O)))))))   O))   ");          Thread.sleep(100);
-            System.out.println("      O)) O))   O))   O)) O))  O))   O))        O))  O))     O))        O))   O))))");     Thread.sleep(100);
-            System.out.println(" O)   O))  O))   O))   O)O))   O))   O))        O))    O))   O))         O))    O)  ");    Thread.sleep(100);
-            System.out.println("  O))))     O)) O)))    O))      O)) O)))       O))      O)) O))          O)))))");        Thread.sleep(100);
-            Thread.sleep(3500);
+        System.out.println("                                                                                    ");    Thread.sleep(100);  //to make it look a cooler
+        System.out.println("      O))                                      O)))))))     O)))))))      O))))     ");    Thread.sleep(100);
+        System.out.println("      O))                                      O))    O))   O))    O))  O)    O))  ");     Thread.sleep(100);
+        System.out.println("      O))    O))    O))     O))   O))           O))    O))   O))    O)) O))     ");        Thread.sleep(100);
+        System.out.println("      O))  O))  O))  O))   O))  O))  O))        O) O))       O)))))))   O))   ");          Thread.sleep(100);
+        System.out.println("      O)) O))   O))   O)) O))  O))   O))        O))  O))     O))        O))   O))))");     Thread.sleep(100);
+        System.out.println(" O)   O))  O))   O))   O)O))   O))   O))        O))    O))   O))         O))    O)  ");    Thread.sleep(100);
+        System.out.println("  O))))     O)) O)))    O))      O)) O)))       O))      O)) O))          O)))))");        Thread.sleep(100);
+        Thread.sleep(3500);
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------"    ); Thread.sleep(550);
         System.out.println( "Tired of your boring life as a carriage driver for crippeled Lords and Ladies, you feel the urge to explore the wide world."                               ); Thread.sleep(550);
         System.out.println( "After wandering a whole 140 feet from your home, you begin to feel very exhausted and decide to have a rest near"                                          ); Thread.sleep(550);
