@@ -10,8 +10,7 @@ public class Game {
     static int healthPotion;
 
     public static void main(String[] args) {
-        createSaveFolder.createFold();
-
+        try{createSaveFolder.createFold();
         Exp.main();
         //Titlescreen
         System.out.println(
@@ -27,7 +26,8 @@ public class Game {
    
         System.out.println("Tired of your boring life as a carriage driver for crippeled Lords and Ladies, you feel the urge to explore the wide world.\nAfter wandering a whole 140 feet from your home, you begin to feel very exhausted and decide to have a rest near\nthe entrance to a cave.You have a short nap. After waking up again the sun is already beginning to set, but you still feel the urge to enter the cave.\nSo you light your torch and head inside.");
         System.out.println("------------------------------------------------------------------------------------");
-        System.out.println("Press [ENTER] to depart on your adventure!");
+        System.out.println("Press [ENTER] to depart on your adventure!");}
+        catch(Exception e){main(null);}
         //System.out.println("Day: "+ day);  
         //System.out.println(Encounters.playerHealth);
         //Wait for user Input
