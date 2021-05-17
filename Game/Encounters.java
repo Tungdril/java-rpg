@@ -1,7 +1,4 @@
-import java.lang.invoke.SwitchPoint;
 import java.util.Scanner;
-
-import javax.swing.DefaultBoundedRangeModel;
 public class Encounters {
 
     public static void fight(){
