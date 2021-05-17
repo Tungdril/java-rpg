@@ -19,7 +19,7 @@ public class Enemy{
             enemy = "Goblin";
             enemyHealth = 4 + Exp.expScaling;
             difficulty = 0.85;
-            enemyDamage = (int) (Math.random()*2);
+            enemyDamage = (int) (Math.random()+1);
         } else if(randomEnemy >50 & randomEnemy <=80){
             enemy = "Skeleton";
             enemyHealth = 6 + Exp.expScaling;
