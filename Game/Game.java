@@ -56,14 +56,15 @@ public class Game {
     public static void decide(){
         //try {Thread.sleep(5000);} catch(Exception e) {System.out.println("shit");}
         Exp.main(); //not sure why I made this call everytime, but scared to remove
-        System.out.println("----------------------------------------------------------------------");
-        System.out.println(" ____________________ "             );          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("|                    |"             );          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("      Health: "+ Enemy.playerHealth );          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("      Money: "+ money               );          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("      Exp: "+(int)Exp.exp           );          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("      Day: "+day                    );          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("|____________________|"             );          try{Thread.sleep(100);}catch(Exception e){}
+        try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("----------------------------------------------------------------------");   try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println(" ____________________ "             );                                      try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("|                    |"             );                                      try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("      Health: "+ Enemy.playerHealth );                                      try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("      Money: "+ money               );                                      try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("      Exp: "+(int)Exp.exp           );                                      try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("      Day: "+day                    );                                      try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("|____________________|"             );                                      try{Thread.sleep(100);}catch(Exception e){}
         try{Thread.sleep(600);}catch(Exception e){}
         Save.creatingSave();
         System.out.println("Decide what to do next."                );          try{Thread.sleep(100);}catch(Exception e){}
@@ -71,6 +72,7 @@ public class Game {
         System.out.println("2. Go back home to heal your wounds"    );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("3. Leave the Game"                      );          try{Thread.sleep(100);}catch(Exception e){}
         Scanner choice = new Scanner(System.in);
+        try{Thread.sleep(100);}catch(Exception e){}
         int option = choice.nextInt();
         switch (option) {
             case 1:
