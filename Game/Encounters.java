@@ -3,7 +3,7 @@ public class Encounters {
 
     public static void fight(){
         Enemy.main(null); //Gets all the enemy info
-        System.out.println("\n----------------------------------------------------------------------");
+        System.out.println("\n----------------------------------------------------------------------\n");
         int randomMsg = (int) (Math.random()*5+1);
         switch (randomMsg) {
             case 1:
@@ -12,23 +12,19 @@ public class Encounters {
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
             break;            
             case 2:
-            try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println("You see some movement behind a rock formation. You carefully step closer, only to be surprised by a "+Enemy.enemy+" !");
+            System.out.println("You see some movement behind a rock formation. You carefully step closer, only to be surprised by a "+Enemy.enemy+"!");
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
             break;            
             case 3:
-            try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println("You squeeze your body through a narrow crack, but once you get to the other side, you come face to face with a "+Enemy.enemy+" !");
+            System.out.println("You squeeze your body through a narrow crack, but once you get to the other side, you come face to face with a "+Enemy.enemy+"!");
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
             break;            
             case 4:
-            try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println("You were just examining some shiny rocks, when you hear movement behind you. It's a "+Enemy.enemy+" !");
+            System.out.println("You were just examining some shiny rocks, when you hear movement behind you. It's a "+Enemy.enemy+"!");
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
             break;
             case 5:
-            try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println("As you enter a new cave, you are ambushed by a "+Enemy.enemy+" !");
+            System.out.println("As you enter a new cave, you are ambushed by a "+Enemy.enemy+"!");
             try {Thread.sleep(3500);} catch(Exception e) {System.out.println("shit");}
             break;
         }
@@ -41,7 +37,8 @@ public class Encounters {
 
         try {
         Scanner fight = new Scanner(System.in);
-        try{Thread.sleep(100);}catch(Exception e){}       
+        try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println(Enemy.Sprite);       
         System.out.println("\n----------------------------------------------------------------------"); 
         try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("\nWhat will you do?\n1. Attack\n2. Defend\n3. Check Health\n4. Flee");
@@ -103,6 +100,7 @@ public class Encounters {
                 Enemy.playerHealth = newplayerHealth;
                 try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("The enemy did " + newenemyDamage + " HP damage!");
+                try{Thread.sleep(500);}catch(Exception e){}
             } else {
                 try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("The enemy attacked and missed.");
@@ -208,7 +206,7 @@ public class Encounters {
             System.out.println("You found [" + reward + "] G!");
             Game.money= Game.money+reward;
             double expGain = Exp.exp + 5 * Enemy.difficulty;  //adds exp based on encounter difficulty
-            Exp.exp = + expGain;
+            Exp.exp = Exp.exp + expGain;
             try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("You gain [" + (int)expGain + "] EXP!");
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}

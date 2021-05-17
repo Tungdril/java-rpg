@@ -26,8 +26,8 @@ public class Game {
         System.out.println("      O)) O))   O))   O)) O))  O))   O))        O))  O))     O))        O))   O)))) ");    Thread.sleep(100);
         System.out.println(" O)   O))  O))   O))   O)O))   O))   O))        O))    O))   O))         O))    O)  ");    Thread.sleep(100);
         System.out.println("  O))))     O)) O)))    O))      O)) O)))       O))      O)) O))          O)))))    ");    Thread.sleep(100);
-        Thread.sleep(3500);
-        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------"    ); Thread.sleep(550);
+        Thread.sleep(1500);
+        System.out.println("\n-------------------------------------------------------------------------------------------------------------------------------------------------------"    ); Thread.sleep(550);
         System.out.println( "Tired of your boring life as a carriage driver for the fat aristocracy, you feel the urge to explore the wide world."                               ); Thread.sleep(550);
         System.out.println( "After wandering a whole 140 feet from your home, you begin to feel very exhausted and decide to have a rest near the entrance to a cave."                  ); Thread.sleep(550);
         System.out.println( "You have a short nap. After waking up again the sun is already beginning to set, but you still feel the urge to enter the cave."                           ); Thread.sleep(550);
@@ -65,7 +65,6 @@ public class Game {
         System.out.println("      Day: "+day                    );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("|____________________|"             );          try{Thread.sleep(100);}catch(Exception e){}
         try{Thread.sleep(600);}catch(Exception e){}
-        System.out.println("Day: "+ day); 
         Save.creatingSave();
         System.out.println("Decide what to do next."                );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("1. Continue deeper into the cave"       );          try{Thread.sleep(100);}catch(Exception e){}

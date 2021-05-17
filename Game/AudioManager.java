@@ -7,7 +7,7 @@ import javax.sound.sampled.Clip;
 public class AudioManager{
  public static void playSound(){
   String soundFile = "./Audio/bgm.wav";
-  String testmania = "./java-rpg/Game/Audio/bgm.wav";
+  String testmania = "./java-rpg/Game/Audio/bgm.wav";                     //only for testing
   File SoundsTest = new File(testmania);                                  //only for testing
   String soundFileTesting =SoundsTest.getAbsolutePath();                  //only for testing
   File SoundTest = new File(soundFileTesting);                            //only for testing
