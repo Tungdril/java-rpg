@@ -1,4 +1,7 @@
+import java.lang.invoke.SwitchPoint;
 import java.util.Scanner;
+
+import javax.swing.DefaultBoundedRangeModel;
 public class Encounters {
 
     public static void fight(){
@@ -46,55 +49,58 @@ public class Encounters {
 
         Thread.sleep(150);
         Integer fight2 = fight.nextInt();
-            if (fight2==1){ //Attack
-                try{Thread.sleep(100);}catch(Exception e){}
+        switch(fight2){
+            case 1://Attack
+             try{Thread.sleep(100);}catch(Exception e){} 
                 System.out.println("You attacked the enemy!");
                 int newenemyHealth = (Enemy.enemyHealth - playerDamage);
                 try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("You did " + (Enemy.enemyHealth-newenemyHealth) + " damage."); 
                 Enemy.enemyHealth = newenemyHealth;
-            }
-            else if (fight2==2){ //Defend
+            break;
+            case 2://Defend
                 try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("You defend against the incoming attack.");
                 Enemy.playerDefense++;
-            }
-            else if (fight2==3){ //Check Health
-                                                                                                              try{Thread.sleep(100);}catch(Exception e){}
+            break;
+            case 3://Check Health
+            try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("----------------------------------------------------------------------" );try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("The enemy has still " + Enemy.enemyHealth + " HP left"                  );try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("You still have " + Enemy.playerHealth + " HP left"                      );try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("----------------------------------------------------------------------" );
-            }
-            else if (fight2==4){ //Flee
+            break;
+            case 4: //Flee
+            try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println("You tried to flee.");
+            int fleeChance = (int) (Math.random()*100+1+Game.day); //the higher day is, the harder it is to flee
+            if(fleeChance<= 30){    // 30% Chance to flee from combat, the player will then be put in decision
                 try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("You tried to flee.");
-                int fleeChance = (int) (Math.random()*100+1+Game.day); //the higher day is, the harder it is to flee
-                if(fleeChance<= 30){    // 30% Chance to flee from combat, the player will then be put in decision
-                    try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("And succeeded at that!");
-                    Game.decide();
-                } else {try{Thread.sleep(100);}catch(Exception e){};
-                            System.out.println("But to no avail!");} // 70% chance to not flee, the player used his turn and gained nothing
-            }
-            else { //if the Number isn't 1-4
+                System.out.println("And succeeded at that!");
+                Game.decide();}
+                else {try{Thread.sleep(100);}catch(Exception e){};
+                            System.out.println("But to no avail!");} // 70% chance to not flee, the player used his turn and gained nothing           
+            break;
+            default: //if the Number isn't 1-4
                 try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("Really... We gave pretty clear instructions. Dissapointing.");
                 Enemy.playerHealth = (Enemy.playerHealth-Enemy.playerHealth); //if the player is to stupid to use 1,2,3 or 4 he will be disposed immediatly
                 Death.death(); 
-            }
+        }
+        
+
             Thread.sleep(200);
             Enemy.enemyDamageChance = (int) (Math.random()*100+1);
             Enemy.enemyDefenseChance = (int) (Math.random()*100+1 ) ;
             Enemy.enemyDefense=0;
             
             if(Enemy.enemyDefenseChance<16){
-                try{Thread.sleep(100);}catch(Exception e){}                              //15% Chance for enemy to defend
+                try{Thread.sleep(100);}catch(Exception e){}         //15% Chance for enemy to defend
                 System.out.println("\nThe enemy defends!");
                 Enemy.enemyDefense++;
             } 
             else if(Enemy.enemyDamageChance>10) {
-                try{Thread.sleep(100);}catch(Exception e){}                         // If the Enemy doesn't defend he has a 10% Chance to miss his attack
+                try{Thread.sleep(100);}catch(Exception e){}               // If the Enemy doesn't defend he has a 10% Chance to miss his attack
                 System.out.println("\nThe enemy attacks!");
                 int newenemyDamage = Enemy.enemyDamage-Enemy.playerDefense;
                 int newplayerHealth = Enemy.playerHealth-newenemyDamage;
