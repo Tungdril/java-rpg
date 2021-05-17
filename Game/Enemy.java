@@ -40,7 +40,7 @@ public class Enemy{
         boolean Gablins = enemy=="Goblin";
         boolean Skelly = enemy=="Skeleton";
         boolean Orks = enemy=="Orc";
-        boolean Gargöuyl = enemy =="Gargoyle";
+        boolean Gargle = enemy =="Gargoyle";
         if(Gablins){
             try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "             ,      ,  ");              try{Thread.sleep(100);}catch(Exception e){}
@@ -122,7 +122,7 @@ public class Enemy{
         System.out.println(    "                          _/,/'"            );             try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "                        /,/,\""             );             try{Thread.sleep(100);}catch(Exception e){}
         }
-        if (Gargöuyl){
+        if (Gargle){
             try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(",                                                               ,");            try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("\\'.                                                           .'/");          try{Thread.sleep(100);}catch(Exception e){}
