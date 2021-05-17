@@ -313,8 +313,8 @@ public static void main(String[] args){
                                         }
             shop();
         }
-        public static void greetingKeeper(){
-            int greetedKeeper=metBefore;
+        public static void greetingKeeper(){ 
+            int greetedKeeper=metBefore; //prevents welcome message being drawn every time you reset the menu, to choose something else
             if(greetedKeeper==0)
             {
             System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
