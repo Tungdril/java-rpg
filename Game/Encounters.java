@@ -265,6 +265,8 @@ public class Encounters {
             try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("You gain [" + (int)expGain + "] EXP!");
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
+            AudioManager.stopBattle();
+            AudioManager.main(null);
             Game.decide(); //calls decide to let the player make the next move              
         }
     }

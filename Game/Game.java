@@ -1,5 +1,7 @@
 
 import java.util.Scanner;
+
+import javax.sound.sampled.spi.AudioFileReader;
 public class Game {
     static int day = 1; 
     static String Money;
@@ -13,7 +15,7 @@ public class Game {
         createSaveFolder.createFold(); //creates a \JavaRPG\saves directory Folder at C:\"User"\Documents\ 
         Exp.main(); //initilize Exp
         maxHealth = 8 + Exp.expScaling; //recalculates health based on expScaling
-        AudioManager.playSound(); //start bgm
+        AudioManager.main(null); //start bgm
 
         //Titlescreen
         System.out.println("                                                                                    ");    Thread.sleep(100);  //to make it look a cooler
@@ -64,7 +66,6 @@ public class Game {
         System.out.println("      Day: "+day                    );                                      try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("|____________________|"             );                                      try{Thread.sleep(100);}catch(Exception e){}
         try{Thread.sleep(600);}catch(Exception e){}
-        System.out.println(Death.stopMusic);
         Save.creatingSave();
         System.out.println("Decide what to do next."                );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("1. Continue deeper into the cave"       );          try{Thread.sleep(100);}catch(Exception e){}
@@ -79,7 +80,7 @@ public class Game {
                 explore();
             break;
             case 2:
-            day++;
+            day++; 
                 Encounters.home(); 
             break;
             case 3: //ends the code
@@ -92,7 +93,9 @@ public class Game {
 
     public static void explore(){
     int exploreEvent = (int) (Math.random()*100+1); //generate encounter 
-       if(exploreEvent<=40){ 
+       if(exploreEvent<=40){
+        AudioManager.stopBgm();
+        AudioManager.mainBattle();
         Encounters.fight();
         Encounters.combat();
         Encounters.healthCalc();              

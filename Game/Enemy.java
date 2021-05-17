@@ -57,44 +57,44 @@ public class Enemy{
         }
         if(Skelly){
             try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                              _.--\"\"-._");            try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("  .                         .\"         \".");          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(" / \\    ,^.         /(     Y             |      )\\");         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("/   `---. |--'\\    (  \\__..'--   -   -- -'\"\"-.-'  )");          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("|        :|    `>   '.     l_..-------.._l      .'");           try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("|      __l;__ .'      \"-.__.||_.-'v'-._||`\"----\"");          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(" \\  .-' | |  `              l._       _.'");           try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(" \\/    | |                   l`^^'^^'j");          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("        | |                _   \\_____/     _");            try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("                              _.--\"\"-._");            try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("  .                         .\"         \".");          try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println(" / \\    ,^.         /(     Y             |      )\\");         try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("/   `---. |--'\\    (  \\__..'--   -   -- -'\"\"-.-'  )");          try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("|        :|    `>   '.     l_..-------.._l      .'");           try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("|      __l;__ .'      \"-.__.||_.-'v'-._||`\"----\"");          try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println(" \\  .-' | |  `              l._       _.'");           try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println(" \\/    | |                   l`^^'^^'j");          try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("        | |                _   \\_____/     _");            try{Thread.sleep(50);}catch(Exception e){}
         System.out.println("        j |               l `--__)-'(__.--' |");            try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("        | |               | /`---``-----'\"1 |  ,-----.");          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("        | |               )/  `--' '---'   \'-'  ___  `-.");            try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("        | |              //  `-'  '`----'  /  ,-'   I`.  \\");          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("      _ L |_            //  `-.-.'`-----' /  /  |   |  `. \\");         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("     '._' / \\         _/(   `/   )- ---' ;  /__.J   L.__.\\ :");           try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("      `._;/7(-.......'  /        ) (     |  |            | |");         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("      `._;l _'--------_/        )-'/     :  |___.    _._./ ;");         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("        | |                 .__ )-'\\  __  \\  \\  I   1   / /");           try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("        `-'                /   `-\\-(-'   \\ \\  `.|   | ,' /");            try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                           \\__  `-'    __/  `-. `---'',-'");           try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                              )-._.-- (        `-----'");           try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                             )(  l\\ o ('..-.");            try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                       _..--' _'-' '--'.-. |");         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                __,,-'' _,,-''            \\ \\");          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("               f'. _,,-'                   \\ \\");         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("              ()--  |                       \\ \\");            try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                \\.  |                       /  \\");           try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                  \\ \\                      |._  |");          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                   \\ \\                     |  ()|");          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                    \\ \\                     \\  /");          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                     ) `-.                   | |");         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                    // .__)                  | |");         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                 _.//7'                      | |");         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("               '---'                         j_| ");            try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                                            (| |");         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                                             |  \\");           try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                                             |lllj");           try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("                                             ||||| ");            try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("        | |               | /`---``-----'\"1 |  ,-----.");          try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("        | |               )/  `--' '---'   \'-'  ___  `-.");            try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("        | |              //  `-'  '`----'  /  ,-'   I`.  \\");          try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("      _ L |_            //  `-.-.'`-----' /  /  |   |  `. \\");         try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("     '._' / \\         _/(   `/   )- ---' ;  /__.J   L.__.\\ :");           try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("      `._;/7(-.......'  /        ) (     |  |            | |");         try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("      `._;l _'--------_/        )-'/     :  |___.    _._./ ;");         try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("        | |                 .__ )-'\\  __  \\  \\  I   1   / /");           try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("        `-'                /   `-\\-(-'   \\ \\  `.|   | ,' /");            try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                           \\__  `-'    __/  `-. `---'',-'");           try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                              )-._.-- (        `-----'");           try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                             )(  l\\ o ('..-.");            try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                       _..--' _'-' '--'.-. |");         try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                __,,-'' _,,-''            \\ \\");          try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("               f'. _,,-'                   \\ \\");         try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("              ()--  |                       \\ \\");            try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                \\.  |                       /  \\");           try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                  \\ \\                      |._  |");          try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                   \\ \\                     |  ()|");          try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                    \\ \\                     \\  /");          try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                     ) `-.                   | |");         try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                    // .__)                  | |");         try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                 _.//7'                      | |");         try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("               '---'                         j_| ");            try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                                            (| |");         try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                                             |  \\");           try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                                             |lllj");           try{Thread.sleep(50);}catch(Exception e){}
+        System.out.println("                                             ||||| ");            try{Thread.sleep(50);}catch(Exception e){}
         }
         if(Orks){
                                                                                            try{Thread.sleep(100);}catch(Exception e){}
@@ -158,96 +158,3 @@ public class Enemy{
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

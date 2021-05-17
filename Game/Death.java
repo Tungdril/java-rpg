@@ -7,10 +7,8 @@ public class Death { //made a file for it alone to make it easier to check for a
     public static void death(){
         if (Enemy.playerHealth<=0){   //deathstate                          
             try{Thread.sleep(1750);}catch(Exception e){}
-            stopMusic = 1;  //stops bgm, to prevent more than one instance being played, if the player decides to continue 
-            //AudioManager.playSound();
-            //playDeath = 1;
-            //AudioManager.playDeath(); 
+            AudioManager.stopBattle();
+            AudioManager.mainDeath();
             
                 System.out.println("                                 You have died");                                     try{Thread.sleep(2000);}catch(Exception e){System.out.println("HOW?\n(exception in Death.java)");};
                 System.out.println("                                 _____  _____ ");                                     try{Thread.sleep(500);}catch(Exception e){} //to make it beautiful
@@ -40,7 +38,8 @@ public class Death { //made a file for it alone to make it easier to check for a
             System.out.print("Do you wish to continue?\n1. yes\n2. no\n"); //Player can return to Titlescreen or end the programm
             Scanner d = new Scanner(System.in); //d stands for death
             int postMortem = d.nextInt();
-            if(postMortem==1){              
+            if(postMortem==1){  
+            AudioManager.stopDeath();               
             Game.main(null);//goes back to the Titlescreen
             Enemy.playerHealth = 8;} //
             
