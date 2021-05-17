@@ -14,18 +14,22 @@ public class Encounters {
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
             break;            
             case 2:
+            try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("You see some movement behind a rock formation. You carefully step closer, only to be surprised by a "+Enemy.enemy+"!");
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
             break;            
             case 3:
+            try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("You squeeze your body through a narrow crack, but once you get to the other side, you come face to face with a "+Enemy.enemy+"!");
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
             break;            
             case 4:
+            try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("You were just examining some shiny rocks, when you hear movement behind you. It's a "+Enemy.enemy+"!");
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
             break;
             case 5:
+            try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("As you enter a new cave, you are ambushed by a "+Enemy.enemy+"!");
             try {Thread.sleep(3500);} catch(Exception e) {System.out.println("shit");}
             break;
