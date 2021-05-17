@@ -11,6 +11,7 @@ public class Shop {
     static String SwordEquip;
     static int metBefore;
 public static void main(String[] args){ 
+    Game.money=2000;
     shop();  
 }
     public static void shop(){
@@ -179,7 +180,7 @@ public static void main(String[] args){
             System.out.println(    "|     `\\<> |  | <>/'                   |");                    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|       `-.|__|.-`                     |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|--------------------------------------| ");                    try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println(    "| \"Are you here to buy this Shield?\" |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "|  \"Are you here to buy this Shield?\" |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "| 1. Yes (200 G)                       |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "| 2. No                                |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
