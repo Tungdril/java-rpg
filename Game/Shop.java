@@ -279,33 +279,64 @@ public static void main(String[] args){
                 } catch (Exception e){shop();}
             }   
         }
-        public static void medicineShop(){  //just making the health potion shop another module because i can
+
+        public static void medicineShop(){  //just making the health potion shop another module because i can            
             if(Game.money>=20){
                 int heal = (int) (Math.random()*3+1);
 
-                System.out.println(" ____________________________________ ");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|                _____               |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|               `.___,'              |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|                (___)               |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|                <   >               |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|                 ) (                |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|                /`-.\\               |");                                 try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|               /     \\              |");                                 try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|              / _    _\\             |");                                 try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|             :,' `-.' `:            |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|             |         |            |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|             :         ;            |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|              \\       /             |");                                 try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|               `.___.'              |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|------------------------------------|");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|      You bought the potion!        |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|And directly drank it. How wasteful.|");                                  try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|          You regain " + heal + "HP.           |");                       try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("|____________________________________|");                                  try{Thread.sleep(100);}catch(Exception e){}
-
-                Enemy.playerHealth = Enemy.playerHealth + heal;
+                int overheal = heal + Enemy.playerHealth;
                 Game.money=Game.money-20;
-                shop();
+                
+                if (overheal <= Game.maxHealth){
+                    Enemy.playerHealth = Enemy.playerHealth + heal;
+                    System.out.println(" ____________________________________ ");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|                _____               |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|               `.___,'              |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|                (___)               |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|                <   >               |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|                 ) (                |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|                /`-.\\               |");                                 try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|               /     \\              |");                                 try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|              / _    _\\             |");                                 try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|             :,' `-.' `:            |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|             |         |            |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|             :         ;            |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|              \\       /             |");                                 try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|               `.___.'              |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|------------------------------------|");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|      You bought the potion!        |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|And directly drank it. How wasteful.|");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|          You regain " + heal + "HP.           |");                       try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|____________________________________|");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    shop();
+                } else if(Enemy.playerHealth == Game.maxHealth){
+                    System.out.println(" ____________________________________ ");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|                _____               |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|               `.___,'              |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|                (___)               |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|                <   >               |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|                 ) (                |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|                /`-.\\               |");                                 try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|               /     \\              |");                                 try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|              / _    _\\             |");                                 try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|             :,' `-.' `:            |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|             |         |            |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|             :         ;            |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|              \\       /             |");                                 try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|               `.___.'              |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|------------------------------------|");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|      You bought the potion!        |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|It has no effect, you wasted your G.|");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|          You regain no HP.         |");                       try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|____________________________________|");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    shop();     
+                } else{
+                    //System.out.println("overheal!");
+                    medicineShop(); //rerolls until no more overheal
+                } 
+
+
+                
             } else                      {System.out.println(" ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
                                          System.out.println("|       You don't have enough G.     |");          try{Thread.sleep(100);}catch(Exception e){}
                                          System.out.println("|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}

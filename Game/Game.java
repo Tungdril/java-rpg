@@ -1,12 +1,12 @@
 
 import java.util.Scanner;
 public class Game {
-     
     static int day = 1; 
     static String Money;
     static String Day;
     static String userName;
     static int money;
+    static int maxHealth = 8;
 
     public static void main(String[] args) {
         //Death.stopMusic=0; //allows bgm, remove because it then launches bgm twice
@@ -14,7 +14,7 @@ public class Game {
         try{
         createSaveFolder.createFold(); //creates a \JavaRPG\saves directory Folder at C:\"User"\Documents\ 
         Exp.main(); //initilize Exp
-        
+        maxHealth = 8 + Exp.expScaling; //recalculates health based on expScaling
         AudioManager.playSound(); //start bgm
 
         //Titlescreen
@@ -66,6 +66,8 @@ public class Game {
         System.out.println("      Day: "+day                    );                                      try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("|____________________|"             );                                      try{Thread.sleep(100);}catch(Exception e){}
         try{Thread.sleep(600);}catch(Exception e){}
+        //System.out.println(maxHealth);
+        //System.out.println(Exp.expScaling);
         Save.creatingSave();
         System.out.println("Decide what to do next."                );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("1. Continue deeper into the cave"       );          try{Thread.sleep(100);}catch(Exception e){}

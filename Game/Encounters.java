@@ -221,13 +221,28 @@ public class Encounters {
     //heals player, and returns to decide()
     public static void home(){
         int restingHealth = (int) (Math.random()*3+1);
-        Enemy.playerHealth = restingHealth+Enemy.playerHealth;
-        try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("You find your way back to the surface and walk back home to have a rest.\nThe next day you walk right back into the cave.");
-        try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("You regenerated "+restingHealth+" health!");
-        try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
-        Game.decide();
+        int overheal = restingHealth + Enemy.playerHealth; //checks if the healing would be more than the allowed maxHealth
+
+        if (overheal <= Game.maxHealth){
+            Enemy.playerHealth = restingHealth+Enemy.playerHealth;
+
+            try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println("You find your way back to the surface and walk back home to have a rest.\nThe next day you walk right back into the cave.");
+            try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println("You regenerated "+restingHealth+" health!");
+            try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
+            Game.decide();
+        } else if(Enemy.playerHealth == Game.maxHealth){
+            System.out.println("You are not wounded.");
+            Game.day--; //needs to subtracted, or one day would be skipped
+            Game.decide();
+        } else{
+            //System.out.println("overheal!");
+            home(); //rerolls until no more overheal
+        }
+
+
+        
     }
     public static void winstate(){ //winstate
         if (Enemy.enemyHealth<=0){
