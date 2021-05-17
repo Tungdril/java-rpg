@@ -15,13 +15,13 @@ public class AudioManager{
       if(Death.stopMusic==1){ //prevents playing in certain cases
         return;
     }else{
-        try {                                    //change soundFileTesting to soundFile before launch                  
-        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(SoundTest)); //gets the .wav file
+        try {                                    //change SoundTest soundFile before launch                  
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream((SoundTest)); //gets the .wav file
         System.out.println(); //why is this here?
         Clip clip = AudioSystem.getClip(); //defines the .mov as a new clip
         clip.open(audioInputStream); //opens the clip
         clip.start(); //starts the clip
-        clip.loop(Clip.LOOP_CONTINUOUSLY); //lopps the clip
+        clip.loop(Clip.LOOP_CONTINUOUSLY); //loops the clip
         Death.stopMusic = 1; //prevents endless loop
         Thread.sleep(100);
     } catch(Exception ex) {
