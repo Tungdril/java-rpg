@@ -14,7 +14,6 @@ public static void main(String[] args){shop();}
 
     public static void shop(){
         Affinity.Affimeter();
-        Game.money=20000;
         Scanner vendor = new Scanner(System.in);
         Affinity.Affi();                            //calls the Affinity Saystem
         greetingKeeper();
