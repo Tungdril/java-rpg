@@ -38,7 +38,7 @@ public class Encounters {
         try {
         Scanner fight = new Scanner(System.in);
         try{Thread.sleep(100);}catch(Exception e){}
-        Enemy.MichaelsSprites();
+        Enemy.Sprites();
         try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("\n----------------------------------------------------------------------"); 
         try{Thread.sleep(100);}catch(Exception e){}
