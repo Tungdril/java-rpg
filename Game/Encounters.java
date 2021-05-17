@@ -60,16 +60,18 @@ public class Encounters {
         Integer fight2 = fight.nextInt();
         switch(fight2){
             case 1://Attack
-             try{Thread.sleep(100);}catch(Exception e){} 
+                try{Thread.sleep(100);}catch(Exception e){} 
                 System.out.println("You attacked the enemy!");
                 int newenemyHealth = (Enemy.enemyHealth - playerDamage);
                 try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("You did " + (Enemy.enemyHealth-newenemyHealth) + " damage."); 
                 Enemy.enemyHealth = newenemyHealth;
+                try{Thread.sleep(100);}catch(Exception e){}
             break;
             case 2://Defend
                 try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("You defend against the incoming attack.");
+                try{Thread.sleep(100);}catch(Exception e){}
                 Enemy.playerDefense++;
             break;
             case 3://Check Health
@@ -77,7 +79,7 @@ public class Encounters {
                 System.out.println("----------------------------------------------------------------------" );try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("The enemy has still " + Enemy.enemyHealth + " HP left"                  );try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("You still have " + Enemy.playerHealth + " HP left"                      );try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("----------------------------------------------------------------------" );
+                System.out.println("----------------------------------------------------------------------" );try{Thread.sleep(100);}catch(Exception e){}
             break;
             case 4: //Flee
             try{Thread.sleep(100);}catch(Exception e){}
@@ -86,9 +88,11 @@ public class Encounters {
             if(fleeChance<= 30){    // 30% Chance to flee from combat, the player will then be put in decision
                 try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("And succeeded at that!");
+                try{Thread.sleep(100);}catch(Exception e){}
                 Game.decide();}
-                else {try{Thread.sleep(100);}catch(Exception e){};
-                            System.out.println("But to no avail!");} // 70% chance to not flee, the player used his turn and gained nothing           
+                else {  try{Thread.sleep(100);}catch(Exception e){};
+                        System.out.println("But to no avail!");         // 70% chance to not flee, the player used his turn and gained nothing
+                        try{Thread.sleep(100);}catch(Exception e){}}            
             break;
             default: //if the Number isn't 1-4
                 try{Thread.sleep(100);}catch(Exception e){}
@@ -106,11 +110,13 @@ public class Encounters {
             if(Enemy.enemyDefenseChance<16){
                 try{Thread.sleep(100);}catch(Exception e){}         //15% Chance for enemy to defend
                 System.out.println("\nThe enemy defends!");
+                try{Thread.sleep(100);}catch(Exception e){}
                 Enemy.enemyDefense++;
             } 
             else if(Enemy.enemyDamageChance>10) {
                 try{Thread.sleep(100);}catch(Exception e){}               // If the Enemy doesn't defend he has a 10% Chance to miss his attack
                 System.out.println("\nThe enemy attacks!");
+                try{Thread.sleep(100);}catch(Exception e){}
                 int newenemyDamage = Enemy.enemyDamage-Enemy.playerDefense;
                 int newplayerHealth = Enemy.playerHealth-newenemyDamage;
                 Enemy.playerHealth = newplayerHealth;
@@ -120,6 +126,7 @@ public class Encounters {
             } else {
                 try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("The enemy attacked and missed.");
+                try{Thread.sleep(100);}catch(Exception e){}
             }
             Enemy.playerDefense=0;
             Thread.sleep(150);
