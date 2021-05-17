@@ -41,6 +41,7 @@ public static void main(String[] args){
                 try{Thread.sleep(300);}catch(Exception e){}
                 medicineShop();
             case 3:
+            metBefore=1;
             System.out.println( " ____________________________________ ");    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println( "|         You leave the shop.        |");    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println( "|____________________________________|");    try{Thread.sleep(100);}catch(Exception e){}
