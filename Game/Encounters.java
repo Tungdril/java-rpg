@@ -101,7 +101,7 @@ public class Encounters {
                 Death.death(); 
         }
         
-
+            winstate();
             Thread.sleep(200);
             Enemy.enemyDamageChance = (int) (Math.random()*100+1);
             Enemy.enemyDefenseChance = (int) (Math.random()*100+1 ) ;
@@ -218,6 +218,21 @@ public class Encounters {
         Death.death(); 
         
         //winstate
+        winstate(); 
+    }    
+
+    //heals player, and returns to decide()
+    public static void home(){
+        int restingHealth = (int) (Math.random()*3+1);
+        Enemy.playerHealth = restingHealth+Enemy.playerHealth;
+        try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("You find your way back to the surface and walk back home to have a rest.\nThe next day you walk right back into the cave.");
+        try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("You regenerated "+restingHealth+" health!");
+        try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
+        Game.decide();
+    }
+    public static void winstate(){
         if (Enemy.enemyHealth<=0){
             try{Thread.sleep(100);}catch(Exception e){}                                        
             System.out.println("----------------------------------------------------------------------");
@@ -234,18 +249,7 @@ public class Encounters {
             System.out.println("You gain [" + (int)expGain + "] EXP!");
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
             Game.decide(); //calls decide to let the player make the next move              
-        }  
-    }    
-
-    //heals player, and returns to decide()
-    public static void home(){
-        int restingHealth = (int) (Math.random()*3+1);
-        Enemy.playerHealth = restingHealth+Enemy.playerHealth;
-        try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("You find your way back to the surface and walk back home to have a rest.\nThe next day you walk right back into the cave.");
-        try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("You regenerated "+restingHealth+" health!");
-        try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
-        Game.decide();
+        }
     }
+
 }
