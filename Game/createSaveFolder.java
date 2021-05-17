@@ -15,7 +15,13 @@ public class createSaveFolder{
         Scanner Name = new Scanner(System.in);
         System.out.println("Please enter your Name");
         Game.userName = Name.next();
-        System.out.println("Do you wish to \n1. create \n     or \n2. load \na save file");
+        try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("Do you wish to"         );  try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("1. create"              );  try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("     or"                );  try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("2.  load"               );  try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("a save file"            );  try{Thread.sleep(100);}catch(Exception e){}
+        try{Thread.sleep(100);}catch(Exception e){}
         int savefile = Name.nextInt();
         switch(savefile){
             case 1: Save.creatingSave();System.out.println(""); break; 
