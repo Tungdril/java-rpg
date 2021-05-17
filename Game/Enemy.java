@@ -1,7 +1,7 @@
 public class Enemy{
     static String enemy;
     static int enemyHealth;
-    static int playerHealth = 8;
+    static int playerHealth = 0;
     static String PlayerHealth;
     static int playerDamage;
     static int enemyDamage; 

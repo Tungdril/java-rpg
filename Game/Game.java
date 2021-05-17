@@ -8,9 +8,7 @@ public class Game {
     static int money;
     static int maxHealth = 8;
 
-    public static void main(String[] args) {
-        //Death.stopMusic=0; //allows bgm, remove because it then launches bgm twice
-        
+    public static void main(String[] args) {       
         try{
         createSaveFolder.createFold(); //creates a \JavaRPG\saves directory Folder at C:\"User"\Documents\ 
         Exp.main(); //initilize Exp
@@ -66,8 +64,7 @@ public class Game {
         System.out.println("      Day: "+day                    );                                      try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("|____________________|"             );                                      try{Thread.sleep(100);}catch(Exception e){}
         try{Thread.sleep(600);}catch(Exception e){}
-        //System.out.println(maxHealth);
-        //System.out.println(Exp.expScaling);
+        System.out.println(Death.stopMusic);
         Save.creatingSave();
         System.out.println("Decide what to do next."                );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("1. Continue deeper into the cave"       );          try{Thread.sleep(100);}catch(Exception e){}
