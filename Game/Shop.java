@@ -46,7 +46,6 @@ public static void main(String[] args){
             System.out.println( "|         You leave the shop.        |");    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println( "|____________________________________|");    try{Thread.sleep(100);}catch(Exception e){}
             try{Thread.sleep(1000);}catch(Exception e){}
-            metBefore=0;
             Game.decide();
             
         }
