@@ -16,7 +16,7 @@ public class AudioManager{
         return;
     }else{
         try {                                    //change SoundTest soundFile before launch                  
-        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream((SoundTest)); //gets the .wav file
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(testmania)); //gets the .wav file
         System.out.println(); //why is this here?
         Clip clip = AudioSystem.getClip(); //defines the .mov as a new clip
         clip.open(audioInputStream); //opens the clip
