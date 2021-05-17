@@ -13,12 +13,12 @@ public class AudioManager{
         return;
     }else{
         try {                                    //change soundFileTesting to soundFile before launch               @Tungdril does for me the same error  @SmyloG yes I know, but it works for me                   
-        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundFileTesting));
-        System.out.println();
-        Clip clip = AudioSystem.getClip();
-        clip.open(audioInputStream);
-        clip.start();
-        clip.loop(Clip.LOOP_CONTINUOUSLY);
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundFileTesting)); //gets the .wav file
+        System.out.println(); //why is this here?
+        Clip clip = AudioSystem.getClip(); //defines the .mov as a new clip
+        clip.open(audioInputStream); //opens the clip
+        clip.start(); //starts the clip
+        clip.loop(Clip.LOOP_CONTINUOUSLY); //lopps the clip
         Death.stopMusic = 1; //prevents endless loop
         Thread.sleep(100);
     } catch(Exception ex) {

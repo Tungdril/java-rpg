@@ -1,12 +1,12 @@
 {
 	"folders": [
 		{
-			"path": ".."
+			"path": "."
 		}
 	],
 	"settings": {
 		"java.project.sourcePaths": [
-			""
+			"Game"
 		]
 	}
 }
