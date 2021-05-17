@@ -11,7 +11,6 @@ public class Shop {
     static String SwordEquip;
     static int metBefore;
 public static void main(String[] args){ 
-    Game.money=2000;
     shop();  
 }
     public static void shop(){
