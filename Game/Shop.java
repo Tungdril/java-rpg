@@ -20,7 +20,6 @@ public static void main(String[] args){ shop();}
         
         System.out.println(    " ____________________________________ ");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|       \"What are you buying?\"       |");                         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(    "|     said the dwarven shopkeeper    |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|------------------------------------|");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|           You choose to:           |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|1. Buy Equipment                    |");                           try{Thread.sleep(100);}catch(Exception e){}
@@ -32,15 +31,15 @@ public static void main(String[] args){ shop();}
 
         switch (Talk){          //loop was replaced with recursion
             case 1:
-                metBefore=1;
+                metBefore=metBefore+1;
                 try{Thread.sleep(300);}catch(Exception e){}   
                 equipShop();
             case 2:
-                metBefore=1;
+                metBefore=metBefore+1;
                 try{Thread.sleep(300);}catch(Exception e){}
                 medicineShop();
             case 3:
-            metBefore=0;
+            metBefore=1;
             System.out.println( " ____________________________________ ");    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println( "|         You leave the shop.        |");    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println( "|____________________________________|");    try{Thread.sleep(100);}catch(Exception e){}
@@ -63,7 +62,7 @@ public static void main(String[] args){ shop();}
             boolean Sword = sword==2;            
             boolean ArmorSword = Armor & Sword;
 
-            if(ArmorSword){                         //if the Sword and the Shield has been bought the player will be put backk in shop
+            if(ArmorSword){                         //if the Sword and the Shield has been bought the player will be put back in shop
             System.out.println(    " ______________________________________");                      try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
@@ -235,7 +234,7 @@ public static void main(String[] args){ shop();}
             System.out.println(    "|  \"The cool Sword or a shiny Shield?\" |");                   try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "| 1. Sword (200 G)                     |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "| 2. Shield (300 G)                    |");                     try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println(    "| 3. none of the above                 |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| 3. Leave                             |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
                 int upgrades = vendor.nextInt();
                 switch (upgrades){
@@ -325,7 +324,8 @@ public static void main(String[] args){ shop();}
                     System.out.println("|               `.___.'              |");                                  try{Thread.sleep(100);}catch(Exception e){}
                     System.out.println("|------------------------------------|");                                  try{Thread.sleep(100);}catch(Exception e){}
                     System.out.println("|      You bought the potion!        |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|It has no effect, you wasted your G.|");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("| It has no effect, but you at least |");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    System.out.println("|     contributed to the economy.    |");
                     System.out.println("|          You regain no HP.         |");                       try{Thread.sleep(100);}catch(Exception e){}
                     System.out.println("|____________________________________|");                                  try{Thread.sleep(100);}catch(Exception e){}
                     shop();     
@@ -344,13 +344,44 @@ public static void main(String[] args){ shop();}
         }
         public static void greetingKeeper(){ 
             int greetedKeeper=metBefore; //prevents welcome message being drawn every time you reset the menu, to choose something else
+            if(metBefore==1){       //random talk from the dwarf
+                int randomShop = (int) (Math.random()*100+1);
+                boolean randomShop1= randomShop>=1 && randomShop<26;    //25% Chance for everything
+                boolean randomShop2=randomShop>=26 && randomShop<51;
+                boolean randomShop3=randomShop>=51 && randomShop<76;
+                boolean randomShop4=randomShop>=76 && randomShop<101;
+                    if(randomShop1){
+                        System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|     You have entered the Shop.     |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|               \"Hmm?\"               |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                    }
+                    if(randomShop2){
+                        System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|     You have entered the Shop.     |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|  \"You're still alive, impressive.\" |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                    }
+                    if(randomShop3){
+                        System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|     You have entered the Shop.     |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|      \"Do you need a Potion?\"       |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                    }
+                    if(randomShop4){
+                        System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|     You have entered the Shop.     |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|  \"You should buy some Equipment\"   |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                    }
+                }
             if(greetedKeeper==0)
-            {
-            System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
-            System.out.print(   "|    You have entered a small cave.  |\n");                              try{Thread.sleep(100);}catch(Exception e){}
-            System.out.print(   "|An old dwarf has set up a shop here.|\n");                              try{Thread.sleep(100);}catch(Exception e){}
-            System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
-            
-            }
+                {
+                System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
+                System.out.print(   "|    You have entered a small cave.  |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                System.out.print(   "|An old dwarf has set up a shop here.|\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                metBefore=1;
+                }
         }
     }
