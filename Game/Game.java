@@ -1,19 +1,17 @@
 
 import java.util.Scanner;
 
-import javax.sound.sampled.spi.AudioFileReader;
 public class Game {
     static int day = 1; 
     static String Money;
     static String Day;
     static String userName;
     static int money;
-    static int maxHealth = 8;
+    static int maxHealth = 8 + Exp.expScaling;
 
     public static void main(String[] args) {       
         try{
         createSaveFolder.createFold(); //creates a \JavaRPG\saves directory Folder at C:\"User"\Documents\ 
-        Exp.main(); //initilize Exp
         maxHealth = 8 + Exp.expScaling; //recalculates health based on expScaling
         AudioManager.main(null); //start bgm
 
@@ -37,16 +35,16 @@ public class Game {
         catch(Exception e){} //if there's an exception in the Titlescreen it will loop
         //System.out.println("Day: "+ day);  
         //System.out.println(Encounters.playerHealth);
+
         //Wait for user Input
         try{
             System.in.read();
         } catch(Exception e){e.printStackTrace();System.exit(0);}
             createSaveFolder.SaveLoad(); //loads and Saves the Games if there's an Exception the Titlescreen will be called
-         
+        Exp.main(); //initilize Exp 
         Shop.equipCheck();
         decide(); //this is easier to check if the Loading didn't fuck up
         
-        //explore();
     }
         
 
@@ -54,7 +52,6 @@ public class Game {
     
 
     public static void decide(){
-        //try {Thread.sleep(5000);} catch(Exception e) {System.out.println("shit");}
         Exp.main(); //not sure why I made this call everytime, but scared to remove
         try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("----------------------------------------------------------------------");   try{Thread.sleep(100);}catch(Exception e){}
@@ -66,6 +63,8 @@ public class Game {
         System.out.println("      Day: "+day                    );                                      try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("|____________________|"             );                                      try{Thread.sleep(100);}catch(Exception e){}
         try{Thread.sleep(600);}catch(Exception e){}
+        //System.out.println(Exp.expScaling);
+        //System.out.println(maxHealth);
         Save.creatingSave();
         System.out.println("Decide what to do next."                );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("1. Continue deeper into the cave"       );          try{Thread.sleep(100);}catch(Exception e){}

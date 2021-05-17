@@ -5,6 +5,7 @@ public class Exp {
 
     //determines expScaling
     public static void main(){
+        Game.maxHealth = 8 + expScaling; 
         if(exp<10){
             expScaling = 0;
         } else if(exp>=10 && exp<30){
