@@ -40,7 +40,7 @@ public class Game {
         //Wait for user Input
         try{
             System.in.read();
-        } catch(Exception e){}
+        } catch(Exception e){e.printStackTrace();System.exit(0);}
             createSaveFolder.SaveLoad(); //loads and Saves the Games if there's an Exception the Titlescreen will be called
          
         Shop.equipCheck();
