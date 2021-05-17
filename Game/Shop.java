@@ -353,25 +353,25 @@ public static void main(String[] args){ shop();}
                     if(randomShop1){
                         System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
                         System.out.print(   "|     You have entered the Shop.     |\n");                              try{Thread.sleep(100);}catch(Exception e){}
-                        System.out.print(   "|               \"Hmm?\"               |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|               \"Hmm?\"               |\n");                            try{Thread.sleep(100);}catch(Exception e){}
                         System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
                     }
                     if(randomShop2){
                         System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
                         System.out.print(   "|     You have entered the Shop.     |\n");                              try{Thread.sleep(100);}catch(Exception e){}
-                        System.out.print(   "|  \"You're still alive, impressive.\" |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|  \"You're still alive, impressive.\" |\n");                            try{Thread.sleep(100);}catch(Exception e){}
                         System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
                     }
                     if(randomShop3){
                         System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
                         System.out.print(   "|     You have entered the Shop.     |\n");                              try{Thread.sleep(100);}catch(Exception e){}
-                        System.out.print(   "|      \"Do you need a Potion?\"       |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|      \"Do you need a Potion?\"       |\n");                            try{Thread.sleep(100);}catch(Exception e){}
                         System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
                     }
                     if(randomShop4){
                         System.out.print(   " ____________________________________ \n");                              try{Thread.sleep(100);}catch(Exception e){}
                         System.out.print(   "|     You have entered the Shop.     |\n");                              try{Thread.sleep(100);}catch(Exception e){}
-                        System.out.print(   "|  \"You should buy some Equipment\"   |\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "|  \"You should buy some Equipment\"   |\n");                            try{Thread.sleep(100);}catch(Exception e){}
                         System.out.print(   "|____________________________________|\n");                              try{Thread.sleep(100);}catch(Exception e){}
                     }
                 }

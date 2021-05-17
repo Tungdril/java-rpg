@@ -24,7 +24,8 @@ public class createSaveFolder{
         try{Thread.sleep(100);}catch(Exception e){}
         int savefile = Name.nextInt();
         switch(savefile){
-            case 1: Save.creatingSave();System.out.println(""); break; 
+            case 1: Save.creatingSave();System.out.println("");
+                    Enemy.playerHealth=8; break; 
             case 2: Save.readingPain();System.out.println("//////Loading\\\\\\\\\\\\"); break;}
         } catch(Exception e){System.out.println("Use Numbers");Game.main(null);}
         
