@@ -24,11 +24,9 @@ public static void createFile() {
 
     File f = new File(createSaveFolder.savepath + Game.userName + ".txt");
        if(f.exists()){ 
-        f.delete();
-        try {f.createNewFile(); } catch(Exception e) {System.out.println("Something went wrong while Saving");Game.main(null);} 
+        try {f.delete();f.createNewFile(); } catch(Exception e) {System.out.println("Something went wrong while Saving");Game.main(null);} 
         } else 
-        {try {f.createNewFile(); } catch(Exception e) {System.out.println("Something went wrong while Saving");Game.main(null);}}
-    }
+        {try {f.delete();f.createNewFile(); } catch(Exception e) {System.out.println("Something went wrong while Saving");Game.main(null);}}}
 
 
 public static String getSavePath(){

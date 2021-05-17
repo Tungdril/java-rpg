@@ -13,7 +13,7 @@ public class AudioManager{
 
   public static void main(String[] args){ //Background music (bgm)
          
-        String path = "./Game/Audio/bgm.wav"; //defines the path
+        String path = "./Audio/bgm.wav"; //defines the path
         try {
             clipBgm = AudioSystem.getClip();   //binds the AudioSystem to the clip
             File file = new File(path);       //reads the filepath
@@ -30,7 +30,7 @@ public class AudioManager{
 
     public static void mainBattle(){ //Battle music (battle)
          
-      String path = "./Game/Audio/Battle.wav";
+      String path = "./Audio/Battle.wav";
       try {
           clipBattle = AudioSystem.getClip();
           File file = new File(path);
@@ -46,7 +46,7 @@ public class AudioManager{
 
 public static void mainDeath(){ //Death music (death)
          
-  String path = "./Game/Audio/death.wav";
+  String path = "./Audio/death.wav";
   try {
       clipDeath = AudioSystem.getClip();
       File file = new File(path);
