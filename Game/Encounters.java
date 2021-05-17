@@ -77,7 +77,7 @@ public class Encounters {
             case 3://Check Health
             try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("----------------------------------------------------------------------" );try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("The "+Enemy.enemy+" still has " + Enemy.enemyHealth + " HP left"        );try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("The enemy has still " + Enemy.enemyHealth + " HP left"                  );try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("You still have " + Enemy.playerHealth + " HP left"                      );try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("----------------------------------------------------------------------" );try{Thread.sleep(100);}catch(Exception e){}
             break;
@@ -232,7 +232,7 @@ public class Encounters {
         try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
         Game.decide();
     }
-    public static void winstate(){
+    public static void winstate(){ //winstate
         if (Enemy.enemyHealth<=0){
             try{Thread.sleep(100);}catch(Exception e){}                                        
             System.out.println("----------------------------------------------------------------------");
@@ -251,5 +251,4 @@ public class Encounters {
             Game.decide(); //calls decide to let the player make the next move              
         }
     }
-
 }
