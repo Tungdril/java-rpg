@@ -10,9 +10,8 @@ public class Shop {
     static String ArmorEquip;
     static String SwordEquip;
     static int metBefore;
-public static void main(String[] args){ 
-    shop();  
-}
+public static void main(String[] args){ shop();}
+
     public static void shop(){
         Scanner vendor = new Scanner(System.in);                            
         greetingKeeper();
