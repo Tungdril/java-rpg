@@ -9,7 +9,7 @@ public class Game {
     static int money;
 
     public static void main(String[] args) {
-        //Death.stopMusic=0; //allows bgm
+        //Death.stopMusic=0; //allows bgm, remove because it then launches bgm twice
         
         try{
         createSaveFolder.createFold(); //creates a \JavaRPG\saves directory Folder at C:\"User"\Documents\ 
@@ -41,7 +41,7 @@ public class Game {
         try{
             System.in.read();
         } catch(Exception e){}
-            createSaveFolder.SaveLoad(); //Loads and Saves the Games if there's an Exception the Titlescreen will be called
+            createSaveFolder.SaveLoad(); //loads and Saves the Games if there's an Exception the Titlescreen will be called
          
         Shop.equipCheck();
         decide(); //this is easier to check if Loading didn't fuck up
@@ -55,7 +55,7 @@ public class Game {
 
     public static void decide(){
         //try {Thread.sleep(5000);} catch(Exception e) {System.out.println("shit");}
-        Exp.main();
+        Exp.main(); //not sure why I made this call everytime, but scared to remove
         System.out.println("----------------------------------------------------------------------");
         System.out.println(" ____________________ "             );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("|                    |"             );          try{Thread.sleep(100);}catch(Exception e){}
@@ -90,7 +90,7 @@ public class Game {
     }
 
     public static void explore(){
-    int exploreEvent = (int) (Math.random()*100+1); //Generate encounter 
+    int exploreEvent = (int) (Math.random()*100+1); //generate encounter 
        if(exploreEvent<=40){ 
         Encounters.fight();
         Encounters.combat();
