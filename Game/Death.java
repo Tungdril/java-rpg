@@ -9,7 +9,7 @@ public class Death { //made a file for it alone to make it easier to check for a
             stopMusic = 1;  //stops bgm, to prevent more than one instance being played, if the player decides to continue 
             AudioManager.playSound();  
             
-            System.out.println("                                 You have died"); try{Thread.sleep(2000);}catch(Exception e){System.out.println("HOW?\n(exception in Death.java)");};
+                System.out.println("                                 You have died");                                     try{Thread.sleep(2000);}catch(Exception e){System.out.println("HOW?\n(exception in Death.java)");};
                 System.out.println("                                 _____  _____ ");                                     try{Thread.sleep(500);}catch(Exception e){} //to make it beautiful
                 System.out.println("                                <     `/     | ");                                    try{Thread.sleep(500);}catch(Exception e){}
                 System.out.println("                                 >          ( ");                                     try{Thread.sleep(500);}catch(Exception e){}
