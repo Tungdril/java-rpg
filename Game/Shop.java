@@ -13,6 +13,7 @@ public class Shop {
 public static void main(String[] args){shop();}
 
     public static void shop(){
+        Affinity.Affimeter();
         Game.money=20000;
         Scanner vendor = new Scanner(System.in);
         Affinity.Affi();                            //calls the Affinity Saystem
@@ -22,14 +23,14 @@ public static void main(String[] args){shop();}
         
         System.out.println(    " ____________________________________ ");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|       \"What are you buying?\"       |");                         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(    "|------------------------------------|");                           try{Thread.sleep(100);}catch(Exception e){} //36 lines
+        System.out.println(    "|"+ Affinity.AffinityMeter +"|");                           try{Thread.sleep(100);}catch(Exception e){} //36 lines
         System.out.println(    "|           You choose to:           |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|1. Buy Equipment                    |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|2. Buy a Healing Potion ("+Affinity.potionPrice+" G)      |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|3. Buy the Dwarf a Beer (50 G)      |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|4. Leave                            |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|____________________________________|");                           try{Thread.sleep(100);}catch(Exception e){}
-        
+        Affinity.Affimeter();
         int Talk = vendor.nextInt();
 
         switch (Talk){          //loop was replaced with recursion
@@ -58,6 +59,7 @@ public static void main(String[] args){shop();}
             Game.decide();
             
         }
+        Affinity.Affimeter();
     }  
        
                 
