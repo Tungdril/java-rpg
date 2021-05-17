@@ -44,7 +44,7 @@ public class Game {
             createSaveFolder.SaveLoad(); //loads and Saves the Games if there's an Exception the Titlescreen will be called
          
         Shop.equipCheck();
-        decide(); //this is easier to check if Loading didn't fuck up
+        decide(); //this is easier to check if the Loading didn't fuck up
         
         //explore();
     }
@@ -104,17 +104,3 @@ public class Game {
        }
     }
 }
-
-
-
- 
-
-
-    
-     
-
-
-
-
-
-
