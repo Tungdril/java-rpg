@@ -24,7 +24,7 @@ public class Enemy{
             enemy = "Skeleton";
             enemyHealth = 6 + Exp.expScaling;
             difficulty = 1.0;
-            enemyDamage = (int) (Math.random()*3);
+            enemyDamage = (int) (Math.random()*3+1);
         } else{
             enemy = "Orc";
             enemyHealth = 8 + Exp.expScaling;
