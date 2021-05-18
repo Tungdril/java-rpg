@@ -6,6 +6,7 @@ public class Save {
 //save and load complete
 static String MetBefore;
 static String ShopAffinity;
+static File f = new File(createSaveFolder.savepath + Game.userName + ".txt");
 public static void main(String[] args) {
     createFile();
     System.out.print(getSavePath()+"\n");
@@ -53,7 +54,7 @@ public static void writingPain(){
     } catch(IOException e) {System.out.println("Breeki"); e.printStackTrace();}
 }
 public static void readingPain(){
-    try {
+    if(f.exists()){try {
         File f = new File(createSaveFolder.savepath + Game.userName + ".txt");
         Scanner reader = new Scanner(f);
         while (reader.hasNextLine()) {
@@ -81,5 +82,6 @@ public static void readingPain(){
         }
             reader.close();
         } catch (Exception e) {System.out.println("The Load system is fucked."); Game.main(null);}
-}
+        }
+    }
 }
