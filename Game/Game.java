@@ -56,15 +56,16 @@ public class Game {
     public static void decide(){
         //try {Thread.sleep(5000);} catch(Exception e) {System.out.println("shit");}
         Exp.main(); //not sure why I made this call everytime, but scared to remove
+        GraphicUi.healthometer();
         try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("----------------------------------------------------------------------");   try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(" ____________________ "             );                                      try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("|                    |"             );                                      try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("      Health: "+ Enemy.playerHealth );                                      try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println(" _______________________ "             );                                      try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("|        Health:        |"             );                                      try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println(""+ GraphicUi.HealthBar+""        );                                      try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("      Money: "+ money               );                                      try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("      Exp: "+(int)Exp.exp           );                                      try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("      Day: "+day                    );                                      try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("|____________________|"             );                                      try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("|_______________________|"             );                                      try{Thread.sleep(100);}catch(Exception e){}
         try{Thread.sleep(600);}catch(Exception e){}
         Save.creatingSave();
         System.out.println("Decide what to do next."                );          try{Thread.sleep(100);}catch(Exception e){}

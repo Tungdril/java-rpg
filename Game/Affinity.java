@@ -22,8 +22,8 @@ public class Affinity {
         int easierShopAff=shopAffinity/10;             //Added an Affinity Meter to let the player know how much affinity he has accumulated
         switch(easierShopAff){
             case 0:
-            AffinityMeter="──┤------------------------------├──"; break;        // @Tungdril Should i use █ or ■?
-            case 1:
+            AffinityMeter="──┤------------------------------├──"; break;        // @Tungdril Should i use █ or ■? //@SmyloG this: ■
+            case 1: 
             AffinityMeter="──┤■■■---------------------------├──"; break;
             case 2:
             AffinityMeter="──┤■■■■■■------------------------├──"; break;
