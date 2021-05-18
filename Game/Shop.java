@@ -11,13 +11,14 @@ public class Shop {
     static String ArmorEquip;
     static String SwordEquip;
     static int metBefore;
-public static void main(String[] args){ Game.money=2000;shop();}
+public static void main(String[] args){shop();}
 
     public static void shop(){
-        
         GraphicUi.Affimeter();
+        int ShopChance = (int) (Math.random()*100+1);
+        if(){ 
         Scanner vendor = new Scanner(System.in);
-        Affinity.Affi();                            //calls the Affinity Saystem
+        Affinity.Affi();                            //calls the Affinity System
         greetingKeeper();
         try{Thread.sleep(650);}catch(Exception e){}
         try{Thread.sleep(1000);}catch(Exception e){}
@@ -27,7 +28,7 @@ public static void main(String[] args){ Game.money=2000;shop();}
         System.out.println(    "|"+ GraphicUi.AffinityMeter +"|");                           try{Thread.sleep(100);}catch(Exception e){} //36 lines
         System.out.println(    "|           You choose to:           |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|1. Buy Equipment                    |");                           try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(    "|2. Buy a Healing Potion ["+Affinity.potionPrice+" G]      |");                           try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println(    "|2. Buy a Healing Potion [20 G]      |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|3. Buy the Dwarf a Beer [50 G]      |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|4. Leave                            |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|____________________________________|");                           try{Thread.sleep(100);}catch(Exception e){}
@@ -235,5 +236,7 @@ public static void main(String[] args){ Game.money=2000;shop();}
                 shop();
                 }
             else{GraphicUi.notEnoughMoney();shop();}
+            
+        
         } 
     }
