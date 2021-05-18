@@ -91,6 +91,7 @@ public class Encounters {
                 try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("And succeeded at that!");
                 try{Thread.sleep(100);}catch(Exception e){}
+                AudioManager.stopBattle();
                 Game.decide();}
                 else {  try{Thread.sleep(100);}catch(Exception e){};
                         System.out.println("But to no avail!");         // 70% chance to not flee, the player used his turn and gained nothing
