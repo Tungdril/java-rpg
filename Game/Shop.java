@@ -14,7 +14,7 @@ public static void main(String[] args){shop();}
 
     public static void shop(){
         
-        Affinity.Affimeter();
+        GraphicUi.Affimeter();
         Scanner vendor = new Scanner(System.in);
         Affinity.Affi();                            //calls the Affinity Saystem
         greetingKeeper();
@@ -30,7 +30,7 @@ public static void main(String[] args){shop();}
         System.out.println(    "|3. Buy the Dwarf a Beer [50 G]      |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|4. Leave                            |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|____________________________________|");                           try{Thread.sleep(100);}catch(Exception e){}
-        Affinity.Affimeter();
+        GraphicUi.Affimeter();
         int Talk = vendor.nextInt();
 
         switch (Talk){          //loop was replaced with recursion
@@ -59,7 +59,7 @@ public static void main(String[] args){shop();}
             Game.decide();
             
         }
-        Affinity.Affimeter();
+        GraphicUi.Affimeter();
     }  
        
                 
