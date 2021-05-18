@@ -299,5 +299,18 @@ public static void healthometer(){
   System.out.println("|          You regain no HP.         |");                                  try{Thread.sleep(100);}catch(Exception e){}
   System.out.println("|____________________________________|");                                  try{Thread.sleep(100);}catch(Exception e){}
 }
-
+  public static void swordBought(){
+    System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(               "|     You bought the cool Sword!     |");                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(               "|     Hopefully it's as useful       |");                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(               "|       as it's cool looking!        |");                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(               "|____________________________________|");                  try{Thread.sleep(100);}catch(Exception e){}
+  }
+  public static void shieldBought(){
+    System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(               "|    You bought the shiny Shield!    |");                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(               "|      Hopefully it's as useful      |");                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(               "|           as it's shiny!           |");                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(               "|____________________________________|");                  try{Thread.sleep(100);}catch(Exception e){}
+  }
 }

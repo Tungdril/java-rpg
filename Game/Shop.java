@@ -86,11 +86,8 @@ public static void main(String[] args){ Game.money=2000;shop();}
                 switch (swordBuy){
                     case 1:
                     if (Game.money<Affinity.swordPrice)     {GraphicUi.notEnoughMoney();break;}
-                    else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|     You bought the cool Sword!     |");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|     Hopefully it's as useful       |");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|       as it's cool looking!        |");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|____________________________________|");                  try{Thread.sleep(100);}catch(Exception e){}
+                    else {
+                    GraphicUi.swordBought();
                     sword=2;
                     Game.money=Game.money-Affinity.swordPrice;
                     swordEquip=1;
@@ -109,11 +106,8 @@ public static void main(String[] args){ Game.money=2000;shop();}
             switch(armorBuy){
             case 1:
                     if (Game.money<Affinity.shieldPrice)    {GraphicUi.notEnoughMoney();break;}
-                    else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|    You bought the shiny Shield!    |");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|      Hopefully it's as useful      |");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|           as it's shiny!           |");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|____________________________________|");                  try{Thread.sleep(100);}catch(Exception e){}
+                    else {
+                    GraphicUi.shieldBought();
                     armor=2;
                     Game.money=Game.money-Affinity.shieldPrice;
                     armorEquip=1;
@@ -132,11 +126,8 @@ public static void main(String[] args){ Game.money=2000;shop();}
                 switch (upgrades){
                     case 1:
                     if (Game.money<Affinity.swordPrice)     {GraphicUi.notEnoughMoney();}
-                    else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|     You bought the cool Sword!     |");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|     Hopefully it's as useful       |");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|       as it's cool looking!        |");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|____________________________________|");                  try{Thread.sleep(100);}catch(Exception e){}
+                    else {
+                    GraphicUi.swordBought();
                     sword=2;
                     Game.money=Game.money-Affinity.swordPrice;
                     swordEquip=1;
@@ -145,11 +136,8 @@ public static void main(String[] args){ Game.money=2000;shop();}
                     break;
                     case 2:
                     if (Game.money<Affinity.shieldPrice)    {GraphicUi.notEnoughMoney();break;}
-                    else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|    You bought the shiny Shield!    |");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|      Hopefully it's as useful      |");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|           as it's shiny!           |");                  try{Thread.sleep(100);}catch(Exception e){}
-                          System.out.println(               "|____________________________________|");                  try{Thread.sleep(100);}catch(Exception e){}
+                    else {
+                    GraphicUi.shieldBought();
                     armor=2;
                     Game.money=Game.money-Affinity.shieldPrice;
                     armorEquip=1;
@@ -246,9 +234,6 @@ public static void main(String[] args){ Game.money=2000;shop();}
                 Game.money=Game.money-50;
                 shop();
                 }
-            else{   System.out.println(" ____________________________________ ");             try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|       You don't have enough G.     |");             try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|____________________________________|");             try{Thread.sleep(100);}catch(Exception e){}
-                shop();}
+            else{GraphicUi.notEnoughMoney();shop();}
         } 
     }
