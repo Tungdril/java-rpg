@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class Shop {
     static int sword;
     static int armor;
+    static int heal;
     static int swordEquip;
     static int armorEquip;
     static String ArmorEquip;
     static String SwordEquip;
     static int metBefore;
-public static void main(String[] args){shop();}
+public static void main(String[] args){ Game.money=2000;shop();}
 
     public static void shop(){
         
@@ -84,11 +85,7 @@ public static void main(String[] args){shop();}
                 int swordBuy = vendor.nextInt();
                 switch (swordBuy){
                     case 1:
-                    if (Game.money<Affinity.swordPrice)     {   System.out.println(   " ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
-                                                                System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
-                                                                System.out.println(   "|         this cool Sword.           |");          try{Thread.sleep(100);}catch(Exception e){}
-                                                                System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
-                                             break;}
+                    if (Game.money<Affinity.swordPrice)     {GraphicUi.notEnoughMoney();break;}
                     else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|     You bought the cool Sword!     |");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|     Hopefully it's as useful       |");                  try{Thread.sleep(100);}catch(Exception e){}
@@ -111,11 +108,7 @@ public static void main(String[] args){shop();}
             int armorBuy = vendor.nextInt();
             switch(armorBuy){
             case 1:
-                    if (Game.money<Affinity.shieldPrice)    {   System.out.println(   " ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
-                                                                System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
-                                                                System.out.println(   "|         this shiny Shield.         |");          try{Thread.sleep(100);}catch(Exception e){}
-                                                                System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
-                                                                break;}
+                    if (Game.money<Affinity.shieldPrice)    {GraphicUi.notEnoughMoney();break;}
                     else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|    You bought the shiny Shield!    |");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|      Hopefully it's as useful      |");                  try{Thread.sleep(100);}catch(Exception e){}
@@ -138,11 +131,7 @@ public static void main(String[] args){shop();}
                 int upgrades = vendor.nextInt();
                 switch (upgrades){
                     case 1:
-                    if (Game.money<Affinity.swordPrice)     {System.out.println(   " ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
-                                             System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
-                                             System.out.println(   "|         this cool Sword.           |");          try{Thread.sleep(100);}catch(Exception e){}
-                                             System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
-                                             }
+                    if (Game.money<Affinity.swordPrice)     {GraphicUi.notEnoughMoney();}
                     else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|     You bought the cool Sword!     |");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|     Hopefully it's as useful       |");                  try{Thread.sleep(100);}catch(Exception e){}
@@ -155,11 +144,7 @@ public static void main(String[] args){shop();}
                     Affinity.Affi();
                     break;
                     case 2:
-                    if (Game.money<Affinity.shieldPrice)    {System.out.println(   " ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
-                                            System.out.println(   "| You don't have enough money to buy |");          try{Thread.sleep(100);}catch(Exception e){}
-                                            System.out.println(   "|         this shiny Shield.         |");          try{Thread.sleep(100);}catch(Exception e){}
-                                            System.out.println(   "|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
-                                            break;}
+                    if (Game.money<Affinity.shieldPrice)    {GraphicUi.notEnoughMoney();break;}
                     else {System.out.println(               " ____________________________________ ");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|    You bought the shiny Shield!    |");                  try{Thread.sleep(100);}catch(Exception e){}
                           System.out.println(               "|      Hopefully it's as useful      |");                  try{Thread.sleep(100);}catch(Exception e){}
@@ -190,49 +175,12 @@ public static void main(String[] args){shop();}
                 
                 if (overheal <= Game.maxHealth){
                     Enemy.playerHealth = Enemy.playerHealth + heal;
-                    System.out.println(" ____________________________________ ");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|                _____               |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|               `.___,'              |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|                (___)               |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|                <   >               |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|                 ) (                |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|                /`-.\\               |");                                 try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|               /     \\              |");                                 try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|              / _    _\\             |");                                 try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|             :,' `-.' `:            |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|             |         |            |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|             :         ;            |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|              \\       /             |");                                 try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|               `.___.'              |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|────────────────────────────────────|");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|      You bought the potion!        |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|And directly drank it. How wasteful.|");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|          You regain " + heal + "HP.           |");                       try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|____________________________________|");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    GraphicUi.Potion();
                     Affinity.shopAffinity=Affinity.shopAffinity+5;
                     Affinity.Affi();
                     shop();
                 } else if(Enemy.playerHealth == Game.maxHealth){
-                    System.out.println(" ____________________________________ ");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|                _____               |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|               `.___,'              |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|                (___)               |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|                <   >               |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|                 ) (                |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|                /`-.\\               |");                                 try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|               /     \\              |");                                 try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|              / _    _\\             |");                                 try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|             :,' `-.' `:            |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|             |         |            |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|             :         ;            |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|              \\       /             |");                                 try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|               `.___.'              |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|────────────────────────────────────|");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|      You bought the potion!        |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("| It has no effect, but you at least |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|     contributed to the economy.    |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|          You regain no HP.         |");                                  try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("|____________________________________|");                                  try{Thread.sleep(100);}catch(Exception e){}
+                    GraphicUi.overPotion();
                     Affinity.shopAffinity=Affinity.shopAffinity+5; //adds Affinity with the Shopkeeper
                     Affinity.Affi();
                     shop();     
@@ -243,10 +191,7 @@ public static void main(String[] args){shop();}
 
 
                 
-            } else                      {System.out.println(" ____________________________________ ");          try{Thread.sleep(100);}catch(Exception e){}
-                                         System.out.println("|       You don't have enough G.     |");          try{Thread.sleep(100);}catch(Exception e){}
-                                         System.out.println("|____________________________________|");          try{Thread.sleep(100);}catch(Exception e){}
-                                        }
+            } else{GraphicUi.notEnoughMoney();}
             shop();
         }
         public static void greetingKeeper(){ 
