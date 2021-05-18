@@ -190,13 +190,14 @@ static boolean inspected=false;
 
     //creates small, medium and large loot, by multiplying value with lootSize
     public static void loot(){ 
-        int lootSize = (int) (Math.random()*3+1);
+        int lootSize = (int) (Math.random()*6+1);
         int lootValue = (int) (Math.random()*10*lootSize+2);
         switch (lootSize) {
+            //money loot
             case 1:
             try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("You enter a small cave, the walls are overgrown with moss. To your right you can see a faint glimmering in the overgrowth.\n"+"Upon closer inspection it seems like a few coins were reflecting the light of your torch.\n"+
-            "You find ["+lootValue+"] G!");
+            "\nYou find ["+lootValue+"] G!");
             Game.money= Game.money+lootValue;
             try {Thread.sleep(4000);} catch(Exception e) {System.out.println("shit");}
             Game.decide();
@@ -204,7 +205,7 @@ static boolean inspected=false;
             case 2:
             try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("Examining the new cave you just entered, you see a lifeless skeleton lying collapsed against the wall.\nYou approach the body and snatch its wallet\n"+
-            "It had ["+ lootValue+"] G in it!");
+            "\nIt had ["+ lootValue+"] G in it!");
             Game.money= Game.money+lootValue;
             try {Thread.sleep(3500);} catch(Exception e) {System.out.println("shit");}
             Game.decide();
@@ -212,11 +213,40 @@ static boolean inspected=false;
             case 3:
             try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("As you continue to walk deeper and deeper into the cave, you suddenly stumble over something.\n"+"You look down and discover that something is a half-buried treasure chest!\n"+
-            "It is filled with ["+ lootValue+"] G!");
+            "\nIt is filled with ["+ lootValue+"] G!");
             Game.money= Game.money+lootValue;
             try {Thread.sleep(3500);} catch(Exception e) {System.out.println("shit");}
             Game.decide();
-            break;      
+            break;
+            //item loot   
+            case 4:
+            try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println("Deeper and deeper you walk, until you suddenly slip on something wet.\n"+"You bring your torch closer to the object and see that it is a big silver mushroom!\n"+
+            "\nYou find a strength shroom!");
+            Loot.constitutionCabbage++;
+            try {Thread.sleep(3500);} catch(Exception e) {System.out.println("shit");}
+            Game.decide(); 
+            case 5:
+            try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println("You enter a big cave with an opening in the ceiling that lets a single beam of daylight through.\n"+"Illuminated by the faint light, you make out a singular white flower!\n"+
+            "\nYou pluck a defense dandelion!");
+            Loot.defenseDandelion++;
+            try {Thread.sleep(3500);} catch(Exception e) {System.out.println("shit");}
+            Game.decide();
+            case 6:
+            try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println("Strolling through the endless tunnels, you come across a small table, which must have been by a group of goblins.\n"+"You approach the table and some fresh vegetables were left behind!\n"+
+            "\nYou stash a constitution cabbage!");
+            Loot.constitutionCabbage++;
+            try {Thread.sleep(3500);} catch(Exception e) {System.out.println("shit");}
+            Game.decide();
+            case 7:
+            try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println("You walk into a small tunnel and press your body through it.\n"+"Near the midway point you notice a single green plant growing near some dripping water.\n"+
+            "\nYou collect a healing herb!");
+            Loot.healingHerb++;
+            try {Thread.sleep(3500);} catch(Exception e) {System.out.println("shit");}
+            Game.decide(); 
         }
         
     }
@@ -271,16 +301,29 @@ static boolean inspected=false;
             try{Thread.sleep(100);}catch(Exception e){}                                        
             System.out.println("----------------------------------------------------------------------");
             try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println("You have successfully beaten the "+Enemy.enemy);      
+            System.out.println("You have successfully beaten the "+Enemy.enemy);   
+            try{Thread.sleep(100);}catch(Exception e){}  
+
+            Loot.itemLoot();
+            if(Loot.dropItem==true){    //if true gives item as loot
+                System.out.println("While closer examining the body you find " + Loot.Item + "!");  
+            } try{Thread.sleep(100);}catch(Exception e){} 
+
             int bonus = Exp.expScaling*2;
             int reward = (int) (Math.random()*10 * Enemy.difficulty + 10 + bonus);
-            try{Thread.sleep(100);}catch(Exception e){}           
-            System.out.println("You found [" + reward + "] G!");
+                               
+            System.out.println("You found [" + reward + "] G!"); //gives money based on exp and difficulty
             Game.money= Game.money+reward;
+            try{Thread.sleep(100);}catch(Exception e){} 
+
+            
+
             double expGain = Exp.exp + 5 * Enemy.difficulty;  //adds exp based on encounter difficulty
             Exp.exp = Exp.exp + expGain;
             try{Thread.sleep(100);}catch(Exception e){}
+
             System.out.println("You gain [" + (int)expGain + "] EXP!");
+
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
             Exp.main();
             AudioManager.stopBattle();
