@@ -1,7 +1,6 @@
 public class GraphicUi {
 
 public static String HealthBar; 
-public static String EnemyHealthBar; 
 static String AffinityMeter;
 
 public static void healthometer(){
@@ -32,35 +31,6 @@ public static void healthometer(){
         break;
       }
     }
-    
-  public static void enemyHealthometer(){
-    switch(Enemy.enemyHealth){
-        case 1: EnemyHealthBar="|-----------■-----------|";
-        break;
-        case 2: EnemyHealthBar="|----------■-■----------|";
-        break;
-        case 3: EnemyHealthBar="|---------■-■-■---------|";
-        break;
-        case 4: EnemyHealthBar="|--------■-■-■-■--------|";
-        break;
-        case 5: EnemyHealthBar="|-------■-■-■-■-■-------|";
-        break;
-        case 6: EnemyHealthBar="|------■-■-■-■-■-■------|";
-        break;
-        case 7: EnemyHealthBar="|-----■-■-■-■-■-■-■-----|";
-        break;
-        case 8: EnemyHealthBar="|----■-■-■-■-■-■-■-■----|";
-        break;
-        //case 9: EnemyHealthBar="|---■-■-■-■-■-■-■-■-■---|";
-        //break;
-        //case 10:EnemyHealthBar="|--■-■-■-■-■-■-■-■-■-■--|";
-        //break;
-        //case 11:EnemyHealthBar="|-■-■-■-■-■-■-■-■-■-■-■-|";
-        //break;
-        //case 12:EnemyHealthBar="|■-■-■-■-■-■-■-■-■-■-■-■|";
-        //break;
-    }
-  }  
     public static void Affimeter(){
       int easierShopAff=Affinity.shopAffinity/10;             //Added an Affinity Meter to let the player know how much affinity he has accumulated
       switch(easierShopAff){
