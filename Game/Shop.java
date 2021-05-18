@@ -11,12 +11,13 @@ public class Shop {
     static String ArmorEquip;
     static String SwordEquip;
     static int metBefore;
+    static int metAlchBefore;
 public static void main(String[] args){shop();}
 
     public static void shop(){
         GraphicUi.Affimeter();
         int ShopChance = (int) (Math.random()*100+1);
-        if(){ 
+        if(ShopChance>=51){ 
         Scanner vendor = new Scanner(System.in);
         Affinity.Affi();                            //calls the Affinity System
         greetingKeeper();
@@ -62,6 +63,14 @@ public static void main(String[] args){shop();}
             
         }
         GraphicUi.Affimeter();
+        }
+        else
+        {
+            Affinity.Affi();
+            greetingAlchemist();
+            try{Thread.sleep(650);}catch(Exception e){}
+            try{Thread.sleep(1000);}catch(Exception e){}
+        }
     }  
         public static void equipCheck() //checks if the player has bought equipment and if the player did, it adds the armor and sword buff
         {
@@ -239,4 +248,45 @@ public static void main(String[] args){shop();}
             
         
         } 
+        public static void greetingAlchemist(){                         //start of the new alchemist
+            if(metAlchBefore==1){       //random talk from the Alchemist
+                int randomShop = (int) (Math.random()*100+1);
+                boolean randomShop1= randomShop>=1 && randomShop<26;    //25% Chance for everything
+                boolean randomShop2=randomShop>=26 && randomShop<51;
+                boolean randomShop3=randomShop>=51 && randomShop<76;
+                boolean randomShop4=randomShop>=76 && randomShop<101;
+                    if(randomShop1){
+                        System.out.print(   "┌─                                  ─┐\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "      You have entered the Shop.      \n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "  \"You shouldn't wander aimlessly.\"   \n");                            try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "└─                                  ─┘\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                    }
+                    if(randomShop2){
+                        System.out.print(   "┌─                                  ─┐\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "      You have entered the Shop.      \n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "     \"Would you like some herbs?\"     \n");                            try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "└─                                  ─┘\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                    }
+                    if(randomShop3){
+                        System.out.print(   "┌─                                  ─┐\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "      You have entered the Shop.      \n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "       \"Do you need a Potion?\"        \n");                            try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "└─                                  ─┘\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                    }
+                    if(randomShop4){
+                        System.out.print(   "┌─                                  ─┐\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "      You have entered the Shop.      \n");                              try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "   \"Have you seen some new Fungi?\"    \n");                            try{Thread.sleep(100);}catch(Exception e){}
+                        System.out.print(   "└─                                  ─┘\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                    }
+                }
+            if(metAlchBefore==0)
+                {
+                System.out.print(   "┌─                                  ─┐\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                System.out.print(   "     You have entered a small cave.   \n");                              try{Thread.sleep(100);}catch(Exception e){}
+                System.out.print(   " An alchemist has set up a shop here. \n");                              try{Thread.sleep(100);}catch(Exception e){}
+                System.out.print(   "└─                                  ─┘\n");                              try{Thread.sleep(100);}catch(Exception e){}
+                metAlchBefore=1;
+            }
+        }
     }
