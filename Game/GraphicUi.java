@@ -58,4 +58,131 @@ public static void healthometer(){
           AffinityMeter="──┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■├──"; break;}  
 
         }
+    public static void shopSwordandShield(){
+    System.out.println(    " ______________________________________");                      try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|─────────────────────────────────────| ");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| \"There's no Equipment to be bought.\" |");                   try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| 1. Leave                             |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
+
+    }
+    public static void shopSword(){
+    System.out.println(    " ______________________________________");                      try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            .-.       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                           {{#}}      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            888       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                       _    )8(     _ |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                      (O)__/ W \\__(O) |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                       `~\"-=):(=-\"~`  |");                   try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |C|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |O|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |O|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |O|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |L|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            \\ /       |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|─────────────────────────────────────| ");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|  \"Are you here to buy this Sword?\" |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| 1. Sword ["+Affinity.swordPrice+" G]                     |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| 2. No                                |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
+    }
+    public static void shopShield(){
+    System.out.println(    " ______________________________________");                      try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                                      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|  ____________________                |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |<><><>  |  |  <><><>|               |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |<>      |  |      <>|               |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |<>      |  |      <>|               |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |<>   .--------.   <>|               |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |     |   ()   |     |               |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |_____| (O\\/O) |_____|               |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |     \\   /\\   /     |               |");                   try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |------\\  \\/  /------|               |");                   try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |       '.__.'       |               |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |        |  |        |               |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| :        |  |        :               |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|  \\       |  |       /                |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|   \\<>    |  |    <>/                 |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|    \\<>   |  |   <>/                  |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|     `\\<> |  | <>/'                   |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|       `-.|__|.-`                     |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|──────────────────────────────────────| ");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|  \"Are you here to buy this Shield?\"  |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| 1. Yes ["+Affinity.shieldPrice+" G]                       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| 2. No                                |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}}
+    public static void shopFull(){
+    System.out.println(    " ______________________________________");                      try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            .-.       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                           {{#}}      |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            888       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                            8@8       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                       _    )8(    _ |");                      try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|                      (O)__/ W \\__(O) |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|  ____________________ `~\"-=):(=-\"~`  |");                   try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |<><><>  |  |  <><><>|     |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |<>      |  |      <>|     |C|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |<>      |  |      <>|     |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |<>   .--------.   <>|     |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |     |   ()   |     |     |O|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |_____| (O\\/O) |_____|     |'|       |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |     \\   /\\   /     |     |.|       |");                   try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |------\\  \\/  /------|     |O|       |");                   try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |       '.__.'       |     |'|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| |        |  |        |     |.|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| :        |  |        :     |O|       |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|  \\       |  |       /      |'|       |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|   \\<>    |  |    <>/       |.|       |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|    \\<>   |  |   <>/        |L|       |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|     `\\<> |  | <>/'         |'|       |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|       `-.|__|.-`           \\ /       |");                    try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|──────────────────────────────────────| ");                   try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|  \"The cool Sword or a shiny Shield?\" |");                   try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| 1. Sword ["+Affinity.swordPrice+" G]                     |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| 2. Shield ["+Affinity.shieldPrice+" G]                    |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "| 3. Leave                             |");                     try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}}
 }
