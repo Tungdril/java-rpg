@@ -80,12 +80,11 @@ public static void dwarfShop(){
         try{Thread.sleep(1000);}catch(Exception e){}
         System.out.println(    "┌─                                  ─┐");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "        \"What are you buying?\"        ");                         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(    " "+ GraphicUi.AffinityAlchMeter +" ");                              try{Thread.sleep(100);}catch(Exception e){} //36 lines
+        System.out.println(    " "+ GraphicUi.AffinityAlchMeter +" ");                              try{Thread.sleep(100);}catch(Exception e){} 
         System.out.println(    "            You choose to:            ");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    " 1. Buy Potions                     ");                             try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(    " 2. Buy a Healing Potion ["+Affinity.potionPrice+"]       ");       try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(    " 3. Give some money to charity [50 G]       ");                     try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(    " 4. Leave                             ");                           try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println(    " 2. Give some money to charity [50 G]       ");                     try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println(    " 3. Leave                             ");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "└─                                  ─┘");                           try{Thread.sleep(100);}catch(Exception e){}
         int Talk = vendor.nextInt();
 
@@ -335,25 +334,70 @@ public static void dwarfShop(){
             }
         }
         public static void potionShop()
-        {
-            GraphicUi.noCookBook();alchemistShop();
+        {if(!Loot.cookbookFound){GraphicUi.noCookBook();alchemistShop();}
+            Scanner shopper = new Scanner(System.in);    
+            GraphicUi.potions();
+            int potionChoice = shopper.nextInt();
+            try{
+            switch(potionChoice){
+                case 1: //healing
+                medicineAlchShop();
+                break;
+                case 2: //strength
+                if(Game.money>=40&&Loot.strengthShroom>=1){
+                    Affinity.shopAlchAffinity=Affinity.shopAlchAffinity+10;
+                    Loot.strengthShroom--;
+                    Game.money=Game.money-40;
+                    GraphicUi.increaseDefense();
+                    Enemy.playerDamage++;
+                } else if (Loot.strengthShroom>=1&&Game.money<40){GraphicUi.notEnoughMoneyAlch();}
+                else if(Loot.strengthShroom<1&&Game.money>=40){GraphicUi.noItems();}
+                else {GraphicUi.noItemsnoMoney();}
+                break;
+                case 3: //constitution
+                if(Game.money>=60&&Loot.constitutionCabbage>=1){
+                    Affinity.shopAlchAffinity=Affinity.shopAlchAffinity+10;
+                    Loot.constitutionCabbage--;
+                    Game.money=Game.money-60;
+                    GraphicUi.increaseHealth();
+                    Game.maxHealth++;
+                } else if (Loot.constitutionCabbage>=1&&Game.money<60){GraphicUi.notEnoughMoneyAlch();}
+                else if(Loot.constitutionCabbage<1&&Game.money>=60){GraphicUi.noItems();}
+                else {GraphicUi.noItemsnoMoney();}
+                break;
+                case 4: //defense
+                if(Game.money>=60&&Loot.defenseDandelion>=1){
+                    Affinity.shopAlchAffinity=Affinity.shopAlchAffinity+10;
+                    Loot.defenseDandelion--;
+                    Game.money=Game.money-60;
+                    GraphicUi.increaseDefense();
+                    Enemy.playerDefense++;
+                } else if (Loot.defenseDandelion>=1&&Game.money<60){GraphicUi.notEnoughMoneyAlch();}
+                else if(Loot.defenseDandelion<1&&Game.money>=60){GraphicUi.noItems();}
+                else {GraphicUi.noItemsnoMoney();}
+                break;
+                case 5: //leave
+                alchemistShop();
+                break;
+            }alchemistShop();
+        } catch(Exception e){alchemistShop();}
         }
         public static void medicineAlchShop()
         {
-            if(Game.money>=Affinity.potionPrice){
+            if(Game.money>=Affinity.potionPrice&&Loot.healingHerb>=1){
                 int heal = (int) (Math.random()*4+2);
-
+                Loot.healingHerb--;
                 int overheal = heal + Enemy.playerHealth;
                 Game.money=Game.money-Affinity.potionPrice;
                 
                 if (overheal <= Game.maxHealth){
                     Enemy.playerHealth = Enemy.playerHealth + heal;
-                    GraphicUi.Potion();
+                    GraphicUi.AlchPotion();
                     Affinity.shopAlchAffinity=Affinity.shopAlchAffinity+5;
                     Affinity.Affi();
-                    shop();
+                    alchemistShop();
                 } else if(Enemy.playerHealth == Game.maxHealth){
-                    GraphicUi.overPotion();
+                    GraphicUi.AlchoverPotion();
                     Affinity.shopAlchAffinity=Affinity.shopAlchAffinity+5; //adds Affinity with the Shopkeeper
                     Affinity.Affi();
                     alchemistShop();     
@@ -364,7 +408,9 @@ public static void dwarfShop(){
 
 
                 
-            } else{GraphicUi.notEnoughMoneyAlch();}
+            } else if (Loot.healingHerb>=1&&Game.money<Affinity.potionPrice){GraphicUi.notEnoughMoneyAlch();}
+            else if(Loot.healingHerb<1&&Game.money>=Affinity.potionPrice){GraphicUi.noItems();}
+            else {GraphicUi.noItemsnoMoney();}
             alchemistShop();
         }
         public static void herbEvent()
@@ -374,7 +420,7 @@ public static void dwarfShop(){
                 System.out.println(   "┌─                                  ─┐");          try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(   "          \"Thanks, I guess\"           ");          try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(   "└─                                  ─┘");          try{Thread.sleep(100);}catch(Exception e){}
-            Affinity.shopAlchAffinity=Affinity.shopAlchAffinity+10;
+            Affinity.shopAlchAffinity=Affinity.shopAlchAffinity+15;
             Game.money=Game.money-50;
             alchemistShop();
             }

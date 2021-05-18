@@ -384,4 +384,85 @@ public static void healthometer(){
   System.out.println("      Coould you find it for me?      ");             try{Thread.sleep(100);}catch(Exception e){}
   System.out.println("└─                                  ─┘");             try{Thread.sleep(100);}catch(Exception e){}
   }
+  public static void noItems(){
+    System.out.println("┌─                                  ─┐");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("   You don't have the needed Items.      ");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("└─                                  ─┘");          try{Thread.sleep(100);}catch(Exception e){}
+  }
+  public static void noItemsnoMoney(){
+    System.out.println("┌─                                  ─┐");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("     You don't have enough G and      ");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("   you don't have the needed Items.      ");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("└─                                  ─┘");          try{Thread.sleep(100);}catch(Exception e){}
+  }
+  public static void increaseDefense(){
+    System.out.println("┌─                                  ─┐");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("    Your defense is increase by 1!      ");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("└─                                  ─┘");          try{Thread.sleep(100);}catch(Exception e){}
+  }
+  public static void increaseHealth(){
+    System.out.println("┌─                                  ─┐");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("   Your max Health is increase by 1!      ");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("└─                                  ─┘");          try{Thread.sleep(100);}catch(Exception e){}
+  }
+  public static void increaseDamage(){
+    System.out.println("┌─                                  ─┐");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("    Your attack is increase by 1!      ");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("└─                                  ─┘");          try{Thread.sleep(100);}catch(Exception e){}
+  }
+  public static void AlchPotion(){
+    System.out.println("┌─                                  ─┐");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                 _____                ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                `.___,'               ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                 (___)                ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                 <   >                ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                  ) (                 ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                 /`-.\\               ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                /     \\              ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("               / _    _\\             ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("              :,' `-.' `:             ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("              |         |             ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("              :         ;             ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("               \\       /             ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                `.___.'               ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                                      ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("       You bought the potion!         ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(" And directly drank it. How wasteful. ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("           You regain " + Shop.heal + "HP.           |");                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(" ─                                  ─ ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    }
+    public static void AlchoverPotion(){
+    System.out.println("┌─                                  ─┐");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                 _____                ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                `.___,'               ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                 (___)                ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                 <   >                ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                  ) (                 ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                 /`-.\\               ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                /     \\              ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("               / _    _\\             ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("              :,' `-.' `:             ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("              |         |             ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("              :         ;             ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("               \\       /             ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                `.___.'               ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("                                      ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("       You bought the potion!         ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("  It has no effect, but you at least  ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("      contributed to the economy.     ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("           You regain no HP.          ");                                  try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("└─                                  ─┘");                                  try{Thread.sleep(100);}catch(Exception e){}
+  }
+  public static void potions(){
+    System.out.println(    "┌─                                  ─┐");                           try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "        \"What should I brew?\"       ");                           try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "         You choose him to brew:      ");                           try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    " 1. a healing potion ["+Affinity.potionPrice+" G]                      ");                           try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    " 2. a strenght potion [40 G] ");                           try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    " 3. a health potion [60 G]                    ");                           try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    " 4. a skin hardening potion [60 G] ");                           try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    " 5. nothing                             ");                           try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "└─                                  ─┘");                           try{Thread.sleep(100);}catch(Exception e){}
+
+  }
 }
