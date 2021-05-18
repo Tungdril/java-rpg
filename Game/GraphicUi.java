@@ -2,7 +2,8 @@ public class GraphicUi {
 
 public static String HealthBar;
 public static String EnemyHealthBar;
-static String AffinityMeter;
+public static String AffinityMeter;
+public static String AffinityAlchMeter;
 
 public static void healthometer(){
     switch(Enemy.playerHealth){
@@ -343,5 +344,44 @@ public static void healthometer(){
     System.out.println(               "|      Hopefully it's as useful      |");                  try{Thread.sleep(100);}catch(Exception e){}
     System.out.println(               "|           as it's shiny!           |");                  try{Thread.sleep(100);}catch(Exception e){}
     System.out.println(               "|____________________________________|");                  try{Thread.sleep(100);}catch(Exception e){}
+  }
+  public static void AffiAlchmeter(){
+    int easierAlchShopAff=Affinity.shopAlchAffinity/10;             //Added an Affinity Meter to let the player know how much affinity he has accumulated
+    switch(easierAlchShopAff){
+        case 0:
+        AffinityAlchMeter="──┤------------------------------├──"; break;
+        case 1: 
+        AffinityAlchMeter="──┤■■■---------------------------├──"; break;
+        case 2:
+        AffinityAlchMeter="──┤■■■■■■------------------------├──"; break;
+        case 3:
+        AffinityAlchMeter="──┤■■■■■■■■■---------------------├──"; break;
+        case 4:
+        AffinityAlchMeter="──┤■■■■■■■■■■■■------------------├──"; break;
+        case 5:
+        AffinityAlchMeter="──┤■■■■■■■■■■■■■■■---------------├──"; break;
+        case 6:
+        AffinityAlchMeter="──┤■■■■■■■■■■■■■■■■■■------------├──"; break;
+        case 7:
+        AffinityAlchMeter="──┤■■■■■■■■■■■■■■■■■■■■■---------├──"; break;
+        case 8:
+        AffinityAlchMeter="──┤■■■■■■■■■■■■■■■■■■■■■■■■------├──"; break;
+        case 9:
+        AffinityAlchMeter="──┤■■■■■■■■■■■■■■■■■■■■■■■■■■■---├──"; break;
+        case 10:
+        AffinityAlchMeter="──┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■├──"; break;}  
+
+      }
+  public static void notEnoughMoneyAlch(){
+    System.out.println("┌─                                  ─┐");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("        You don't have enough G.      ");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("└─                                  ─┘");          try{Thread.sleep(100);}catch(Exception e){}
+  }
+  public static void noCookBook(){
+  System.out.println("┌─                                  ─┐");             try{Thread.sleep(100);}catch(Exception e){}
+  System.out.println("      Sorry but to brew something     ");             try{Thread.sleep(100);}catch(Exception e){}
+  System.out.println("     different I need my cookbook.    ");             try{Thread.sleep(100);}catch(Exception e){}
+  System.out.println("      Coould you find it for me?      ");             try{Thread.sleep(100);}catch(Exception e){}
+  System.out.println("└─                                  ─┘");             try{Thread.sleep(100);}catch(Exception e){}
   }
 }

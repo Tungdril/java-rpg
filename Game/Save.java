@@ -6,6 +6,7 @@ public class Save {
 //save and load complete
 static String MetBefore;
 static String ShopAffinity;
+static String ShopAlchAffinity;
 static File f = new File(createSaveFolder.savepath + Game.userName + ".txt");
 public static void main(String[] args) {
     createFile();
@@ -48,7 +49,8 @@ public static void writingPain(){
     MetBefore = Integer.toString(Shop.metBefore);
     Enemy.PlayerHealth = Integer.toString(Enemy.playerHealth); 
     ShopAffinity = Integer.toString(Affinity.shopAffinity);
-    writingSave.write(Exp.Exp +"\n"+ Game.Money +"\n" + Game.Day+"\n"+ Shop.ArmorEquip + "\n" + Shop.SwordEquip +"\n" + MetBefore + "\n"+ Enemy.PlayerHealth + "\n" + ShopAffinity);
+    ShopAlchAffinity = Integer.toString(Affinity.shopAlchAffinity);
+    writingSave.write(Exp.Exp +"\n"+ Game.Money +"\n" + Game.Day+"\n"+ Shop.ArmorEquip + "\n" + Shop.SwordEquip +"\n" + MetBefore + "\n"+ Enemy.PlayerHealth + "\n" + ShopAffinity +"\n"+ShopAlchAffinity);
     writingSave.close();
     System.out.println("//////Saving\\\\\\\\\\\\");
     } catch(IOException e) {System.out.println("Breeki"); e.printStackTrace();}
@@ -66,6 +68,7 @@ public static void readingPain(){
             MetBefore = reader.nextLine();
             Enemy.PlayerHealth = reader.nextLine();
             ShopAffinity = reader.nextLine();
+            ShopAlchAffinity = reader.nextLine();
             Exp.exp = Double.parseDouble(Exp.Exp);
             Game.money = Integer.parseInt(Game.Money);
             Game.day = Integer.parseInt(Game.Day);
@@ -74,6 +77,7 @@ public static void readingPain(){
             Shop.metBefore = Integer.parseInt(MetBefore);
             Enemy.playerHealth = Integer.parseInt(Enemy.PlayerHealth);
             Affinity.shopAffinity = Integer.parseInt(ShopAffinity);
+            Affinity.shopAlchAffinity = Integer.parseInt(ShopAlchAffinity);
            // System.out.println("Exp: " + Exp.exp);
            // System.out.println("Money: " + Game.money);
            // System.out.println("Day: " + Game.day);

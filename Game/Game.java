@@ -10,7 +10,7 @@ public class Game {
 
     public static void main(String[] args) {       
         try{
-        createSaveFolder.createFold(); //creates a \JavaRPG\saves directory Folder at C:\"User"\Documents\ 
+        Affinity.shopAlchAffinity=1;
         Exp.main(); //initilize Exp
         maxHealth = 8 + Exp.expScaling; //recalculates health based on expScaling
         AudioManager.main(null); //start bgm
