@@ -13,6 +13,7 @@ public class Shop {
 public static void main(String[] args){shop();}
 
     public static void shop(){
+        
         Affinity.Affimeter();
         Scanner vendor = new Scanner(System.in);
         Affinity.Affi();                            //calls the Affinity Saystem
@@ -22,11 +23,11 @@ public static void main(String[] args){shop();}
         
         System.out.println(    " ____________________________________ ");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|       \"What are you buying?\"       |");                         try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(    "|"+ Affinity.AffinityMeter +"|");                           try{Thread.sleep(100);}catch(Exception e){} //36 lines
+        System.out.println(    "|"+ GraphicUi.AffinityMeter +"|");                           try{Thread.sleep(100);}catch(Exception e){} //36 lines
         System.out.println(    "|           You choose to:           |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|1. Buy Equipment                    |");                           try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(    "|2. Buy a Healing Potion ("+Affinity.potionPrice+" G)      |");                           try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println(    "|3. Buy the Dwarf a Beer (50 G)      |");                           try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println(    "|2. Buy a Healing Potion ["+Affinity.potionPrice+" G]      |");                           try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println(    "|3. Buy the Dwarf a Beer [50 G]      |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|4. Leave                            |");                           try{Thread.sleep(100);}catch(Exception e){}
         System.out.println(    "|____________________________________|");                           try{Thread.sleep(100);}catch(Exception e){}
         Affinity.Affimeter();
@@ -136,7 +137,7 @@ public static void main(String[] args){shop();}
                 System.out.println(    "|                            \\ /       |");                    try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|─────────────────────────────────────| ");                    try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|  \"Are you here to buy this Sword?\" |");                     try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println(    "| 1. Sword ("+Affinity.swordPrice+" G)                     |");                     try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println(    "| 1. Sword ["+Affinity.swordPrice+" G]                     |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "| 2. No                                |");                     try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
                 int swordBuy = vendor.nextInt();
@@ -192,7 +193,7 @@ public static void main(String[] args){shop();}
             System.out.println(    "|       `-.|__|.-`                     |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|──────────────────────────────────────| ");                    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|  \"Are you here to buy this Shield?\"  |");                     try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println(    "| 1. Yes ("+Affinity.shieldPrice+" G)                       |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| 1. Yes ["+Affinity.shieldPrice+" G]                       |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "| 2. No                                |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
             int armorBuy = vendor.nextInt();
@@ -248,8 +249,8 @@ public static void main(String[] args){shop();}
             System.out.println(    "|       `-.|__|.-`           \\ /       |");                    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|──────────────────────────────────────| ");                   try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|  \"The cool Sword or a shiny Shield?\" |");                   try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println(    "| 1. Sword ("+Affinity.swordPrice+" G)                     |");                     try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println(    "| 2. Shield ("+Affinity.shieldPrice+" G)                    |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| 1. Sword ["+Affinity.swordPrice+" G]                     |");                     try{Thread.sleep(100);}catch(Exception e){}
+            System.out.println(    "| 2. Shield ["+Affinity.shieldPrice+" G]                    |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "| 3. Leave                             |");                     try{Thread.sleep(100);}catch(Exception e){}
             System.out.println(    "|______________________________________|");                     try{Thread.sleep(100);}catch(Exception e){}
                 int upgrades = vendor.nextInt();
