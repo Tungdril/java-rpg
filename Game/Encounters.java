@@ -304,11 +304,6 @@ static boolean inspected=false;
             System.out.println("You have successfully beaten the "+Enemy.enemy);   
             try{Thread.sleep(100);}catch(Exception e){}  
 
-            Loot.itemLoot();
-            if(Loot.dropItem==true){    //if true gives item as loot
-                System.out.println("While closer examining the body you find " + Loot.Item + "!");  
-            } try{Thread.sleep(100);}catch(Exception e){} 
-
             int bonus = Exp.expScaling*2;
             int reward = (int) (Math.random()*10 * Enemy.difficulty + 10 + bonus);
                                
@@ -324,7 +319,12 @@ static boolean inspected=false;
 
             System.out.println("You gain [" + (int)expGain + "] EXP!");
 
+            Loot.itemLoot();
+            if(Loot.dropItem==true){    //if true gives item as loot
+                System.out.println("While closer examining the body you find " + Loot.Item + "!");  
+            } try{Thread.sleep(100);}catch(Exception e){} 
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
+            
             Exp.main();
             AudioManager.stopBattle();
             AudioManager.main(null);

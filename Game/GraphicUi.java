@@ -4,6 +4,7 @@ public static String HealthBar;
 public static String EnemyHealthBar;
 public static String AffinityMeter;
 public static String AffinityAlchMeter;
+public static String CombatDice; 
 
 public static void healthometer(){
     switch(Enemy.playerHealth){
@@ -62,6 +63,54 @@ public static void healthometer(){
             //break;
           }
         }
+
+    public static void combatDice(){ //not used yet, im planning to make the combat dice-roll based. yay or nay @SmyloG
+      switch (diceRolled){ 
+        case 1:
+        CombatDice = " ┏───────┓\n"+    //dice get sqished in the command line, look weird here but good when playing
+                     " │       │\n"+    
+                     " │   ○   │\n"+
+                     " │       │\n"+
+                     " ┗───────┛\n";
+        break;
+        case 2:
+        CombatDice = " ┏───────┓\n"+    //I made these myself btw
+                     " │ ○     │\n"+  
+                     " │       │\n"+
+                     " │     ○ │\n"+
+                     " ┗───────┛\n";
+        break;
+        case 3:
+        CombatDice = " ┏───────┓\n"+
+                     " │ ○     │\n"+
+                     " │   ○   │\n"+
+                     " │     ○ │\n"+
+                     " ┗───────┛\n";
+        break;
+        case 4:
+        CombatDice = " ┏───────┓\n"+
+                     " │ ○   ○ │\n"+
+                     " │       │\n"+
+                     " │ ○   ○ │\n"+
+                     " ┗───────┛\n";
+        break;
+        case 5:
+        CombatDice = " ┏───────┓\n"+
+                     " │ ○   ○ │\n"+
+                     " │   ○   │\n"+
+                     " │ ○   ○ │\n"+
+                     " ┗───────┛\n";
+        break;
+        case 6:
+        CombatDice = " ┏───────┓\n"+
+                     " │ ○   ○ │\n"+
+                     " │ ○   ○ │\n"+
+                     " │ ○   ○ │\n"+
+                     " ┗───────┛\n";
+        break;
+        
+      }
+    }
 
     public static void Affimeter(){
       int easierShopAff=Affinity.shopAffinity/10;             //Added an Affinity Meter to let the player know how much affinity he has accumulated
