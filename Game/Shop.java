@@ -98,13 +98,8 @@ public static void dwarfShop(){
             metAlchBefore=metAlchBefore+1;
                 Affinity.Affi();
                 try{Thread.sleep(300);}catch(Exception e){}
-                medicineAlchShop();
-            case 3:
-            metAlchBefore=metAlchBefore+1;
-                Affinity.Affi();
-                try{Thread.sleep(300);}catch(Exception e){}
                 herbEvent();
-            case 4:
+            case 3:
             metAlchBefore=1;
             System.out.println( "┌─                                  ─┐");    try{Thread.sleep(100);}catch(Exception e){}
             System.out.println( "          You leave the shop.         ");    try{Thread.sleep(100);}catch(Exception e){}
