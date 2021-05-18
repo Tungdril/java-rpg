@@ -82,6 +82,6 @@ public static void readingPain(){
         }
             reader.close();
         } catch (Exception e) {System.out.println("The Load system is fucked."); Game.main(null);}
-        }
+        } else {System.out.println("A savefile for this username was not found."); Game.main(null);}
     }
 }
