@@ -80,6 +80,6 @@ public static void readingPain(){
            // System.out.println("Sword: " + Shop.swordEquip);
         }
             reader.close();
-        } catch (Exception e) {System.out.println("The Load system is fucked."); Game.main(null);}
+        } catch (Exception e) {System.out.println("The Load system is fucked.");AudioManager.stopBgm(); Game.main(null);}
 }
 }

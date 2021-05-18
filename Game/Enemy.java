@@ -14,6 +14,7 @@ public class Enemy{
 
         
     public static void main(String[] args) {
+        Exp.main();//needs this call to correctly calculate extra health 
         int randomEnemy = (int) (Math.random()*100+1);
         if(randomEnemy <= 50){
             enemy = "Goblin";

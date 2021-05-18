@@ -11,32 +11,32 @@ public class Encounters {
             case 1:
             try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("As you are marching deeper into the cave system, you are suprised by an angry " + Enemy.enemy+"!"); 
-            combat();
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
+            combat();
             break;            
             case 2:
             try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("You see some movement behind a rock formation. You carefully step closer, only to be surprised by a "+Enemy.enemy+"!");
-            combat();
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
+            combat();
             break;            
             case 3:
             try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("You squeeze your body through a narrow crack, but once you get to the other side, you come face to face with a "+Enemy.enemy+"!");
-            combat();
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
+            combat();
             break;            
             case 4:
             try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("You were just examining some shiny rocks, when you hear movement behind you. It's a "+Enemy.enemy+"!");
-            combat();
             try {Thread.sleep(3000);} catch(Exception e) {System.out.println("shit");}
+            combat();
             break;
             case 5:
             try{Thread.sleep(100);}catch(Exception e){}
             System.out.println("As you enter a new cave, you are ambushed by a "+Enemy.enemy+"!");
-            combat();
             try {Thread.sleep(3500);} catch(Exception e) {System.out.println("shit");}
+            combat();
             break;
         }
     }
@@ -50,13 +50,17 @@ public class Encounters {
         Scanner fight = new Scanner(System.in);
         try{Thread.sleep(100);}catch(Exception e){}
         Enemy.Sprites();
+        GraphicUi.healthometer();
+        GraphicUi.enemyHealthometer();
         try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("\n----------------------------------------------------------------------"); 
+        System.out.println("Your HP: "+GraphicUi.HealthBar);
+        System.out.println("----------------------------------------------------------------------"); 
         try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("\nWhat will you do?");                              try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("1. Attack");                                        try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("2. Defend");                                        try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("3. Check Health");                                  try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("3. Inspect "+Enemy.enemy);                          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("4. Flee");                                          try{Thread.sleep(100);}catch(Exception e){}
         Thread.sleep(150);
         Integer fight2 = fight.nextInt();
@@ -76,12 +80,12 @@ public class Encounters {
                 try{Thread.sleep(100);}catch(Exception e){}
                 Enemy.playerDefense++;
             break;
-            case 3://Check Health
+            case 3://Inspect
             try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("----------------------------------------------------------------------" );try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("The enemy has still " + Enemy.enemyHealth + " HP left"                  );try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("You still have " + Enemy.playerHealth + " HP left"                      );try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("The "+Enemy.enemy+" seems to have " + GraphicUi.EnemyHealthBar + " HP left"                  );try{Thread.sleep(1000);}catch(Exception e){}
                 System.out.println("----------------------------------------------------------------------" );try{Thread.sleep(100);}catch(Exception e){}
+                combat(); //doesn't skip turn
             break;
             case 4: //Flee
             try{Thread.sleep(100);}catch(Exception e){}

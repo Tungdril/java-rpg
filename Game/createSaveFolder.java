@@ -27,7 +27,7 @@ public class createSaveFolder{
             case 1: Save.creatingSave();System.out.println("");
                     Enemy.playerHealth=8; break; 
             case 2: Save.readingPain();System.out.println("//////Loading\\\\\\\\\\\\"); break;}
-        } catch(Exception e){System.out.println("Use Numbers");Game.main(null);}
+        } catch(Exception e){System.out.println("Use Numbers");AudioManager.stopBgm();Game.main(null);}
         
 }
 }
