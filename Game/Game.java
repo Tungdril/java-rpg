@@ -1,7 +1,5 @@
-
 import java.util.Scanner;
 
-import javax.sound.sampled.spi.AudioFileReader;
 public class Game {
     static int day = 1; 
     static String Money;

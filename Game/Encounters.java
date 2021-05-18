@@ -1,6 +1,8 @@
 import java.util.Scanner;
 public class Encounters {
 
+static boolean inspected=false;
+
     public static void fight(){
         Enemy.main(null); //Gets all the enemy info
         try{Thread.sleep(100);}catch(Exception e){}
@@ -54,7 +56,10 @@ public class Encounters {
         GraphicUi.enemyHealthometer();
         try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("\n----------------------------------------------------------------------"); 
-        System.out.println("Your HP: "+GraphicUi.HealthBar);
+        System.out.println("Your HP:  "+GraphicUi.HealthBar);
+        if(inspected==true){
+        System.out.println("Enemy HP: "+GraphicUi.EnemyHealthBar);
+        }
         System.out.println("----------------------------------------------------------------------"); 
         try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("\nWhat will you do?");                              try{Thread.sleep(100);}catch(Exception e){}
@@ -85,16 +90,23 @@ public class Encounters {
                 System.out.println("----------------------------------------------------------------------" );try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("The "+Enemy.enemy+" seems to have " + GraphicUi.EnemyHealthBar + " HP left"                  );try{Thread.sleep(1000);}catch(Exception e){}
                 System.out.println("----------------------------------------------------------------------" );try{Thread.sleep(100);}catch(Exception e){}
-                combat(); //doesn't skip turn
+                inspected=true;
             break;
             case 4: //Flee
             try{Thread.sleep(100);}catch(Exception e){}
-            System.out.println("You tried to flee.");
+            System.out.println("You try to flee.");
             int fleeChance = (int) (Math.random()*100+1+Game.day); //the higher day is, the harder it is to flee
             if(fleeChance<= 30){    // 30% Chance to flee from combat, the player will then be put in decision
                 try{Thread.sleep(100);}catch(Exception e){}
                 System.out.println("And succeeded at that!");
                 try{Thread.sleep(100);}catch(Exception e){}
+                int remainingMoney = Game.money-((Game.money/100)*10);  //need to do all this weird stuff with 2 variables, because it isn't calculation right?
+                int moneyLost = Game.money-remainingMoney;              //works tho
+                Game.money = Game.money-moneyLost;
+                System.out.println("Once you get to safety however, you notice that you dropped some coins!");
+                try{Thread.sleep(100);}catch(Exception e){}
+                System.out.println("You loose ["+moneyLost+"] G.");
+                System.out.println(Game.money);
                 AudioManager.stopBattle();
                 Game.decide();}
                 else {  try{Thread.sleep(100);}catch(Exception e){};
@@ -236,9 +248,9 @@ public class Encounters {
         if (overheal <= Game.maxHealth){
             Enemy.playerHealth = restingHealth+Enemy.playerHealth;
 
-            try{Thread.sleep(100);}catch(Exception e){}
+            try{Thread.sleep(200);}catch(Exception e){}
             System.out.println("You find your way back to the surface and walk back home to have a rest.\nThe next day you walk right back into the cave.");
-            try{Thread.sleep(100);}catch(Exception e){}
+            try{Thread.sleep(200);}catch(Exception e){}
             System.out.println("You regenerated "+restingHealth+" health!");
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
             Game.decide();
