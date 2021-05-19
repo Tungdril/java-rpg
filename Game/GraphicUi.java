@@ -4,7 +4,8 @@ public static String HealthBar;
 public static String EnemyHealthBar;
 public static String AffinityMeter;
 public static String AffinityAlchMeter;
-public static String CombatDice; 
+public static String CombatDice;
+public static int diceRolled; 
 
 public static void healthometer(){
     switch(Enemy.playerHealth){
@@ -67,7 +68,7 @@ public static void healthometer(){
     public static void combatDice(){ //not used yet, im planning to make the combat dice-roll based. yay or nay @SmyloG
       switch (diceRolled){ 
         case 1:
-        CombatDice = " ┏───────┓\n"+    //dice get sqished in the command line, look weird here but good when playing
+        CombatDice = " ┏───────┓\n"+    //dice get squished in the command line, look weird here but good when playing
                      " │       │\n"+    
                      " │   ○   │\n"+
                      " │       │\n"+
