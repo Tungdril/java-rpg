@@ -403,9 +403,16 @@ public static void dwarfShop(){
 
 
                 
-            } else if (Loot.healingHerb>=1&&Game.money<Affinity.potionPrice){GraphicUi.notEnoughMoneyAlch();}
-            else if(Loot.healingHerb<1&&Game.money>=Affinity.potionPrice){GraphicUi.noItems();}
-            else {GraphicUi.noItemsnoMoney();}
+            } else if (Loot.healingHerb>=1&&Game.money<Affinity.potionPrice)
+            {
+                GraphicUi.notEnoughMoneyAlch();
+            }
+            else if(Loot.healingHerb<1&&Game.money>=Affinity.potionPrice)
+            {
+                GraphicUi.noItems();
+            }
+            else {GraphicUi.noItemsnoMoney();
+            }
             alchemistShop();
         }
         public static void herbEvent()
