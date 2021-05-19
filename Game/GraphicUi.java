@@ -63,6 +63,60 @@ public static void healthometer(){
           }
         }
 
+    public static void combatDice(){ //not used yet, im planning to make the combat dice-roll based. yay or nay @SmyloG
+      switch (CombatDice.diceRolled){ 
+        case 0:
+        CombatDice.CombatDice = 
+                     " ┏───────┓\n"+    //dice get squished in the command line, look weird here but good when playing
+                     " │       │\n"+    
+                     " │   ○   │\n"+
+                     " │       │\n"+
+                     " ┗───────┛\n";
+        break;
+        case 1:
+        CombatDice.CombatDice = 
+                     " ┏───────┓\n"+    //I made these myself btw
+                     " │ ○     │\n"+  
+                     " │       │\n"+
+                     " │     ○ │\n"+
+                     " ┗───────┛\n";
+        break;
+        case 2:
+        CombatDice.CombatDice = 
+                     " ┏───────┓\n"+
+                     " │ ○     │\n"+
+                     " │   ○   │\n"+
+                     " │     ○ │\n"+
+                     " ┗───────┛\n";
+        break;
+        case 3:
+        CombatDice.CombatDice = 
+                     " ┏───────┓\n"+
+                     " │ ○   ○ │\n"+
+                     " │       │\n"+
+                     " │ ○   ○ │\n"+
+                     " ┗───────┛\n";
+        break;
+        case 4:
+        CombatDice.CombatDice = 
+                     " ┏───────┓\n"+
+                     " │ ○   ○ │\n"+
+                     " │   ○   │\n"+
+                     " │ ○   ○ │\n"+
+                     " ┗───────┛\n";
+        break;
+        case 5:
+        CombatDice.CombatDice = 
+                     " ┏───────┓\n"+
+                     " │ ○   ○ │\n"+
+                     " │ ○   ○ │\n"+
+                     " │ ○   ○ │\n"+
+                     " ┗───────┛\n";
+        break;
+        
+      }
+    }
+
     public static void Affimeter(){
       int easierShopAff=Affinity.shopAffinity/10;             //Added an Affinity Meter to let the player know how much affinity he has accumulated
       switch(easierShopAff){
