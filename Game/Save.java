@@ -12,7 +12,7 @@ static String CB;
 static String DD;
 static String HH;
 static String SS;
-static File f = new File(createSaveFolder.savepath + Game.userName + ".txt");
+static File f = new File(createSaveFolder.savepath + Game.userName + ".json");
 public static void main(String[] args) {
     createFile();
     System.out.print(getSavePath()+"\n");
@@ -30,7 +30,7 @@ public static void creatingSave(){
 
 public static void createFile() {
 
-    File f = new File(createSaveFolder.savepath + Game.userName + ".txt");
+    File f = new File(createSaveFolder.savepath + Game.userName + ".json");
        if(f.exists()){ 
         try {f.delete();f.createNewFile(); } catch(Exception e) {System.out.println("Something went wrong while Saving");Game.main(null);} 
         } else 
@@ -38,14 +38,14 @@ public static void createFile() {
 
 
 public static String getSavePath(){
-        return createSaveFolder.savepath + Game.userName + ".txt";
+        return createSaveFolder.savepath + Game.userName + ".json";
 
 
 }
 
 public static void writingPain(){
     try{
-    FileWriter writingSave = new FileWriter(createSaveFolder.savepath + Game.userName + ".txt");
+    FileWriter writingSave = new FileWriter(createSaveFolder.savepath + Game.userName + ".json");
     Exp.Exp = Double.toString(Exp.exp);
     Game.Money = Integer.toString(Game.money);
     Game.Day = Integer.toString(Game.day);
@@ -67,7 +67,7 @@ public static void writingPain(){
 }
 public static void readingPain(){
     if(f.exists()){try {
-        File f = new File(createSaveFolder.savepath + Game.userName + ".txt");
+        File f = new File(createSaveFolder.savepath + Game.userName + ".json");
         Scanner reader = new Scanner(f);
         while (reader.hasNextLine()) {
             Exp.Exp = reader.nextLine();
