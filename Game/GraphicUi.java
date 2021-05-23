@@ -63,55 +63,62 @@ public static void healthometer(){
           }
         }
 
-    public static void combatDice(){ //not used yet, im planning to make the combat dice-roll based. yay or nay @SmyloG
+    public static void combatDice(){ //not used yet, im planning to make the combat dice-roll based
+      CombatDice.dice();
       switch (CombatDice.diceRolled){ 
-        case 0:
+        case 1:
         CombatDice.CombatDice = 
-                     " ┏───────┓\n"+    //dice get squished in the command line, look weird here but good when playing
+                     " ┌───────┐\n"+    //dice get squished in the command line, look weird here but good when playing
                      " │       │\n"+    
                      " │   ○   │\n"+
                      " │       │\n"+
-                     " ┗───────┛\n";
-        break;
-        case 1:
-        CombatDice.CombatDice = 
-                     " ┏───────┓\n"+    //I made these myself btw
-                     " │ ○     │\n"+  
-                     " │       │\n"+
-                     " │     ○ │\n"+
-                     " ┗───────┛\n";
+                     " └───────┘\n";
+        System.out.println(CombatDice.CombatDice);
         break;
         case 2:
         CombatDice.CombatDice = 
-                     " ┏───────┓\n"+
-                     " │ ○     │\n"+
-                     " │   ○   │\n"+
+                     " ┌───────┐\n"+    //I made these myself btw
+                     " │ ○     │\n"+  
+                     " │       │\n"+
                      " │     ○ │\n"+
-                     " ┗───────┛\n";
+                     " └───────┘\n";
+        System.out.println(CombatDice.CombatDice);
         break;
         case 3:
         CombatDice.CombatDice = 
-                     " ┏───────┓\n"+
-                     " │ ○   ○ │\n"+
-                     " │       │\n"+
-                     " │ ○   ○ │\n"+
-                     " ┗───────┛\n";
+                     " ┌───────┐\n"+
+                     " │ ○     │\n"+
+                     " │   ○   │\n"+
+                     " │     ○ │\n"+
+                     " └───────┘\n";
+        System.out.println(CombatDice.CombatDice);
         break;
         case 4:
         CombatDice.CombatDice = 
-                     " ┏───────┓\n"+
+                     " ┌───────┐\n"+
                      " │ ○   ○ │\n"+
-                     " │   ○   │\n"+
+                     " │       │\n"+
                      " │ ○   ○ │\n"+
-                     " ┗───────┛\n";
+                     " └───────┘\n";
+        System.out.println(CombatDice.CombatDice);
         break;
         case 5:
         CombatDice.CombatDice = 
-                     " ┏───────┓\n"+
+                     " ┌───────┐\n"+
+                     " │ ○   ○ │\n"+
+                     " │   ○   │\n"+
+                     " │ ○   ○ │\n"+
+                     " └───────┘\n";
+        System.out.println(CombatDice.CombatDice);
+        break;
+        case 6:
+        CombatDice.CombatDice = 
+                     " ┌───────┐\n"+
                      " │ ○   ○ │\n"+
                      " │ ○   ○ │\n"+
                      " │ ○   ○ │\n"+
-                     " ┗───────┛\n";
+                     " └───────┘\n";
+        System.out.println(CombatDice.CombatDice);
         break;
         
       }
