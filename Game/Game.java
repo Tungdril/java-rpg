@@ -11,7 +11,7 @@ public class Game {
     public static void main(String[] args) {       
         try{
         Affinity.shopAlchAffinity=1;
-        Exp.main(); //initilize Exp
+        Exp.main(); //initialize Exp
         maxHealth = 8 + Exp.expScaling; //recalculates health based on expScaling
         AudioManager.main(null); //start bgm
 
@@ -38,7 +38,7 @@ public class Game {
         //Wait for user Input
         try{
             System.in.read();
-        } catch(Exception e){e.printStackTrace();System.exit(0);}
+        } catch(Exception e){e.printStackTrace(); System.exit(0);}
             createSaveFolder.SaveLoad(); //loads and Saves the Games if there's an Exception the Titlescreen will be called
          
         Shop.equipCheck();
