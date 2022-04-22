@@ -151,7 +151,7 @@ public class Enemy{
             System.out.println("             `'-._   '/ / / /---|---\\ \\ \\ \\'   _.-'`");          try{Thread.sleep(50);}catch(Exception e){}
             System.out.println("                  '-./ / / / \\`---`/ \\ \\ \\ \\.-'");            try{Thread.sleep(50);}catch(Exception e){}
             System.out.println("                      `)` `  /'---'\\  ` `(`");          try{Thread.sleep(50);}catch(Exception e){}
-            System.out.println("                jgs  /`     |       |     `\\");         try{Thread.sleep(50);}catch(Exception e){}
+            System.out.println("                     /`     |       |     `\\");         try{Thread.sleep(50);}catch(Exception e){}
             System.out.println("                    /  /  | |       | |  \\  \\");          try{Thread.sleep(50);}catch(Exception e){}
             System.out.println("                .--'  /   | '.     .' |   \\  '--.");           try{Thread.sleep(50);}catch(Exception e){}
             System.out.println("               /_____/|  / \\._\\   /_./ \\  |\\_____\\");          try{Thread.sleep(50);}catch(Exception e){}

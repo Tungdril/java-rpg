@@ -12,11 +12,11 @@ public class AudioManager{
   static Clip clipBattle;
 
   public static void main(String[] args){ //Background music (bgm)
-         
-        String path = "./Audio/bgm.wav"; //defines the path
+        File starting = new File(System.getProperty("user.dir")); //defines working directory
+
         try {
             clipBgm = AudioSystem.getClip();   //binds the AudioSystem to the clip
-            File file = new File(path);       //reads the filepath
+            File file = new File(starting,"/Game/Audio/bgm.wav");       //reads the filepath
             AudioInputStream bgm = AudioSystem.getAudioInputStream(file); //defines the clip as the file
             clipBgm.open(bgm);  //initializes the clip
             clipBgm.start();    //plays the clip
@@ -30,10 +30,10 @@ public class AudioManager{
 
     public static void mainBattle(){ //Battle music (battle)
          
-      String path = "./Audio/Battle.wav";
+      File starting = new File(System.getProperty("user.dir"));
       try {
           clipBattle = AudioSystem.getClip();
-          File file = new File(path);
+          File file = new File(starting,"/Game/Audio/battle.wav");
           AudioInputStream battle = AudioSystem.getAudioInputStream(file);
           clipBattle.open(battle);
           clipBattle.start();
@@ -46,10 +46,10 @@ public class AudioManager{
 
 public static void mainDeath(){ //Death music (death)
          
-  String path = "./Audio/death.wav";
+  File starting = new File(System.getProperty("user.dir"));
   try {
       clipDeath = AudioSystem.getClip();
-      File file = new File(path);
+      File file = new File(starting,"/Game/Audio/death.wav");
       AudioInputStream death = AudioSystem.getAudioInputStream(file);
       clipDeath.open(death);
       clipDeath.start();

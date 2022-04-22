@@ -46,7 +46,8 @@ static boolean inspected=false;
     public static void combat(){
         Death.death();
         try {Thread.sleep(150);} catch(Exception e) {System.out.println("shit");}
-        int playerDamage = (int) (Math.random()*2+1+Shop.sword); // Player damage is 1-2 HP 
+
+        int playerDamage = (int) (Math.random()*2+1+Shop.sword); // Default player damage is 1-2 HP 
 
         try {
         Scanner fight = new Scanner(System.in);
@@ -71,11 +72,15 @@ static boolean inspected=false;
         Integer fight2 = fight.nextInt();
         switch(fight2){
             case 1://Attack
-                try{Thread.sleep(100);}catch(Exception e){} 
-                System.out.println("You attacked the enemy!");
+                System.out.println("--- Dice Roll ---");
+                CombatDice.dice();
+                try{Thread.sleep(100);}catch(Exception e){}
+                playerDamage = playerDamage + CombatDice.diceModifier;
+                System.out.println("You rolled a " + CombatDice.diceRolled + "!");
+                System.out.println("You attack the enemy!");
                 int newenemyHealth = (Enemy.enemyHealth - playerDamage);
                 try{Thread.sleep(100);}catch(Exception e){}
-                System.out.println("You did " + (Enemy.enemyHealth-newenemyHealth) + " damage."); 
+                System.out.println("You dealt " + (Enemy.enemyHealth-newenemyHealth) + " damage."); 
                 Enemy.enemyHealth = newenemyHealth;
                 try{Thread.sleep(100);}catch(Exception e){}
             break;
