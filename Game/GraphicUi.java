@@ -124,6 +124,19 @@ public static void healthometer(){
       }
     }
 
+    public static void status(){  //added status window because fuck you (and it's easier to just call it if needed inistead of hard coding)
+      Exp.main();
+      GraphicUi.healthometer();
+      try{Thread.sleep(100);}catch(Exception e){}
+      System.out.println(" _______________________ "             );                                      try{Thread.sleep(100);}catch(Exception e){}
+      System.out.println("|        Health:        |"             );                                      try{Thread.sleep(100);}catch(Exception e){}
+      System.out.println(""+ GraphicUi.HealthBar+""        );                                      try{Thread.sleep(100);}catch(Exception e){}
+      System.out.println("      Money: "+ Game.money               );                                      try{Thread.sleep(100);}catch(Exception e){}
+      System.out.println("      Exp: "+(int)Exp.exp           );                                      try{Thread.sleep(100);}catch(Exception e){}
+      System.out.println("      Day: "+Game.day                    );                                      try{Thread.sleep(100);}catch(Exception e){}
+      System.out.println("|_______________________|"             );                                      try{Thread.sleep(100);}catch(Exception e){}
+    }
+
     public static void Affimeter(){
       int easierShopAff=Affinity.shopAffinity/10;             //Added an Affinity Meter to let the player know how much affinity he has accumulated
       switch(easierShopAff){

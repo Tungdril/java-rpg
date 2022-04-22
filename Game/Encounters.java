@@ -272,22 +272,22 @@ static boolean inspected=false;
 
     //heals player, and returns to decide()
     public static void home(){
+        Game.day++;
         int restingHealth = (int) (Math.random()*3+1);
         int overheal = restingHealth + Enemy.playerHealth; //checks if the healing would be more than the allowed maxHealth
-
+        Save.creatingSave();
         if (overheal <= Game.maxHealth){
             Enemy.playerHealth = restingHealth+Enemy.playerHealth;
-
             try{Thread.sleep(200);}catch(Exception e){}
             System.out.println("You find your way back to the surface and walk back home to have a rest.\nThe next day you walk right back into the cave.");
             try{Thread.sleep(200);}catch(Exception e){}
             System.out.println("You regenerated "+restingHealth+" health!");
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}
-            Game.decide();
+            City.guild();
         } else if(Enemy.playerHealth == Game.maxHealth){
             System.out.println("You are not wounded.");
             Game.day--; //needs to subtracted, or one day would be skipped
-            Game.decide();
+            City.guild();
         } else{
             //System.out.println("overheal!");
             home(); //rerolls until no more overheal

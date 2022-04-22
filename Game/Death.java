@@ -43,8 +43,8 @@ public class Death { //made a file for it alone to make it easier to check for a
             Game.main(null);//goes back to the Titlescreen
             Enemy.playerHealth = 8;} //
             
-            else{System.exit(0); //exits java 
-            
+            else{
+                System.exit(0); //exits java 
             } 
     }
 }
