@@ -1,0 +1,3 @@
+
+javac Game.java
+pause

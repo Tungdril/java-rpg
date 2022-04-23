@@ -12,6 +12,7 @@ static String CB;
 static String DD;
 static String HH;
 static String SS;
+static String Gut;
 static File f = new File(createSaveFolder.savepath + Game.userName + ".json");
 public static void main(String[] args) {
     createFile();
@@ -55,12 +56,13 @@ public static void writingPain(){
     Enemy.PlayerHealth = Integer.toString(Enemy.playerHealth); 
     ShopAffinity = Integer.toString(Affinity.shopAffinity);
     ShopAlchAffinity = Integer.toString(Affinity.shopAlchAffinity);
+    Gut = Integer.toString(City.gut);
     CC=Integer.toString(Loot.constitutionCabbage);
     CB=Integer.toString(Loot.cookbook);
     DD=Integer.toString(Loot.defenseDandelion);
     HH=Integer.toString(Loot.healingHerb);
     SS=Integer.toString(Loot.strengthShroom);
-    writingSave.write(Exp.Exp +"\n"+ Game.Money +"\n"+ Game.Day+"\n"+ Shop.ArmorEquip +"\n"+ Shop.SwordEquip +"\n"+ MetBefore +"\n"+ Enemy.PlayerHealth +"\n"+ ShopAffinity +"\n"+ShopAlchAffinity +"\n"+CC+"\n"+CB+"\n"+DD+"\n"+HH+"\n"+SS );
+    writingSave.write(Exp.Exp +"\n"+ Game.Money +"\n"+ Game.Day+"\n"+ Shop.ArmorEquip +"\n"+ Shop.SwordEquip +"\n"+ MetBefore +"\n"+ Enemy.PlayerHealth +"\n"+ ShopAffinity +"\n"+ShopAlchAffinity +"\n"+Gut +"\n"+CC+"\n"+CB+"\n"+DD+"\n"+HH+"\n"+SS );
     writingSave.close();
     System.out.println("//////Saving\\\\\\\\\\\\");
     } catch(IOException e) {System.out.println("Breeki"); e.printStackTrace();}
@@ -79,6 +81,7 @@ public static void readingPain(){
             Enemy.PlayerHealth = reader.nextLine();
             ShopAffinity = reader.nextLine();
             ShopAlchAffinity = reader.nextLine();
+            Gut = reader.nextLine();
             CC=reader.nextLine();
             CB=reader.nextLine();
             DD=reader.nextLine();
@@ -93,6 +96,7 @@ public static void readingPain(){
             Enemy.playerHealth = Integer.parseInt(Enemy.PlayerHealth);
             Affinity.shopAffinity = Integer.parseInt(ShopAffinity);
             Affinity.shopAlchAffinity = Integer.parseInt(ShopAlchAffinity);
+            City.gut = Integer.parseInt(Gut);
             Loot.constitutionCabbage=Integer.parseInt(CC);
             Loot.cookbook=Integer.parseInt(CB);
             Loot.defenseDandelion=Integer.parseInt(DD);

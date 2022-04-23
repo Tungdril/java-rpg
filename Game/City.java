@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class City {
     public static int gut=0;
     public static void guild(){
+        System.out.println("You are in the Guild."                );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("Decide what to do next."                );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("1. Go to sleep"       );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("2. Go to the City Center"    );          try{Thread.sleep(100);}catch(Exception e){}
@@ -12,6 +13,7 @@ public class City {
         int option = choice.nextInt();
         switch (option) {
             case 1:
+            Save.creatingSave();
             Encounters.home();
             break;
             case 2: 
@@ -30,6 +32,7 @@ public class City {
 
 
     public static void cityCenter(){
+        System.out.println("You are in the City."                );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("Decide what to do next."                );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("1. Go to the Guild"       );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("2. Go exploring"    );          try{Thread.sleep(100);}catch(Exception e){}
