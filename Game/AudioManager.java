@@ -10,6 +10,8 @@ public class AudioManager{
   static Clip clipBgm;
   static Clip clipDeath;
   static Clip clipBattle;
+  static Clip clipBoss;
+  static Clip clipCredits;
 
   public static void main(String[] args){ //Background music (bgm)
         File starting = new File(System.getProperty("user.dir")); //defines working directory
@@ -28,7 +30,7 @@ public class AudioManager{
     }     
 
 
-    public static void mainBattle(){ //Battle music (battle)
+public static void mainBattle(){ //Battle music (battle)
          
       File starting = new File(System.getProperty("user.dir"));
       try {
@@ -59,10 +61,42 @@ public static void mainDeath(){ //Death music (death)
   } catch (Exception ex) {
       ex.printStackTrace();
   }
-}   
+}
+
+public static void mainBoss(){ //Battle music (battle)
+         
+      File starting = new File(System.getProperty("user.dir"));
+      try {
+          clipBoss = AudioSystem.getClip();
+          File file = new File(starting,"/Game/Audio/boss.wav");
+          AudioInputStream boss = AudioSystem.getAudioInputStream(file);
+          clipBoss.open(boss);
+          clipBoss.start();
+          clipBoss.loop(Clip.LOOP_CONTINUOUSLY);
+          Thread.sleep(200);
+      } catch (Exception ex) {
+          ex.printStackTrace();
+      }
+} 
+
+public static void mainCredits(){ //Battle music (battle)
+         
+      File starting = new File(System.getProperty("user.dir"));
+      try {
+          clipCredits = AudioSystem.getClip();
+          File file = new File(starting,"/Game/Audio/credits.wav");
+          AudioInputStream credits = AudioSystem.getAudioInputStream(file);
+          clipCredits.open(credits);
+          clipCredits.start();
+          clipCredits.loop(Clip.LOOP_CONTINUOUSLY);
+          Thread.sleep(200);
+      } catch (Exception ex) {
+          ex.printStackTrace();
+      }
+} 
   
 //stops the music if called, need 3 seperate ones, can't close ones that aren't playing, throws error
- public static void stopBgm(){
+public static void stopBgm(){
      try {
          clipBgm.stop();
          clipBgm.close();
@@ -71,7 +105,7 @@ public static void mainDeath(){ //Death music (death)
           ex.printStackTrace();
      }     
   }  
-  public static void stopBattle(){
+public static void stopBattle(){
     try {
         clipBattle.stop();
         clipBattle.close();
@@ -80,7 +114,7 @@ public static void mainDeath(){ //Death music (death)
          ex.printStackTrace();
     }     
  }
- public static void stopDeath(){
+public static void stopDeath(){
   try {
       clipDeath.stop();
       clipDeath.close();
@@ -89,4 +123,22 @@ public static void mainDeath(){ //Death music (death)
        ex.printStackTrace();
   }     
 }
+public static void stopBoss(){
+    try {
+        clipBoss.stop();
+        clipBoss.close();
+        
+    } catch (Exception ex) {
+         ex.printStackTrace();
+    }     
+ }
+ public static void stopCredits(){
+    try {
+        clipCredits.stop();
+        clipCredits.close();
+        
+    } catch (Exception ex) {
+         ex.printStackTrace();
+    }     
+ }
 }

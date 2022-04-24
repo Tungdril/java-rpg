@@ -1,6 +1,5 @@
 import java.util.Scanner;
-public class Death { //made a file for it alone to make it easier to check for a deathstate before and after battle
-    
+public class Death { 
     public static int stopMusic = 0;
     //public static int playDeath = 0;
 
@@ -8,6 +7,12 @@ public class Death { //made a file for it alone to make it easier to check for a
         if (Enemy.playerHealth<=0){   //deathstate                          
             try{Thread.sleep(1750);}catch(Exception e){}
             AudioManager.stopBattle();
+            try {
+                AudioManager.stopBoss();
+            } catch (Exception e) {
+                //just ignore
+            }
+            
             AudioManager.mainDeath();
             
                 System.out.println("                                 You have died");                                     try{Thread.sleep(2000);}catch(Exception e){System.out.println("HOW?\n(exception in Death.java)");};
@@ -23,7 +28,7 @@ public class Death { //made a file for it alone to make it easier to check for a
                 System.out.println("              |                                                < ");                  try{Thread.sleep(500);}catch(Exception e){}
                 System.out.println("              |_____.-._________              ____/|___________| ");                  try{Thread.sleep(500);}catch(Exception e){}
                 System.out.println("                                | * Day 0    | ");                                    try{Thread.sleep(500);}catch(Exception e){}
-                System.out.println("                                | + Day "+Game.day+"    | ");                         try{Thread.sleep(500);}catch(Exception e){}
+                System.out.println("                                | + Day "+Game.day+"   | ");                         try{Thread.sleep(500);}catch(Exception e){}
                 System.out.println("                                |            | ");                                    try{Thread.sleep(500);}catch(Exception e){}
                 System.out.println("                                |            | ");                                    try{Thread.sleep(500);}catch(Exception e){}
                 System.out.println("                                |   _        < ");                                    try{Thread.sleep(500);}catch(Exception e){}
@@ -41,7 +46,7 @@ public class Death { //made a file for it alone to make it easier to check for a
             if(postMortem==1){  
             AudioManager.stopDeath();               
             Game.main(null);//goes back to the Titlescreen
-            Enemy.playerHealth = 8;} //
+            Enemy.playerHealth = 8;} //resets health
             
             else{
                 System.exit(0); //exits java 

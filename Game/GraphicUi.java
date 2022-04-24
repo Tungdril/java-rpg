@@ -52,14 +52,22 @@ public static void healthometer(){
             break;
             case 8: EnemyHealthBar="|----■-■-■-■-■-■-■-■----|";
             break;
-            //case 9: EnemyHealthBar="|---■-■-■-■-■-■-■-■-■---|";
-            //break;
-            //case 10:EnemyHealthBar="|--■-■-■-■-■-■-■-■-■-■--|";
-            //break;
-            //case 11:EnemyHealthBar="|-■-■-■-■-■-■-■-■-■-■-■-|";
-            //break;
-            //case 12:EnemyHealthBar="|■-■-■-■-■-■-■-■-■-■-■-■|";
-            //break;
+            case 9: EnemyHealthBar="|---■-■-■-■-■-■-■-■-■---|";
+            break;
+            case 10:EnemyHealthBar="|--■-■-■-■-■-■-■-■-■-■--|";
+            break;
+            case 11:EnemyHealthBar="|-■-■-■-■-■-■-■-■-■-■-■-|";
+            break;
+            case 12:EnemyHealthBar="|■-■-■-■-■-■-■-■-■-■-■-■|";
+            break;
+            case 13:EnemyHealthBar="╬|---■-■-■-■-■-■-■-■-■-■-■-■-■---|╬";
+            break;
+            case 14:EnemyHealthBar="╬|--■-■-■-■-■-■-■-■-■-■-■-■-■-■--|╬";
+            break;
+            case 15:EnemyHealthBar="╬|-■-■-■-■-■-■-■-■-■-■-■-■-■-■-■-|╬";
+            break;
+            case 16:EnemyHealthBar="╬|■-■-■-■-■-■-■-■-■-■-■-■-■-■-■-■|╬";
+            break;
           }
         }
 
@@ -471,17 +479,17 @@ public static void healthometer(){
   }
   public static void increaseDefense(){
     System.out.println("┌─                                  ─┐");          try{Thread.sleep(100);}catch(Exception e){}
-    System.out.println("    Your defense is increase by 1!      ");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("    Your defense increased by 1!      ");          try{Thread.sleep(100);}catch(Exception e){}
     System.out.println("└─                                  ─┘");          try{Thread.sleep(100);}catch(Exception e){}
   }
   public static void increaseHealth(){
     System.out.println("┌─                                  ─┐");          try{Thread.sleep(100);}catch(Exception e){}
-    System.out.println("   Your max Health is increase by 1!      ");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("   Your max Health increased by 1!      ");          try{Thread.sleep(100);}catch(Exception e){}
     System.out.println("└─                                  ─┘");          try{Thread.sleep(100);}catch(Exception e){}
   }
   public static void increaseDamage(){
     System.out.println("┌─                                  ─┐");          try{Thread.sleep(100);}catch(Exception e){}
-    System.out.println("    Your attack is increase by 1!      ");          try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println("    Your attack increased by 1!      ");          try{Thread.sleep(100);}catch(Exception e){}
     System.out.println("└─                                  ─┘");          try{Thread.sleep(100);}catch(Exception e){}
   }
   public static void AlchPotion(){
@@ -530,7 +538,7 @@ public static void healthometer(){
   public static void potions(){
     System.out.println(    "┌─                                  ─┐");                           try{Thread.sleep(100);}catch(Exception e){}
     System.out.println(    "        \"What should I brew?\"       ");                           try{Thread.sleep(100);}catch(Exception e){}
-    System.out.println(    "         You choose him to brew:      ");                           try{Thread.sleep(100);}catch(Exception e){}
+    System.out.println(    "         You ask him to brew:      ");                           try{Thread.sleep(100);}catch(Exception e){}
     System.out.println(    " 1. a healing potion ["+Affinity.potionPrice+" G]                      ");                           try{Thread.sleep(100);}catch(Exception e){}
     System.out.println(    " 2. a strenght potion [40 G] ");                           try{Thread.sleep(100);}catch(Exception e){}
     System.out.println(    " 3. a health potion [60 G]                    ");                           try{Thread.sleep(100);}catch(Exception e){}

@@ -1,7 +1,7 @@
 public class Enemy{
     static String enemy;
     static int enemyHealth;
-    static int playerHealth = 100;
+    static int playerHealth = 8;
     static String PlayerHealth;
     static int playerDamage;
     static int enemyDamage; 
@@ -11,26 +11,32 @@ public class Enemy{
     static int enemyDamageChance;
     static double difficulty;
     static String Sprite;
+    static boolean isBoss = false;
 
         
     public static void main(String[] args) {
         Exp.main();//needs this call to correctly calculate extra health 
         int randomEnemy = (int) (Math.random()*100+1);
-        if(randomEnemy <= 50){
+        if(randomEnemy <= 50 && isBoss == false){
             enemy = "Goblin";
             enemyHealth = 4 + Exp.expScaling;
             difficulty = 0.85;
             enemyDamage = (int) (Math.random()+1);
-        } else if(randomEnemy >50 & randomEnemy <=80){
+        } else if(randomEnemy >50 & randomEnemy <=80 && isBoss == false){
             enemy = "Skeleton";
             enemyHealth = 6 + Exp.expScaling;
             difficulty = 1.0;
             enemyDamage = (int) (Math.random()*3+1);
-        } else{
+        } else if(randomEnemy > 80 && isBoss == false){
             enemy = "Minotaur";
             enemyHealth = 8 + Exp.expScaling;
             difficulty = 1.15;
             enemyDamage = (int) (Math.random()*3+1);
+        } else if(isBoss == true){
+            enemy = "Gargoyle";
+            enemyHealth = 12 + Exp.expScaling;
+            difficulty = 1.5;
+            enemyDamage = (int) (Math.random()*4);
         }
         //System.out.println("Type: "+enemy);
         //System.out.println("Health: "+enemyHealth);

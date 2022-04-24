@@ -29,14 +29,13 @@ public class Game {
         System.out.println( "In the search of adventure you left your village and went to the nearest city."                               ); Thread.sleep(550);
         System.out.println( "There you joined a guild which was made by the older generations of people with the same motives as you."                  ); Thread.sleep(550);
         System.out.println( "After the registration you were left pennyless but they would give you a place to sleep and food for free."                           ); Thread.sleep(550);
-        System.out.println( "You also learned about a place called the \"training\" dungeon and it seems like one only truly joins the guild if they clear it."                           ); Thread.sleep(550);
+        System.out.println( "You also learned about a place called the initiation dungeon and it seems like one only truly joins the guild if they clear it."                           ); Thread.sleep(550);
         System.out.println( "The drunkard mentioned that you would get even better treatment!"                                                                                                                  ); Thread.sleep(550);
         System.out.println( "So you decide that you must clear the dungeon."                                                                                                                  ); Thread.sleep(550);
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------"    ); Thread.sleep(550);
         System.out.println("Press [ENTER] to depart on your adventure!");}
         catch(Exception e){} //if there's an exception in the Titlescreen it will loop
-        //System.out.println("Day: "+ day);  
-        //System.out.println(Encounters.playerHealth);
+
         //Wait for user Input
         try{
             System.in.read();
@@ -45,8 +44,6 @@ public class Game {
          
         Shop.equipCheck();
         City.guild(); //this is easier to check if the Loading didn't fuck up
-        
-        //explore();
     }
         
 
@@ -60,7 +57,7 @@ public class Game {
         GraphicUi.status();
         try{Thread.sleep(600);}catch(Exception e){}
         System.out.println("Decide what to do next."                );          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("1. Continue deeper into the cave"       );          try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("1. Continue deeper into the dungeon"       );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("2. Go back to the city"    );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("3. Leave the Game"                      );          try{Thread.sleep(100);}catch(Exception e){}
         Scanner choice = new Scanner(System.in);
@@ -84,18 +81,25 @@ public class Game {
 
     public static void explore(){
     int exploreEvent = (int) (Math.random()*100+1); //generate encounter 
-       if(exploreEvent<=40){
+       if(exploreEvent <= 40 && day < 50){
         AudioManager.stopBgm();
         AudioManager.mainBattle();
         Encounters.fight();
         Encounters.combat();
         Encounters.healthCalc();              
-       } else if(exploreEvent >40 && exploreEvent <=70 && day>1){
+       } else if(exploreEvent >40 && exploreEvent <=70 && day>1 && day < 50){
            Shop.shop();
-       } else if(exploreEvent>70 && exploreEvent <= 90){
+       } else if(exploreEvent>70 && exploreEvent <= 90 && day < 50){
            Encounters.nothing();
-       } else{
+       } else if(exploreEvent > 90 && day < 50){
            Encounters.loot();
+       } else if(day >= 50){
+            AudioManager.stopBgm();
+            AudioManager.mainBoss(); 
+            Enemy.isBoss = true;
+            Enemy.main(null);
+            BossFight.main(null);
+            BossFight.healthCalc();
        }
     }
 }

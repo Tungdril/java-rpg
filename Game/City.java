@@ -18,7 +18,7 @@ public class City {
             cityCenter(); 
             break;
             case 3:
-                drunk();
+            drunk();
             break;
             case 4: //ends the code
             System.exit(0);
