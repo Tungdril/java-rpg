@@ -280,11 +280,10 @@ static boolean inspected = false;
         Game.day++;
         int restingHealth = (int) (Math.random()*3+1);
         int overheal = restingHealth + Enemy.playerHealth; //checks if the healing would be more than the allowed maxHealth
-        Save.creatingSave();
         if (overheal <= Game.maxHealth){
             Enemy.playerHealth = restingHealth+Enemy.playerHealth;
             try{Thread.sleep(200);}catch(Exception e){}
-            System.out.println("You find your way back to the surface and walk back home to have a rest.\nThe next day you walk right back into the cave.");
+            System.out.println("After a day of rest you are ready for more Adventure!");
             try{Thread.sleep(200);}catch(Exception e){}
             System.out.println("You regenerated "+restingHealth+" health!");
             try {Thread.sleep(2000);} catch(Exception e) {System.out.println("shit");}

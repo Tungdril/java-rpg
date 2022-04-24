@@ -54,29 +54,33 @@ public class Game {
         //try {Thread.sleep(5000);} catch(Exception e) {System.out.println("shit");}
         Exp.main(); //not sure why I made this call everytime, but scared to remove
         System.out.println("----------------------------------------------------------------------");   try{Thread.sleep(100);}catch(Exception e){}
+        Dungeon.dungeonUI();
         GraphicUi.status();
         try{Thread.sleep(600);}catch(Exception e){}
         System.out.println("Decide what to do next."                );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("1. Continue deeper into the dungeon"       );          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("2. Go back to the city"    );          try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("2. Go back to the Entrance"    );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("3. Leave the Game"                      );          try{Thread.sleep(100);}catch(Exception e){}
         Scanner choice = new Scanner(System.in);
         try{Thread.sleep(100);}catch(Exception e){}
         int option = choice.nextInt();
         switch (option) {
             case 1:
+            Dungeon.returnCheck();
+            Dungeon.depthInc();
+            Dungeon.di++;
             day++;
                 explore();
             break;
             case 2: 
-                City.cityCenter(); 
+                Dungeon.dungeonEnt(); 
             break;
             case 3: //ends the code
             System.exit(0);
             default: 
             System.out.println("That's not an option!");
             decide();
-        }                      
+        }
     }
 
     public static void explore(){

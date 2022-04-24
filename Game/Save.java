@@ -12,6 +12,12 @@ static String CB;
 static String DD;
 static String HH;
 static String SS;
+static String Gut;
+static String Depth2;
+static String Depth4;
+static String Depth6;
+static String Depth8;
+static String Depth9;
 static File f = new File(createSaveFolder.savepath + Game.userName + ".json");
 public static void main(String[] args) {
     createFile();
@@ -55,12 +61,39 @@ public static void writingPain(){
     Enemy.PlayerHealth = Integer.toString(Enemy.playerHealth); 
     ShopAffinity = Integer.toString(Affinity.shopAffinity);
     ShopAlchAffinity = Integer.toString(Affinity.shopAlchAffinity);
+    Gut = Integer.toString(City.gut);
     CC=Integer.toString(Loot.constitutionCabbage);
     CB=Integer.toString(Loot.cookbook);
     DD=Integer.toString(Loot.defenseDandelion);
     HH=Integer.toString(Loot.healingHerb);
     SS=Integer.toString(Loot.strengthShroom);
-    writingSave.write(Exp.Exp +"\n"+ Game.Money +"\n"+ Game.Day+"\n"+ Shop.ArmorEquip +"\n"+ Shop.SwordEquip +"\n"+ MetBefore +"\n"+ Enemy.PlayerHealth +"\n"+ ShopAffinity +"\n"+ShopAlchAffinity +"\n"+CC+"\n"+CB+"\n"+DD+"\n"+HH+"\n"+SS );
+    Depth2 = SS=Integer.toString(Dungeon.depth2);
+    Depth4 = SS=Integer.toString(Dungeon.depth4);
+    Depth6 = SS=Integer.toString(Dungeon.depth6);
+    Depth8 = SS=Integer.toString(Dungeon.depth8);
+    Depth9 = SS=Integer.toString(Dungeon.depth9);
+    writingSave.write(
+        Exp.Exp +"\n"+ 
+        Game.Money +"\n"+ 
+        Game.Day+"\n"+ 
+        Shop.ArmorEquip +"\n"+ 
+        Shop.SwordEquip +"\n"+ 
+        MetBefore +"\n"+ 
+        Enemy.PlayerHealth +"\n"+ 
+        ShopAffinity +"\n"+
+        ShopAlchAffinity +"\n"+
+        Gut +"\n"+
+        CC+"\n"+
+        CB+"\n"+
+        DD+"\n"+
+        HH+"\n"+
+        SS+"\n"+
+        Depth2+"\n"+
+        Depth4+"\n"+
+        Depth6+"\n"+
+        Depth8+"\n"+
+        Depth9+"\n"
+        );
     writingSave.close();
     System.out.println("//////Saving\\\\\\\\\\\\");
     } catch(IOException e) {System.out.println("Breeki"); e.printStackTrace();}
@@ -79,11 +112,17 @@ public static void readingPain(){
             Enemy.PlayerHealth = reader.nextLine();
             ShopAffinity = reader.nextLine();
             ShopAlchAffinity = reader.nextLine();
+            Gut = reader.nextLine();
             CC=reader.nextLine();
             CB=reader.nextLine();
             DD=reader.nextLine();
             HH=reader.nextLine();
             SS=reader.nextLine();
+            Depth2=reader.nextLine();
+            Depth4=reader.nextLine();
+            Depth6=reader.nextLine();
+            Depth8=reader.nextLine();
+            Depth9=reader.nextLine();
             Exp.exp = Double.parseDouble(Exp.Exp);
             Game.money = Integer.parseInt(Game.Money);
             Game.day = Integer.parseInt(Game.Day);
@@ -93,11 +132,18 @@ public static void readingPain(){
             Enemy.playerHealth = Integer.parseInt(Enemy.PlayerHealth);
             Affinity.shopAffinity = Integer.parseInt(ShopAffinity);
             Affinity.shopAlchAffinity = Integer.parseInt(ShopAlchAffinity);
+            City.gut = Integer.parseInt(Gut);
             Loot.constitutionCabbage=Integer.parseInt(CC);
             Loot.cookbook=Integer.parseInt(CB);
             Loot.defenseDandelion=Integer.parseInt(DD);
             Loot.healingHerb=Integer.parseInt(HH);
             Loot.strengthShroom=Integer.parseInt(SS);
+            Dungeon.depth2=Integer.parseInt(Depth2);
+            Dungeon.depth4=Integer.parseInt(Depth4);
+            Dungeon.depth6=Integer.parseInt(Depth6);
+            Dungeon.depth8=Integer.parseInt(Depth8);
+            Dungeon.depth9=Integer.parseInt(Depth9);
+            
            // System.out.println("Exp: " + Exp.exp);
            // System.out.println("Money: " + Game.money);
            // System.out.println("Day: " + Game.day);

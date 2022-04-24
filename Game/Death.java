@@ -25,7 +25,7 @@ public class Death {
                 System.out.println("                                |            | ");                                    try{Thread.sleep(500);}catch(Exception e){}
                 System.out.println("                 ______.______%_|            |_________________ ");                   try{Thread.sleep(500);}catch(Exception e){}
                 System.out.println("               _/                                              | ");                  try{Thread.sleep(500);}catch(Exception e){}
-                System.out.println("              |                                                < ");                  try{Thread.sleep(500);}catch(Exception e){}
+                System.out.println("              |                REACHED DEPTH "+Dungeon.depth+"                 < ");                  try{Thread.sleep(500);}catch(Exception e){}
                 System.out.println("              |_____.-._________              ____/|___________| ");                  try{Thread.sleep(500);}catch(Exception e){}
                 System.out.println("                                | * Day 0    | ");                                    try{Thread.sleep(500);}catch(Exception e){}
                 System.out.println("                                | + Day "+Game.day+"   | ");                         try{Thread.sleep(500);}catch(Exception e){}
