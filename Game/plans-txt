@@ -3,7 +3,7 @@ make dungeon
         certain depths have bosses
         every 5 encounters = 1 depth
         every 20 depth & depth 99 have a return point
-        depth 100 has final bosses
+        depth 100 has final bosses          //Tungdril: yea good idea, implemeted boss fight on day 50 for now. but we can change that later 
 
 make time system
 
