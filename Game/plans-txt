@@ -1,0 +1,8 @@
+make dungeon
+    with depth system
+        certain depths have bosses
+        every 5 encounters = 1 depth
+        every 20 depth & depth 99 have a return point
+        depth 100 has final bosses
+
+make time system

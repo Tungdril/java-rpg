@@ -57,10 +57,11 @@ public class Game {
         //try {Thread.sleep(5000);} catch(Exception e) {System.out.println("shit");}
         Exp.main(); //not sure why I made this call everytime, but scared to remove
         System.out.println("----------------------------------------------------------------------");   try{Thread.sleep(100);}catch(Exception e){}
+        Dungeon.dungeon();
         GraphicUi.status();
         try{Thread.sleep(600);}catch(Exception e){}
         System.out.println("Decide what to do next."                );          try{Thread.sleep(100);}catch(Exception e){}
-        System.out.println("1. Continue deeper into the cave"       );          try{Thread.sleep(100);}catch(Exception e){}
+        System.out.println("1. Continue deeper into the dungeon"       );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("2. Go back to the city"    );          try{Thread.sleep(100);}catch(Exception e){}
         System.out.println("3. Leave the Game"                      );          try{Thread.sleep(100);}catch(Exception e){}
         Scanner choice = new Scanner(System.in);
@@ -79,7 +80,7 @@ public class Game {
             default: 
             System.out.println("That's not an option!");
             decide();
-        }                      
+        }
     }
 
     public static void explore(){
