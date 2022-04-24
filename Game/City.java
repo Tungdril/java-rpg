@@ -45,7 +45,7 @@ public class City {
             guild();
             break;
             case 2:
-            Game.decide(); 
+            Dungeon.dungeonEnt(); 
             break;
             case 3: //ends the code
             System.exit(0);

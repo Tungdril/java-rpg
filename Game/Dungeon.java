@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Dungeon {
+    public static int di = 0;
     public static int depth = 0;
     public static int depth2 = 0;
     public static int depth4 = 0;
@@ -8,7 +9,7 @@ public class Dungeon {
     public static int depth8 = 0;
     public static int depth9 = 0;
     public static void main(String[] args){dungeonEnt();}
-    public static void dungeon()
+    public static void dungeonUI()
     {
         Exp.main();
         if (depth < 10) 
@@ -43,9 +44,12 @@ public class Dungeon {
             case 1:
                 Game.day++;
                 depth++;
+
+                depthCalc1();
                 Game.explore();
             break;
             case 2:
+                depthCalc0();
                 depthCalc1();
                 returnPoints();
             case 3: 
@@ -61,18 +65,18 @@ public class Dungeon {
     }
     
     public static void depthCalc0(){
-        if(depth2==1) {depth = 20;}
-        else if (depth4==1) {depth = 40;}
-        else if (depth6==1) {depth = 60;}
-        else if (depth8==1) {depth = 80;}
-        else if (depth9==1) {depth = 99;}}
+        if (depth2==1) {depth = 20;}
+        if (depth4==1) {depth = 40;}
+        if (depth6==1) {depth = 60;}
+        if (depth8==1) {depth = 80;}
+        if (depth9==1) {depth = 99;}}
 
     public static void depthCalc1(){
-        if(depth >= 20) {depth2 = 1;}
-        else if (depth >= 40) {depth4 = 1;}
-        else if (depth >= 60) {depth6 = 1;}
-        else if (depth >= 80) {depth8 = 1;}
-        else if (depth >= 99) {depth9 = 1;}}
+        if (depth >= 20) {depth2 = 1;}
+        if (depth >= 40) {depth4 = 1;}
+        if (depth >= 60) {depth6 = 1;}
+        if (depth >= 80) {depth8 = 1;}
+        if (depth >= 99) {depth9 = 1;}}
     
     public static void returnPoints(){
         System.out.println("Choose which Return Point you wish to return to"                );          try{Thread.sleep(100);}catch(Exception e){}
@@ -108,5 +112,32 @@ public class Dungeon {
             System.out.println("That's not an option!");
             returnPoints();
         }
+    }
+    public static void returnCheck(){
+        if (depth == 20) {
+            depth2 = 1;
+            System.out.println("You have unlocked a Return Point."       );          try{Thread.sleep(100);}catch(Exception e){}
+        }
+        if (depth == 40) {
+            depth4 = 1;
+            System.out.println("You have unlocked a Return Point."       );          try{Thread.sleep(100);}catch(Exception e){}
+        }
+        if (depth == 60) {
+            depth6 = 1;
+            System.out.println("You have unlocked a Return Point."       );          try{Thread.sleep(100);}catch(Exception e){}
+        }
+        if (depth == 80) {
+            depth8 = 1;
+            System.out.println("You have unlocked a Return Point."       );          try{Thread.sleep(100);}catch(Exception e){}
+        }
+        if (depth == 99) {
+            depth9 = 1;
+            System.out.println("You have unlocked a Return Point."       );          try{Thread.sleep(100);}catch(Exception e){}
+        }
+    }
+    public static void depthInc()
+    {
+        boolean d = di==5;
+        if (d) {depth++; di=0;}         
     }
 }
