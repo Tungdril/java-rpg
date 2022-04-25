@@ -6,6 +6,7 @@ This entire project is held together by ductape and sheer willpower, since
 both developers lack any programming knowledge and are just trying to do some fun stuff
 
 Music by sawsquarenoise and gigakoops
+
 Licensed under CC BY-NC-SA 4.0
 https://creativecommons.org/licenses/by/4.0/legalcode
 
